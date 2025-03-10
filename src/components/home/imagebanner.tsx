@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function ExperientialLearning() {
   return (
     <motion.section
-      className="py-12 px-4 md:px-12 text-center bg-white"
+      className="py-20 px-4 md:px-12 text-center bg-white"
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
@@ -30,7 +30,7 @@ export default function ExperientialLearning() {
 
       {/* Caption with Staggered Effect */}
       <motion.p
-        className="text-gray-700 mt-4 text-sm md:text-base helvetica"
+        className="text-[#1E1E1E] mt-4 text-base md:text-lg helvetica-neue-regular"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}

@@ -21,7 +21,7 @@ export default function VideoBanner() {
 
       {/* Dark Overlay */}
       <motion.div
-        className="absolute inset-0 bg-black bg-opacity-300"
+        className="absolute inset-0 bg-black bg-opacity-500"
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.5 }}
         transition={{ duration: 1 }}
@@ -58,7 +58,7 @@ export default function VideoBanner() {
 
         {/* Main Heading */}
         <motion.h1
-          className="text-4xl sm:text-5xl md:text-8xl mt-2 serif-title"
+          className="text-3xl sm:text-5xl md:text-8xl mt-2 abrildisplay"
           variants={{
             hidden: { opacity: 0, y: 20 },
             visible: { opacity: 1, y: 0 },

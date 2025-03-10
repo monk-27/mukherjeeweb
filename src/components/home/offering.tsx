@@ -10,7 +10,7 @@ export default function Offerings() {
         transition={{ duration: 0.7, delay: 0.2 }}
         className="text-center mt-10"
       >
-        <div className="text-gray-600 sm:text-xl text-sm helvetica-neue px-2 mx-auto helvetica-neue">
+        <div className="text-gray-600 sm:text-xl text-sm helvetica-neue-light px-2 mx-auto ">
           The Policy, Politics and Governance Foundation (PPGF), in
           collaboration with the Nation First Policy Research Centre (NFPRC)
         </div>
@@ -25,14 +25,17 @@ export default function Offerings() {
         <div className="max-w-6xl mx-auto px-4">
           <motion.h2
             transition={{ duration: 0.7, delay: 0.4 }}
-            className="text-xl md:text-4xl helvetica-bold text-[#FB7165]"
+            className="text-xl md:text-4xl helvetica-neue-bold text-[#FB7165]"
           >
-            Presents young professionals with an immersive hands-on experience
-            in policymaking and political strategy consulting.
+            Presents young professionals with an immersive hands-on <br/> 
+            <span className="text-[#FE8854]">
+            experience
+            in policymaking and political strategy consulting. </span>
+            
           </motion.h2>
           <motion.p
             transition={{ duration: 0.7, delay: 0.6 }}
-            className="text-gray-700 mt-8 text-sm md:text-xl helvetica-neue px-6 sm:px-10"
+            className="text-gray-700 mt-8 text-sm md:text-xl helvetica-neue-light px-6 sm:px-10"
           >
             The Fellowship intends to empower passionate students and
             exceptional professionals with the necessary skill set to succeed in
@@ -56,7 +59,7 @@ export default function Offerings() {
         <div className="relative max-w-7xl mx-auto">
           {/* Title */}
           <motion.h3
-            className=" text-3xl sm:text-6xl text-gray-800 mb-12 sm:mt-12 Abril_font font-bold"
+            className=" text-3xl sm:text-6xl text-gray-800 mb-12 sm:mt-12 abril-fatface-regular"
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}

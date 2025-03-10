@@ -6,13 +6,10 @@ import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 
-
-
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname(); // Get the current route
-  
 
   // Change header style on scroll
   useEffect(() => {
@@ -62,7 +59,7 @@ export default function Header() {
 
         {/* Desktop Navigation */}
         <motion.nav
-          className="hidden lg:flex space-x-16 text-[#FF8609]"
+          className="hidden lg:flex space-x-12"
           initial="hidden"
           animate="visible"
           variants={{
@@ -79,9 +76,9 @@ export default function Header() {
               href={link.path}
               className={`text-xl ${
                 pathname === link.path
-                  ? "helvetica-neue-bold"
-                  : "helvetica-neue"
-              } hover:text-orange-600 transition-all`}
+                  ? "helvetica-neue-bold text-[#FF8609]"
+                  : "helvetica-neue-light text-[#FF8609]"
+              }  transition-all`}
               variants={{
                 hidden: { opacity: 0, y: 10 },
                 visible: { opacity: 1, y: 0 },
@@ -101,11 +98,10 @@ export default function Header() {
           viewport={{ once: true }}
         >
           <Link href="/contact">
-          <button className="grad1 text-white px-8 py-2 rounded-xl  text-xl helvetica-neue-bold">
-            Apply now
-          </button>
+            <button className="grad1 text-white px-4 xl:px-8 py-2 rounded-xl text-base xl:text-xl helvetica-neue-bold">
+              Apply now
+            </button>
           </Link>
-         
         </motion.div>
 
         {/* Mobile Menu Button */}
@@ -124,14 +120,19 @@ export default function Header() {
             exit={{ y: "-100%" }}
             transition={{ duration: 0.5 }}
           >
-            <div className="flex flex-col space-y-4 p-4 text-orange-500">
+            <div className="flex flex-col space-y-4 p-4">
               {navLinks.map((link) => (
                 <motion.a
                   key={link.path}
                   href={link.path}
-                  className={`font-semibold ${
-                    pathname === link.path ? "border-b-2 border-orange-500" : ""
+                  className={` ${
+                    pathname === link.path
+                      ? "helvetica-neue-bold text-[#FF8609]"
+                      : "helvetica-neue-regular text-[#FF8609]"
                   } hover:text-orange-600 transition-all`}
+                  // className={`font-semibold ${
+                  //   pathname === link.path ? "border-b-2 border-orange-500" : ""
+                  // } hover:text-orange-600 transition-all`}
                   onClick={() => setIsOpen(false)}
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -145,11 +146,8 @@ export default function Header() {
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: 0.2 }}
-                
               >
-                <Link href="/contact">
-            Apply now
-          </Link>
+                <Link href="/contact">Apply now</Link>
               </motion.button>
             </div>
           </motion.nav>

@@ -4,13 +4,13 @@ import Image from "next/image";
 
 export default function FellowshipStatus() {
   return (
-    <section className="relative w-full h-auto py-16 px-4 md:px-12">
+    <section className="relative w-full h-auto py-24 px-4 md:px-12">
       {/* Background Image with Overlay */}
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: "url('/fellowback.png')" }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-[#fc8174] to-gray-100 opacity-50"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#f77768] via-[#f5775b5c] to-[#f3f4f633] "></div>
       </div>
 
       {/* Content Wrapper */}
@@ -22,7 +22,7 @@ export default function FellowshipStatus() {
       >
         {/* Heading with Animation */}
         <motion.h2
-          className="text-3xl md:text-4xl font-bold Abril_font"
+          className="text-3xl md:text-5xl abril-fatface-regular"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
@@ -33,7 +33,7 @@ export default function FellowshipStatus() {
 
         {/* Fellowship Details with Staggered Effect */}
         <motion.div
-          className="mt-6 text-lg helvetica-neue"
+          className="my-12 text-xl"
           initial="hidden"
           animate="visible"
           variants={{
@@ -45,12 +45,24 @@ export default function FellowshipStatus() {
           }}
         >
           <motion.p
+            className="mb-2"
             variants={{
               hidden: { opacity: 0, x: -20 },
               visible: { opacity: 1, x: 0 },
             }}
           >
-            <span className="font-bold">For the year:</span> 2024-25
+            <span className="helvetica-neue-bold">Fellowship 2025-26: </span>
+            <span className="helvetica-neue-regular">Important Dates</span>
+          </motion.p>
+          <motion.p
+            className="mb-2"
+            variants={{
+              hidden: { opacity: 0, x: -20 },
+              visible: { opacity: 1, x: 0 },
+            }}
+          >
+            <span className="helvetica-neue-bold">Start Date: </span>
+            <span className="helvetica-neue-regular">July 14, 2025</span>
           </motion.p>
           <motion.p
             variants={{
@@ -58,16 +70,8 @@ export default function FellowshipStatus() {
               visible: { opacity: 1, x: 0 },
             }}
           >
-            <span className="font-bold">Starting date:</span> 1st August 2024
-          </motion.p>
-          <motion.p
-            variants={{
-              hidden: { opacity: 0, x: -20 },
-              visible: { opacity: 1, x: 0 },
-            }}
-          >
-            <span className="font-bold">The final date of application:</span>{" "}
-            25th July 2024
+            <span className="helvetica-neue-bold"> Application Deadline: </span>{" "}
+            <span className="helvetica-neue-regular">June 30, 2025</span>
           </motion.p>
         </motion.div>
 

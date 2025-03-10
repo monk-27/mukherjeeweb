@@ -15,33 +15,155 @@
   }
 }
 
+/* Import local font files using @font-face */
+@font-face {
+  font-family: "Abril Fatface";
+  src: url("/fonts/AbrilFatface-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("/fonts/HelveticaNeueLight.otf") format("opentype");
+  font-weight: 300; /* Light */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("/fonts/HelveticaNeueMedium.otf") format("opentype");
+  font-weight: 400; /* Medium (mapped as regular) */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("/fonts/HelveticaNeueBold.otf") format("opentype");
+  font-weight: 700; /* Bold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Orelega One";
+  src: url("/fonts/OrelegaOne-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
 /* Base styles for body with Helvetica as default */
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: "Helvetica", Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   letter-spacing: 0.02em;
   line-height: 1.6;
 }
+
+/* Abril Fatface Classes */
+.abril-fatface-regular {
+  font-family: "Abril Fatface", Georgia, serif;
+  font-weight: 400; /* Regular */
+}
+
+.montserrat-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400; /* Regular weight, adjustable to 900 if desired */
+  /* font-size: 5.5rem; */ /* Uncomment and adjust if needed */
+  color: #ffffff;
+}
+
+.abril-fatface-medium {
+  font-family: "Abril Fatface", Georgia, serif;
+  font-weight: 500; /* Simulated medium */
+}
+
+.abril-fatface-light {
+  font-family: "Abril Fatface", Georgia, serif;
+  font-weight: 300; /* Simulated light */
+}
+
+.abril-fatface-bold {
+  font-family: "Abril Fatface", Georgia, serif;
+  font-weight: 700; /* Simulated bold */
+}
+
+/* Helvetica Neue Classes */
+.helvetica-neue-regular {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400; /* Medium */
+}
+
+.helvetica-neue-medium {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500; /* Simulated medium (falls back to 400 if not distinct) */
+}
+
+.helvetica-neue-light {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300; /* Light */
+}
+
+.helvetica-neue-bold {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 900; /* Bold */
+}
+
+/* Orelega One Classes */
+.orelega-one-regular {
+  font-family: "Orelega One", serif;
+  font-weight: 400; /* Regular */
+}
+
+.orelega-one-medium {
+  font-family: "Orelega One", serif;
+  font-weight: 500; /* Simulated medium */
+}
+
+.orelega-one-light {
+  font-family: "Orelega One", serif;
+  font-weight: 300; /* Simulated light */
+}
+
+.orelega-one-bold {
+  font-family: "Orelega One", serif;
+  font-weight: 700; /* Simulated bold */
+}
+
+/* Preserve existing classes with updated font-family references */
 .Abril_font {
   font-family: "Abril Fatface", Georgia, serif;
-  font-weight: 700;
+  font-weight: 400; /* Regular */
 }
-/* Class for Helvetica Neue */
-.helvetica-neue {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 400;
+
+.abrildisplay {
+  font-family: "Abril Fatface", Georgia, serif;
+  font-weight: 400; /* Regular */
+  /* font-size: 5.5rem; */
+  color: #ffffff;
+  text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.7),
+    /* Main shadow */ 6px 6px 10px rgba(0, 0, 0, 0.5),
+    /* Secondary shadow for depth */ -2px -2px 4px rgba(0, 0, 0, 0.3); /* Slight opposite shadow for wrap effect */
+}
+
+.abril_regular {
+  font-family: "Abril Fatface", Georgia, serif;
+  font-weight: 400; /* Regular */
   letter-spacing: 0.03em;
 }
 
-/* Class for regular Helvetica */
+.helvetica-neue {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400; /* Medium */
+  letter-spacing: 0.03em;
+}
+
 .helvetica {
   font-family: "Helvetica", Arial, sans-serif;
   font-weight: 400;
   letter-spacing: 0.02em;
 }
 
-/* Optional: Bold variations */
 .helvetica-bold {
   font-family: "Helvetica", Arial, sans-serif;
   font-weight: 700;
@@ -49,10 +171,9 @@ body {
 
 .helvetica-neue-bold {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 700;
+  font-weight: 700; /* Bold */
 }
 
-/* Serif title class with enhanced text shadow */
 .serif-title {
   font-family: "Times New Roman", Georgia, serif;
   font-weight: 900;
@@ -63,7 +184,6 @@ body {
     /* Secondary shadow for depth */ -2px -2px 4px rgba(0, 0, 0, 0.3); /* Slight opposite shadow for wrap effect */
 }
 
-/* Background image styling */
 .bg-img {
   background-image: url(/parlya.png);
   height: 500px;
@@ -71,19 +191,59 @@ body {
   background-size: cover;
 }
 
-/* Gradient styling */
 .grad1 {
   background: linear-gradient(100.31deg, #fb7165 -0.01%, #fe8854 89.82%);
 }
 
-/* Swiper pagination tweak */
 .swiper-pagination-fraction {
   bottom: -20px !important;
 }
+
 .shadowMy {
   box-shadow: 0px 0px 5px #ccc;
 }
-/* Responsive adjustments */
+.swiper-pagination-bullet-active {
+  background: #dc6d2c !important;
+}
+.swiper-wrapper {
+  padding-bottom: 100px;
+}
+.swiper-pagination {
+  text-align: left !important;
+  margin-left: 20%;
+}
+.text-grad {
+  background: -webkit-linear-gradient(#fb7165, #fe8854);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+SELECT {
+  background: url("data:image/svg+xml,<svg height='10px' width='10px' viewBox='0 0 16 16' fill='%23000000' xmlns='http://www.w3.org/2000/svg'><path d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/></svg>")
+    no-repeat;
+  background-position: calc(100% - 0.75rem) center !important;
+  -moz-appearance: none !important;
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  padding-right: 2rem !important;
+}
+
+@media screen and (max-width: 1025px) {
+  .swiper-pagination {
+    text-align: center !important;
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 992px) {
+  .bg-img {
+    height: 300px;
+    background-position: center top;
+    background-size: cover;
+  }
+  .swiper-wrapper {
+    padding-bottom: 0px;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .bg-img {
     height: 300px;

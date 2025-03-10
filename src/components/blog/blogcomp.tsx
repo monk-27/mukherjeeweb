@@ -78,7 +78,7 @@ export default function BlogSection() {
     <section className="py-16 px-4 xl:px-0 max-w-7xl mx-auto">
       {/* Heading with Animation */}
       <motion.h2
-        className="text-5xl font-bold text-center text-gray-900 Abril_font mt-12"
+        className="text-5xl font-bold text-center text-gray-900 abril-fatface-regular mt-12"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
@@ -87,7 +87,7 @@ export default function BlogSection() {
         Blogs
       </motion.h2>
       <motion.p
-        className="text-gray-700 text-center mt-4 helvetica text-xl"
+        className="text-gray-700 text-center mt-4 helvetica-neue-light text-xl"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.7, delay: 0.2 }}
@@ -109,9 +109,9 @@ export default function BlogSection() {
             key={tab}
             className={`text-sm sm:text-lg font-semibold ${
               activeTab === tab
-                ? "text-gray-900 border-b-2 border-red-500 helvetica-bold font-bold"
-                : "text-gray-800 helvetica-neue"
-            } hover:text-red-500 transition-all`}
+                ? "text-gray-900 border-b-2 border-red-500 helvetica-neue-bold "
+                : "text-gray-800 helvetica-neue-regular"
+            } `}
             onClick={() => setActiveTab(tab)}
           >
             {tab}
@@ -123,7 +123,7 @@ export default function BlogSection() {
       <AnimatePresence mode="wait">
         <motion.div
           key={activeTab}
-          className="mt-8 space-y-6"
+          className="mt-8 space-y-6 "
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 20 }}
@@ -155,13 +155,13 @@ export default function BlogSection() {
               {/* Content with Motion Effect */}
               <div className="p-6 md:w-2/3 relative">
                 <div className="flex justify-between items-center">
-                  <p className="text-gray-700 text-sm helvetica">
+                  <p className="text-gray-700 text-sm helvetica-neue-light">
                     {blog.author} &nbsp; | &nbsp; {blog.date}
                   </p>
                   <FaShareAlt className="text-gray-600 hover:text-gray-900 cursor-pointer" />
                 </div>
                 <motion.h3
-                  className="font-bold text-2xl mt-2 text-gray-800 Abril_font"
+                  className="font-bold text-2xl mt-2 text-gray-800 abril-fatface-regular"
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   transition={{ duration: 0.5, delay: 0.2 }}
@@ -170,7 +170,7 @@ export default function BlogSection() {
                   {blog.title}
                 </motion.h3>
                 <motion.p
-                  className="text-gray-700 mt-2  text-xl helvetica"
+                  className="text-gray-700 mt-2  text-xl helvetica-neue-regular"
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   transition={{ duration: 0.5, delay: 0.3 }}
@@ -183,7 +183,8 @@ export default function BlogSection() {
                 <div className="flex justify-between items-center mt-4">
                   <a
                     href="#"
-                    className="text-red-500 font-semibold underline helvetica-bold"
+                    className="text-grad font-semibold helvetica-neue-bold underline"
+                    style={{ textDecoration: "underline" }}
                   >
                     Continue reading
                   </a>

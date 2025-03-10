@@ -334,7 +334,7 @@ export default function RegistrationForm() {
     >
       {/* Title with Animation */}
       <motion.h2
-        className="text-5xl font-bold text-gray-900 Abril_font mt-8"
+        className="text-5xl font-bold text-gray-900 abril-fatface-regular mt-8"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -343,7 +343,7 @@ export default function RegistrationForm() {
         Please fill in your information
       </motion.h2>
       <motion.p
-        className="text-gray-600 mt-2"
+        className="text-gray-600 mt-2 helvetica-neue-light"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.2 }}
@@ -382,10 +382,11 @@ export default function RegistrationForm() {
             <input
               type="text"
               name="fullName"
+              placeholder="Enter your full name"
               value={formData.fullName}
               onChange={handleChange}
               required
-              className="w-full p-3 border rounded-lg mt-1 focus:outline-none"
+              className="w-full p-3 border rounded-lg mt-1 focus:outline-none  placeholder-[#000000] placeholder-helvetica-neue-regular text-gray-700 "
             />
           </motion.div>
 
@@ -404,7 +405,7 @@ export default function RegistrationForm() {
                   value={formData.day}
                   onChange={handleChange}
                   required
-                  className="w-full p-3 border rounded-lg"
+                  className="w-full p-3 border rounded-lg bg-white  placeholder-[#000000] placeholder-helvetica-neue-regular text-gray-700  "
                 >
                   <option value="">Day</option>
                   {[...Array(31)].map((_, i) => (
@@ -416,7 +417,7 @@ export default function RegistrationForm() {
                   value={formData.month}
                   onChange={handleChange}
                   required
-                  className="w-full p-3 border rounded-lg"
+                  className="w-full p-3 border rounded-lg bg-white placeholder-[#000000] placeholder-helvetica-neue-regular text-gray-700 "
                 >
                   <option value="">Month</option>
                   {[...Array(12)].map((_, i) => (
@@ -428,7 +429,7 @@ export default function RegistrationForm() {
                   value={formData.year}
                   onChange={handleChange}
                   required
-                  className="w-full p-3 border rounded-lg"
+                  className="w-full p-3 border rounded-lg bg-white placeholder-[#000000] placeholder-helvetica-neue-regular text-gray-700 "
                 >
                   <option value="">Year</option>
                   {[...Array(60)].map((_, i) => (
@@ -446,14 +447,16 @@ export default function RegistrationForm() {
               }}
             >
               <label className="helvetica-neue-bold text-lg">Citizenship</label>
-              <input
-                type="text"
+              <select
                 name="citizenship"
                 value={formData.citizenship}
                 onChange={handleChange}
                 required
-                className="w-full p-3 border rounded-lg"
-              />
+                className="w-full p-3 border rounded-lg bg-white placeholder-[#000000] placeholder-helvetica-neue-regular text-gray-700 "
+              >
+                <option value="">Select</option>
+                {/* Add city options here if needed */}
+              </select>
             </motion.div>
           </div>
         </motion.div>
@@ -473,10 +476,11 @@ export default function RegistrationForm() {
             <input
               type="text"
               name="country"
+              placeholder="Enter your country"
               value={formData.country}
               onChange={handleChange}
               required
-              className="w-full p-3 border rounded-lg"
+              className="w-full p-3 border rounded-lg placeholder-[#000000] placeholder-helvetica-neue-regular text-gray-700 "
             />
           </motion.div>
 
@@ -495,7 +499,7 @@ export default function RegistrationForm() {
                 value={formData.state}
                 onChange={handleChange}
                 required
-                className="w-full p-3 border rounded-lg"
+                className="w-full p-3 border rounded-lg bg-white placeholder-[#000000] placeholder-helvetica-neue-regular text-gray-700  "
               >
                 <option value="">Select</option>
                 {/* Add state options here if needed */}
@@ -508,7 +512,7 @@ export default function RegistrationForm() {
                 value={formData.city}
                 onChange={handleChange}
                 required
-                className="w-full p-3 border rounded-lg"
+                className="w-full p-3 border rounded-lg bg-white placeholder-[#000000] placeholder-helvetica-neue-regular text-gray-700 "
               >
                 <option value="">Select</option>
                 {/* Add city options here if needed */}
@@ -518,11 +522,12 @@ export default function RegistrationForm() {
               <label className="helvetica-neue-bold text-lg">Zip Code</label>
               <input
                 type="text"
+                placeholder="Enter your zip code"
                 name="zipCode"
                 value={formData.zipCode}
                 onChange={handleChange}
                 required
-                className="w-full p-3 border rounded-lg"
+                className="w-full p-3 border rounded-lg placeholder-[#000000] placeholder-helvetica-neue-regular text-gray-700 "
               />
             </div>
           </motion.div>
@@ -540,10 +545,11 @@ export default function RegistrationForm() {
               <input
                 type="text"
                 name="address1"
+                placeholder="Enter your address line 1"
                 value={formData.address1}
                 onChange={handleChange}
                 required
-                className="w-full p-3 border rounded-lg"
+                className="w-full p-3 border rounded-lg placeholder-[#000000] placeholder-helvetica-neue-regular text-gray-700 "
               />
             </div>
             <div>
@@ -551,9 +557,10 @@ export default function RegistrationForm() {
               <input
                 type="text"
                 name="address2"
+                placeholder="Enter your address line 2"
                 value={formData.address2}
                 onChange={handleChange}
-                className="w-full p-3 border rounded-lg"
+                className="w-full p-3 border rounded-lg placeholder-[#000000] placeholder-helvetica-neue-regular text-gray-700  "
               />
             </div>
           </motion.div>
@@ -564,17 +571,18 @@ export default function RegistrationForm() {
               hidden: { y: 20, opacity: 0 },
               visible: { y: 0, opacity: 1 },
             }}
-            className="grid grid-cols-1 sm:grid-cols-2 gap-4"
+            className="grid grid-cols-1 sm:grid-cols-2 gap-4 placeholder-[#000000] placeholder-helvetica-neue-regular text-gray-700 "
           >
             <div>
-              <label className="fhelvetica-neue-bold text-lg">Email</label>
+              <label className="helvetica-neue-bold text-lg">Email</label>
               <input
                 type="email"
                 name="email"
+                placeholder="Enter your email address"
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full p-3 border rounded-lg"
+                className="w-full p-3 border rounded-lg placeholder-[#000000] placeholder-helvetica-neue-regular text-gray-700 "
               />
             </div>
             <div>
@@ -582,10 +590,11 @@ export default function RegistrationForm() {
               <input
                 type="tel"
                 name="phone"
+                placeholder="Enter your phone number"
                 value={formData.phone}
                 onChange={handleChange}
                 required
-                className="w-full p-3 border rounded-lg"
+                className="w-full p-3 border rounded-lg placeholder-[#000000] placeholder-helvetica-neue-regular text-gray-700 "
               />
             </div>
           </motion.div>

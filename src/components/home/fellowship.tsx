@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function LearningModules() {
   return (
     <motion.section
-      className="bg-gray-100 py-16 px-4 md:px-12 text-center"
+      className="bg-gray-100 py-20 px-4 md:px-12 text-center"
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
@@ -18,10 +18,10 @@ export default function LearningModules() {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 Abril_font">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 abril-fatface-regular">
           Mukherjee Fellowship
         </h2>
-        <h3 className="text-xl md:text-2xl font-semibold text-gray-900 mt-2 Abril_font">
+        <h3 className="text-xl md:text-2xl font-semibold text-gray-900 mt-2 Aabril-fatface-regular">
           Structure
         </h3>
       </motion.div>
@@ -43,30 +43,50 @@ export default function LearningModules() {
         {[
           {
             title: "Theoretical Learning Module",
-            duration: "⏳ 1.5 Months",
+            emoji: "📌",
+            image1: "/time.svg",
+            duration: "1.5 Months",
             location: "In-person",
             image: "/fellow1.png",
             description:
-              "The learning module runs for a period of three months starting in July and takes place in person in Delhi with the attendance of all the Fellows being compulsory. The Mukherjee Fellows undergo rigorous training through curated courses on submodules such as:",
+              "Before deployment, Fellows undergo intensive classroom training led by subject matter experts, covering: ",
             topics: [
-              "Understanding Indian Society",
-              "Political Campaigns 101",
-              "Understanding Political Communication",
-              "Law and Economics in India",
+              "Understanding Indian Society - Analyzing political, social, and cultural frameworks.  ",
+              "Political Campaigns & Communications 101 - Strategies for elections, media relations, and voter engagement  ",
+              "Understanding Parliamentary Procedures - Insights into legislative processes and policymaking.",
+              "Law and Economics in India - Decoding the intersection of governance, law, and fiscal policies",
             ],
           },
           {
             title: "Experiential Learning Module",
-            duration: "⏳ 3 Months",
+            image1: "/time.svg",
+
+            duration: "3 Months",
             location: "Practical Work",
-            image: "/fellow1.png",
+            image: "/parliimage.png",
             description:
-              "This module offers Fellows hands-on experience working with policymakers, government officials, and organizations to apply theoretical knowledge in real-world policy and governance scenarios.",
+              "After completing their training, Fellows are placed in the offices of leading public figures, gaining hands-on exposure to:",
             topics: [
-              "Internships with Elected Representatives",
-              "Policy Research & Governance Projects",
-              "Legislative & Policy Drafting",
-              "Grassroots Engagement",
+              {
+                text: "drafting inputs on bills, parliamentary questions, and policy discussions",
+                emoji: "📝",
+              },
+              {
+                text: "managing social media and political communications",
+                emoji: "📢",
+              },
+              {
+                text: "assisting in election campaigns and constituency strategy",
+                emoji: "📊",
+              },
+              {
+                text: "conducting in-depth policy research and legislative analysis",
+                emoji: "🔎",
+              },
+              {
+                text: "collaborating with consultants on political outreach, governance, and policy formulation",
+                emoji: "🤝",
+              },
             ],
           },
         ].map((module, index) => (
@@ -79,8 +99,8 @@ export default function LearningModules() {
             }}
           >
             {/* Section Title */}
-            <h3 className="text-xl md:text-2xl Abril_font font-semibold mb-4 text-black">
-              {index + 1}. {module.title}
+            <h3 className="text-xl md:text-2xl  orelega-one-regular mb-4 text-black">
+              {String.fromCharCode(65 + index)}. {module.title}
             </h3>
 
             {/* Image Container with Hover Effect */}
@@ -101,28 +121,67 @@ export default function LearningModules() {
               >
                 {/* Badges */}
                 <div className="flex space-x-3 mb-3">
-                  <span className="grad1 text-white px-3 py-1 text-sm font-semibold rounded-md">
+                  <span className="grad1 text-white px-3 py-1 text-sm helvetica-neue-bold rounded-md flex items-center">
+                    <Image
+                      src={module.image1}
+                      alt={`${module.title} badge`}
+                      width={20}
+                      height={20}
+                      className="mr-2"
+                    />
                     {module.duration}
                   </span>
-                  <span className="grad1 text-white px-3 py-1 text-sm font-semibold rounded-md">
+                  <span className="grad1 text-white px-3 py-1 text-sm helvetica-neue-bold rounded-md">
                     {module.location}
                   </span>
                 </div>
 
                 {/* Title */}
-                <h2 className="text-white Abril_font text-base sm:text-2xl font-bold">
+                <h2 className="text-white orelega-one-regular text-base sm:text-2xl ">
                   {module.title}
                 </h2>
 
                 {/* Description */}
-                <p className="text-white helvetica-neue text-sm sm:text-lg mt-2 leading-relaxed">
+                <p className="text-white helvetica-neue-bold text-sm sm:text-lg mt-2 leading-relaxed">
                   {module.description}
                 </p>
 
                 {/* Bullet Points */}
-                <ul className="text-white text-xs sm:text-base helvetica mt-3 space-y-1">
+                <ul className="text-white text-xs sm:text-base helvetica-neue-medium mt-3 space-y-1">
+                  {/* {module.topics.map((topic, idx) => (
+                    <li key={idx}>
+                      {typeof topic === "string"
+                        ? `${module.emoji} ${topic}` // For Theoretical Learning Module
+                        : `${topic.emoji} ${topic.text}` // For Experiential Learning Module
+                      }
+                    </li>
+                  ))} */}
+
                   {module.topics.map((topic, idx) => (
-                    <li key={idx}>• {topic}</li>
+                    <li key={idx}>
+                      {typeof topic === "string" ? (
+                        // For Theoretical Learning Module: Split and bold the part before hyphen
+                        module.title === "Theoretical Learning Module" ? (
+                          <>
+                            <span className="helvetica-neue-bold">
+                              {module.emoji}
+                              {topic.split(" - ")[0] || topic}
+                            </span>
+                            {" - "}
+                            <span className="helvetica-neue-medium">
+                              {topic.split(" - ")[1] || ""}
+                            </span>
+                          </>
+                        ) : (
+                          // For Experiential Learning Module: Render as string with emoji
+                          `${module.emoji} ${topic}`
+                        )
+                      ) : (
+                        // For Experiential Learning Module: Render as object with emoji and text
+
+                        `${topic.emoji} ${topic.text}`
+                      )}
+                    </li>
                   ))}
                 </ul>
               </motion.div>
@@ -135,10 +194,17 @@ export default function LearningModules() {
               >
                 {/* Badges */}
                 <div className="flex space-x-3 mb-3">
-                  <span className="grad1 text-white px-3 py-1 text-sm font-semibold rounded-md">
+                  <span className="grad1 text-white px-3 py-1 text-sm helvetica-neue-bold rounded-md">
+                    <Image
+                      src={module.image1}
+                      alt={`${module.title} badge`}
+                      width={20}
+                      height={20}
+                      className="mr-2"
+                    />
                     {module.duration}
                   </span>
-                  <span className="grad1 text-white px-3 py-1 text-sm font-semibold rounded-md">
+                  <span className="grad1 text-white px-3 py-1 text-sm helvetica-neue-bold rounded-md">
                     {module.location}
                   </span>
                 </div>
@@ -149,14 +215,20 @@ export default function LearningModules() {
                 </h2>
 
                 {/* Description */}
-                <p className="text-white helvetica-neue text-sm sm:text-lg mt-2 leading-relaxed">
+                <p className="text-white helvetica-neue-bold text-sm sm:text-lg mt-2 leading-relaxed">
                   {module.description}
                 </p>
 
                 {/* Bullet Points */}
-                <ul className="text-white text-xs sm:text-base helvetica mt-3 space-y-1">
+                <ul className="text-white text-xs sm:text-base helvetica-neue-medium mt-3 space-y-1">
                   {module.topics.map((topic, idx) => (
-                    <li key={idx}>• {topic}</li>
+                    <li key={idx}>
+                      {
+                        typeof topic === "string"
+                          ? `${module.emoji} ${topic}` // For Theoretical Learning Module
+                          : `${topic.emoji} ${topic.text}` // For Experiential Learning Module
+                      }
+                    </li>
                   ))}
                 </ul>
               </motion.div>
