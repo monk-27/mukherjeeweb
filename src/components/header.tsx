@@ -77,7 +77,7 @@ export default function Header() {
               className={`text-xl ${
                 pathname === link.path
                   ? "helvetica-neue-bold text-[#FF8609]"
-                  : "helvetica-neue-light text-[#FF8609]"
+                  : "helvetica-neue-regular text-[#FF8609]"
               }  transition-all`}
               variants={{
                 hidden: { opacity: 0, y: 10 },
