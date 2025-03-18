@@ -10,7 +10,10 @@ export default function Home() {
     <div className="bg-white">
       <VideoBanner />
       <Offerings />
+      
+
       <LearningModules />
+     
       <Testimonials />
       <FellowshipStatus />
       <ExperientialLearning />

@@ -78,7 +78,7 @@ export default function BlogSection() {
     <section className="py-16 px-4 xl:px-0 max-w-7xl mx-auto">
       {/* Heading with Animation */}
       <motion.h2
-        className="text-5xl font-bold text-center text-gray-900 abril-fatface-regular mt-12"
+        className="text-5xl font-bold text-center text-gray-900 abril-fatface-regular mt-8"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
@@ -132,7 +132,7 @@ export default function BlogSection() {
           {filteredBlogs.map((blog) => (
             <motion.div
               key={blog.id}
-              className="flex flex-col md:flex-row bg-white rounded-lg overflow-hidden shadowMy"
+              className="flex flex-col md:flex-row bg-white rounded-lg overflow-hidden shadowMy group"
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
             >

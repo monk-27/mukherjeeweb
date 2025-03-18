@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function Offerings() {
   return (
-    <div className="py-2 bg-white">
+    <div className="py-2 bg-white mb-6">
       {/* Header Section */}
 
       <motion.p

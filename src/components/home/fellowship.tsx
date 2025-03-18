@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function LearningModules() {
   return (
     <motion.section
-      className="bg-gray-100 py-20 px-4 md:px-12 text-center"
+      className="bg-gray-100 mt-16 py-20 px-4 md:px-12 text-center"
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
@@ -18,10 +18,10 @@ export default function LearningModules() {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 abril-fatface-regular">
+        <h2 className="text-3xl md:text-5xl font-bold text-gray-900 abril-fatface-regular">
           Mukherjee Fellowship
         </h2>
-        <h3 className="text-xl md:text-2xl font-semibold text-gray-900 mt-2 Aabril-fatface-regular">
+        <h3 className="text-xl md:text-3xl font-semibold text-gray-900 mt-2 abril-fatface-regular">
           Structure
         </h3>
       </motion.div>
@@ -179,7 +179,12 @@ export default function LearningModules() {
                       ) : (
                         // For Experiential Learning Module: Render as object with emoji and text
 
-                        `${topic.emoji} ${topic.text}`
+                        <>
+                          <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-white text-black mr-2">
+                            {topic.emoji}
+                          </span>
+                          <span>{topic.text}</span>
+                        </>
                       )}
                     </li>
                   ))}
@@ -226,7 +231,14 @@ export default function LearningModules() {
                       {
                         typeof topic === "string"
                           ? `${module.emoji} ${topic}` // For Theoretical Learning Module
-                          : `${topic.emoji} ${topic.text}` // For Experiential Learning Module
+                          : (
+                            <>
+                              <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-white text-black mr-2">
+                                {topic.emoji}
+                              </span>
+                              <span>{topic.text}</span>
+                            </>
+                          ) // For Experiential Learning Module
                       }
                     </li>
                   ))}

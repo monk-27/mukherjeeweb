@@ -309,6 +309,7 @@ export default function ImageGallery() {
 
   const openModal = (index: number) => {
     setCurrentIndex(index);
+    // console.log("curent index",currentIndex)
     setIsOpen(true);
   };
 
@@ -326,7 +327,7 @@ export default function ImageGallery() {
     <section className="max-w-7xl mx-auto py-10 px-4 xl:px-0 text-center">
       {/* Title with Fade-In Effect */}
       <motion.h2
-        className="text-5xl text-gray-900 abril-fatface-regular mt-2"
+        className="text-5xl text-gray-900 abril-fatface-regular mt-8"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
