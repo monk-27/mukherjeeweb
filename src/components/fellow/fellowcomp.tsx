@@ -9,154 +9,389 @@ export default function MeetOurFellows() {
   const [isOpen, setIsOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const fellows = [
+  const fellowsold = [
     {
-      name: "John Doe",
-      image: "/fellowmate.png",
-      alt: "John Doe",
+      name: "Shivesh Kumar Amit ",
+      image: "/shivesh.jpg",
+      alt: "Shivesh Kumar Amit ",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "From a young age, I was fascinated by politics, and its inner workings. This passion later drew me towards political science, which deepened my curiosity and interest in the world of policy and political consultancy. The Mukherjee fellowship has proven to be the ideal platform for me to explore this field. The past year in the fellowship has been an incredibly rewarding learning experience, stimulating my intellectual growth. It has significantly broadened my understanding of Indian politics and the intricacies of policymaking.",
     },
     {
-      name: "Jane Smith",
-      image: "/fellowmate2.png",
-      alt: "John Doe",
+      name: "Yashvi Rana",
+      image: "/yashvi.jpg",
+      alt: "Yashvi Rana",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "Being part of Mukherjee Fellowship was a transformative learning experience. I was working closely with Member of Parliament Smt. Poonam Mahajan ji over the course of the fellowship and gained invaluable insights into the inner workings of parliamentary offices. This hands-on experience not only sharpened my skills in policy analysis and political engagement but also empowered me to make a tangible impact on the ground through effective collaboration and cooperation.",
     },
     {
-      name: "Rahul Sharma",
-      image: "/fellowmate.png",
-      alt: "John Doe",
+      name: "Ujjwal Singh",
+      image: "/ujjwal.jpg",
+      alt: "Ujjwal Singh",
+
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "Driven by the excitement of working closely with a Member of Parliament and witnessing the 2024 Lok Sabha elections, I joined the Mukherjee Fellowship. My assignment with Shri Dharmendra Pradhan, particularly my three-month stint in Sambalpur, Odisha, was an eye-opening and unforgettable journey into the heart of India's democracy."
     },
     {
-      name: "Priya Patel",
-      image: "/fellowmate2.png",
-      alt: "John Doe",
+      name: "Utsav Utkrisht ",
+      image: "/utsav.jpg",
+      alt: "Utsav Utkrisht ",
+
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        ""
     },
     {
-      name: "Alex Johnson",
-      image: "/fellowmate.png",
-      alt: "John Doe",
+      name: "Abhinav Narta",
+      image: "/abhinav.webp",
+      alt: "Abhinav Narta",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        ""
     },
     {
-      name: "Emily Brown",
-      image: "/fellowmate2.png",
-      alt: "John Doe",
+      name: "Yadukrishna C S",
+      image: "/yadu.jpg",
+      alt: "Yadukrishna C S",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        ""
     },
     {
-      name: "David Wilson",
-      image: "/fellowmate.png",
-      alt: "John Doe",
+      name: "ARUNDAS A",
+      image: "/arun.jpg",
+      alt: "ARUNDAS A",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        ""
     },
     {
-      name: "Sophia Thomas",
-      image: "/fellowmate2.png",
-      alt: "John Doe",
+      name: "Ananya Vinod",
+      image: "/ananya.png",
+      alt: "Ananya Vinod",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        ""
     },
     {
-      name: "Daniel Garcia",
-      image: "/fellowmate.png",
-      alt: "John Doe",
+      name: "Reeva Godara",
+      image: "/reeva.jpeg",
+      alt: "Reeva Godara",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        ""
     },
     {
-      name: "Amit Verma",
-      image: "/fellowmate2.png",
-      alt: "John Doe",
+      name: "Diksha Bohra",
+      image: "/diksha.jpg",
+      alt: "Diksha Bohra",
+
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        ""
     },
     {
-      name: "Neha Kapoor",
-      image: "/fellowmate.png",
+      name: "Archana M",
+      image: "/archana.jpg",
       alt: "John Doe",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        ""
     },
     {
-      name: "Carlos Mendes",
-      image: "/fellowmate2.png",
-      alt: "John Doe",
+      name: "Sankarshana K K",
+      image: "/kk.png",
+      alt: "Sankarshana K K",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        ""
     },
     // Replicating the first 9 fellows to reach 21 total
     {
-      name: "John Doe (2)",
-      image: "/fellowmate.png",
-      alt: "John Doe",
+      name: "Tejaswi Singh ",
+      image: "/tejaswi.jpg",
+      alt: "Tejaswi Singh ",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        ""
     },
     {
-      name: "Jane Smith (2)",
-      image: "/fellowmate2.png",
+      name: "Pushyamitra Joshi",
+      image: "/joshi.jpg",
       alt: "John Doe",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        ""
     },
     {
-      name: "Rahul Sharma (2)",
-      image: "/fellowmate.png",
+      name: "Vaishali Sukhija ",
+      image: "/vaishali.jpg",
       alt: "John Doe",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        ""
     },
     {
-      name: "Priya Patel (2)",
-      image: "/fellowmate2.png",
-      alt: "John Doe",
+      name: "Ashish Mishra",
+      image: "/ashish.jpg",
+      alt: "Ashish Mishra",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        ""
     },
     {
-      name: "Alex Johnson (2)",
-      image: "/fellowmate.png",
-      alt: "John Doe",
+      name: "Shivansh Nagpal",
+      image: "/shivansh.jpeg",
+      alt: "Shivansh Nagpal",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        ""
     },
     {
-      name: "Emily Brown (2)",
-      image: "/fellowmate2.png",
+      name: "Shubham Rai",
+      image: "/shubham.jpeg",
       alt: "John Doe",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        ""
     },
     {
-      name: "David Wilson (2)",
-      image: "/fellowmate.png",
-      alt: "John Doe",
+      name: "Aryaman Pathak",
+      image: "/aryaman.jpg",
+
+      alt: "Aryaman Pathak",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        ""
     },
     {
-      name: "Sophia Thomas (2)",
-      image: "/fellowmate2.png",
-      alt: "John Doe",
+      name: "Ronak Pawar",
+      image: "/ronak.jpg",
+      alt: "Ronak Pawar",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        ""
     },
     {
-      name: "Daniel Garcia (2)",
-      image: "/fellowmate.png",
+      name: "Mehak Yadav",
+      image: "/mehak.jpg",
+      alt: "Mehak Yadav",
+
+      description:
+        ""
+    },
+    
+    {
+      name: "Hardik Bhatnagar  ",
+      image: "/hardik.jpg",
+      alt: "Hardik Bhatnagar ",
+
+      description:
+        ""
+    },
+    {
+      name: "Omkar Arora",
+      image: "/omkar.jpeg",
+      alt: "Omkar Arora",
+
+      description:
+        ""
+    },
+    {
+      name: "Sakshi Kapoor",
+      image: "/sakshi.jpg",
+      alt: "SAKSHI KAPOOR",
+
+      description:
+        ""
+    },
+    {
+      name: "Shubham Kumar",
+      image: "/shubhamkumar.jpg",
+      alt: "Shubham Kumar",
+
+      description:
+        ""
+    },
+    {
+      name: "Ravi Kumar Sogarwal",
+      image: "/ravi.jpg",
+      alt: "RAVI KUMAR SOGARWAL",
+
+      description:
+        ""
+    },
+    {
+      name: "Mukesh Ghanshyam Bisane",
+      image: "/bisane.jpg",
+      alt: "Mukesh Ghanshyam Bisane",
+
+      description:
+        ""
+    },
+    {
+      name: "Mrunmayee Mandar Paralikar",
+      image: "/mandar.jpg",
+      alt: "Mrunmayee Mandar Paralikar",
+
+      description:
+        ""
+    },
+    
+
+  ];
+
+
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const fellownew = [
+    {
+      name: "Anand",
+      image: "/anand.jpg",
+      alt: "Anand ",
+      description:
+        "From a young age, I was fascinated by politics, and its inner workings. This passion later drew me towards political science, which deepened my curiosity and interest in the world of policy and political consultancy. The Mukherjee fellowship has proven to be the ideal platform for me to explore this field. The past year in the fellowship has been an incredibly rewarding learning experience, stimulating my intellectual growth. It has significantly broadened my understanding of Indian politics and the intricacies of policymaking.",
+    },
+    {
+      name: " Rajwardhan Rana ",
+      image: "/rajwardhan.jpg",
+      alt: "Rajwardhan Rana",
+      description:
+        "Being part of Mukherjee Fellowship was a transformative learning experience. I was working closely with Member of Parliament Smt. Poonam Mahajan ji over the course of the fellowship and gained invaluable insights into the inner workings of parliamentary offices. This hands-on experience not only sharpened my skills in policy analysis and political engagement but also empowered me to make a tangible impact on the ground through effective collaboration and cooperation.",
+    },
+    {
+      name: "Anirudh Badoni ",
+      image: "/anirudh.jpg",
       alt: "John Doe",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        ""
+    },
+    {
+      name: "Pallav Shrivastava ",
+      image: "/pallav.jpg",
+      alt: "Pallav Shrivastava ",
+      description:
+        ""
+    },
+    
+    {
+      name: "Disha Chauhan ",
+      image: "/disha.jpeg",
+      alt: "Disha Chauhan ",
+      description:
+        ""
+    },
+    {
+      name: "Rakshita Malviya ",
+      image: "/rakshita.jpg",
+      alt: "Rakshita Malviya ",
+      description:
+        ""
+    },
+    {
+      name: "Harshwardhan ",
+      image: "/harsh.jpg",
+      alt: "Harshwardhan ",
+      description:
+        ""
+    },
+    {
+      name: "Bharati Agarwal",
+      image: "/bharati.png",
+      alt: "John Doe",
+      description:
+        ""
+    },
+    {
+      name: "Sumit Goswami",
+      image: "/sumit.jpeg",
+      alt: "Sumit Goswami",
+      description:
+        ""
+    },
+    {
+      name: "Manan Goel",
+      image: "/manan.jpeg",
+      alt: "John Doe",
+      description:
+        ""
+    },
+    {
+      name: "Pranjal Yadav",
+      image: "/pranjal.JPG",
+      alt: "Pranjal Yadav",
+      description:
+        ""
+    },
+    // Replicating the first 9 fellows to reach 21 total
+    
+    {
+      name: "Vivek Raj",
+      image: "/vivek.jpeg",
+      alt: "John Doe",
+      description:
+        ""
+    },
+    {
+      name: "Shantanu Misra",
+      image: "/shantanu.jpg",
+      alt: "John Doe",
+      description:
+        ""
+    },
+    {
+      name: "Sarthak Sharma ",
+      image: "/sarthak.jpg",
+      alt: "John Doe",
+      description:
+        ""
+    },
+    {
+      name: "Sahil Jindal",
+      image: "/sahil.jpeg",
+      alt: "Sahil Jindal",
+      description:
+        ""
+    },
+    
+    {
+      name: "Janya Vyas ",
+      image: "/janya.jpeg",
+      alt: "Janya Vyas",
+      description:
+        ""
+    },
+    {
+      name: "Vishnudath S",
+      image: "/vishu.jpg",
+      alt: "Vishnudath S",
+      description:
+        ""
+    },
+    {
+      name: "Dazy Sabharwal",
+      image: "/dazy.jpeg",
+      alt: "Dazy Sabharwal",
+      description:
+        ""
+    },
+    {
+      name: "Vaishnavi Gaur",
+      image: "/gaur.jpg",
+      alt: "Vaishnavi Gaur",
+    
+      description:
+        ""
+    },
+    {
+      name: "Abhijeet Singh Kushwah",
+      image: "/abhijeet.jpeg",
+      alt: "Abhijeet Singh Kushwah",
+      description:
+        ""
+    },
+    {
+      name: "Nipun Kumar Srivastava",
+      image: "/nipun.webp",
+      alt: "John Doe",
+      description:
+        ""
+    },
+    {
+      name: "Navamohana Krishnan S",
+      image: "/s.jpg",
+      alt: "John Doe",
+      description:
+        ""
+    },
+    {
+      name: "Jithesh Krishnan Ramesh",
+      image: "/ramesh.jpeg",
+      alt: "Jithesh Krishnan Ramesh",
+      description:
+        ""
     },
   ];
 
@@ -189,9 +424,9 @@ export default function MeetOurFellows() {
       </motion.p>
 
       {/* Fellows Grid with Staggered Animation */}
-      <span className="block text-gray-700  text-md sm:text-5xl mt-8 abril-fatface-regular " >2024 </span>
+      <span className="block text-gray-700  text-md sm:text-5xl mt-8 abril-fatface-regular " >2024 - 2025 </span>
       <motion.div
-        className="grid grid-cols-7 gap-6 mt-12 overflow-x-auto flex-nowrap"
+        className="grid grid-cols-6 gap-6 mt-12 overflow-x-auto flex-nowrap"
         initial="hidden"
         animate="visible"
         variants={{
@@ -202,7 +437,7 @@ export default function MeetOurFellows() {
           },
         }}
       >
-        {fellows.map((fellow, index) => (
+        {fellownew.map((fellow, index) => (
           <motion.div
             key={index}
             onClick={() => openModal(index)}
@@ -214,13 +449,22 @@ export default function MeetOurFellows() {
             whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.5 }}
           >
-            <Image
+            {/* <Image
               src={fellow.image}
               alt={fellow.name}
               width={600}
               height={600}
               className="mx-auto object-cover rounded-lg shadow-md"
-            />
+            /> */}
+            <div className="w-[150px] h-[290px] mx-auto flex items-center justify-center">
+              <Image
+                src={fellow.image}
+                alt={fellow.name}
+                width={600}
+                height={600}
+                className="w-full h-full object-cover rounded-lg  "
+              />
+            </div>
             <p className="font-semibold mt-2 text-gray-800">{fellow.name}</p>
           </motion.div>
         ))}
@@ -247,13 +491,23 @@ export default function MeetOurFellows() {
 
             {/* Main Image Display */}
             <div className="grid grid-cols-3 gap-6">
-              <div className="col-span-3 md:col-span-1 place-content-center">
+              {/* <div className="col-span-3 md:col-span-1 place-content-center">
                 <Image
-                  src={fellows[currentIndex].image}
-                  alt={fellows[currentIndex].alt}
+                  src={fellowsold[currentIndex].image}
+                  alt={fellowsold[currentIndex].alt}
                   width={600}
                   height={600}
                   className="max-w-full max-h-[80vh] md:max-h-[40vh] object-contain rounded-lg"
+                />
+              </div> */}
+
+              <div className="w-[300px] h-[300px] mx-auto flex items-center justify-center">
+                <Image
+                  src={fellownew[currentIndex].image}
+                  alt={fellownew[currentIndex].alt}
+                  width={600}
+                  height={600}
+                  className="w-full h-full object-cover object-center rounded-lg"
                 />
               </div>
 
@@ -264,7 +518,7 @@ export default function MeetOurFellows() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3, ease: "easeOut" }}
                 >
-                  {fellows[currentIndex].name}
+                  {fellownew[currentIndex].name}
                 </motion.div>
                 <motion.div
                   className="text-left text-gray-900 text-lg helvetica mb-4"
@@ -272,7 +526,7 @@ export default function MeetOurFellows() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3, ease: "easeOut" }}
                 >
-                  {fellows[currentIndex].description}
+                  {fellownew[currentIndex].description}
                 </motion.div>
               </div>
             </div>
@@ -282,9 +536,9 @@ export default function MeetOurFellows() {
 
 
 
-      <span className="block text-gray-700 text-md sm:text-5xl mt-8 abril-fatface-regular" >2023 </span>
+      <span className="block text-gray-700 text-md sm:text-5xl mt-8 abril-fatface-regular" >2023 - 2024 </span>
       <motion.div
-        className="grid grid-cols-7 gap-6 mt-12 overflow-x-auto flex-nowrap"
+        className="grid grid-cols-6 gap-6 mt-12 overflow-x-auto flex-nowrap"
         initial="hidden"
         animate="visible"
         variants={{
@@ -295,7 +549,7 @@ export default function MeetOurFellows() {
           },
         }}
       >
-        {fellows.map((fellow, index) => (
+        {fellowsold.map((fellow, index) => (
           <motion.div
             key={index}
             onClick={() => openModal(index)}
@@ -307,13 +561,23 @@ export default function MeetOurFellows() {
             whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.5 }}
           >
-            <Image
+            {/* <Image
               src={fellow.image}
               alt={fellow.name}
               width={600}
               height={600}
               className="mx-auto object-cover rounded-lg shadow-md"
-            />
+            /> */}
+
+            <div className="w-[150px] h-[290px] mx-auto flex items-center justify-center">
+              <Image
+                src={fellow.image}
+                alt={fellow.name}
+                width={600}
+                height={600}
+                className="w-full h-full object-cover rounded-lg "
+              />
+            </div>
             <p className="font-semibold mt-2 text-gray-800">{fellow.name}</p>
           </motion.div>
         ))}
@@ -340,13 +604,22 @@ export default function MeetOurFellows() {
 
             {/* Main Image Display */}
             <div className="grid grid-cols-3 gap-6">
-              <div className="col-span-3 md:col-span-1 place-content-center">
+              {/* <div className="col-span-3 md:col-span-1 place-content-center">
                 <Image
-                  src={fellows[currentIndex].image}
-                  alt={fellows[currentIndex].alt}
+                  src={fellowsold[currentIndex].image}
+                  alt={fellowsold[currentIndex].alt}
                   width={600}
                   height={600}
                   className="max-w-full max-h-[80vh] md:max-h-[40vh] object-contain rounded-lg"
+                />
+              </div> */}
+              <div className="w-[300px] h-[300px] mx-auto flex items-center justify-center">
+                <Image
+                  src={fellowsold[currentIndex].image}
+                  alt={fellowsold[currentIndex].alt}
+                  width={600}
+                  height={600}
+                  className="w-full h-full object-cover rounded-lg"
                 />
               </div>
 
@@ -357,7 +630,7 @@ export default function MeetOurFellows() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3, ease: "easeOut" }}
                 >
-                  {fellows[currentIndex].name}
+                  {fellowsold[currentIndex].name}
                 </motion.div>
                 <motion.div
                   className="text-left text-gray-900 text-lg helvetica mb-4"
@@ -365,7 +638,7 @@ export default function MeetOurFellows() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3, ease: "easeOut" }}
                 >
-                  {fellows[currentIndex].description}
+                  {fellowsold[currentIndex].description}
                 </motion.div>
               </div>
             </div>

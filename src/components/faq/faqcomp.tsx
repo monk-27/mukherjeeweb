@@ -209,41 +209,42 @@ export default function FAQSection() {
     {
       question: "Who can apply for the Fellowship?",
       answer:
-        "Academic background is no bar for applying for the Fellowship. However, the Fellowship particularly caters to young professionals and final-year graduate students who envision a career in policy development and political consultancy. If you are not a final-year student, you are suggested to partake in the ICPC internship.",
+        "The Fellowship welcomes young professionals and final-year students aspiring to build careers in policy and political consulting. If you are still in college, we recommend applying for the ICPC Internship instead.",
     },
     {
       question: "Is there any age limit to apply for this Fellowship?",
       answer:
-        "There is no strict age limit, but it is designed for young professionals and students.",
+        "Yes. Applicants must be 25 years or younger as of July 1, 2025 (born on or after July 1, 2000).",
     },
     {
       question: "Will Fellows receive a stipend?",
-      answer: "Yes, selected Fellows receive a stipend during the program.",
+      answer: "Yes. For the period of the Fellowship including the training module, Fellows will receive a stipend of ₹ 50,000 per month.",
     },
     {
       question:
         "Can the Fellows pursue any other professional or academic engagement?",
       answer:
-        "Fellows are expected to commit full-time, limiting other engagements.",
+        "No. The Mukherjee Fellowship is a full-time program, requiring complete dedication during the fellowship period.",
     },
     {
       question:
         "Can professionals pursue both the ICPC Internship and the Mukherjee Fellowship?",
-      answer: "No, candidates must choose between the two programs.",
+      answer: "No. The ICPC Internship is for penultimate-year students, while the Mukherjee Fellowship is designed for graduates and professionals.",
     },
     {
       question: "Will those who complete the Fellowship receive a Certificate?",
-      answer: "Yes, successful Fellows will receive an official certificate.",
+      answer: "Yes. Upon successful completion, Fellows will receive a course completion certificate from the Nation First Policy Research Centre, along with recommendation letters from their assigned offices.",
+
     },
-    {
-      question:
-        "Can the Fellows continue working with their representatives post the completion of the Fellowship?",
-      answer: "Yes, based on performance and opportunities available.",
-    },
+    // {
+    //   question:
+    //     "Can the Fellows continue working with their representatives post the completion of the Fellowship?",
+    //   answer: "Yes, based on performance and opportunities available.",
+    // },
     {
       question: "Will the Fellows be provided any post Fellowship support?",
       answer:
-        "Yes, career support and networking opportunities will be provided.",
+        "Fellows will receive career placement support in government, corporate, and policy consulting sectors, based on their performance and potential.",
     },
   ];
 
