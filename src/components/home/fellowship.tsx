@@ -45,7 +45,7 @@ export default function LearningModules() {
             title: "Theoretical Learning Module",
             emoji: "📌",
             image1: "/time.svg",
-            duration: "1.5 Months",
+            duration: "3 Months",
             location: "In-person",
             image: "/fellow1.png",
             description:
@@ -61,7 +61,7 @@ export default function LearningModules() {
             title: "Experiential Learning Module",
             image1: "/time.svg",
 
-            duration: "3 Months",
+            duration: "9 Months",
             location: "Practical Work",
             image: "/parliimage.png",
             description:

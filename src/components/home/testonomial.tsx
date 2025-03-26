@@ -41,7 +41,7 @@ export default function Testimonials() {
 
     {
       text:
-        "The MukherJee Fellows in our office displayed remarkable professionalism, work ethic and political attitude. They embraced the work promptly and established a close connection with on ground volunteers. Their knowledge of the Marathi electorate was invaluable to our team, greatly contributing to the election campaign!",
+        "The Mukherjee Fellows in our office displayed remarkable professionalism, work ethic and political attitude. They embraced the work promptly and established a close connection with on ground volunteers. Their knowledge of the Marathi electorate was invaluable to our team, greatly contributing to the election campaign!",
       name: "Shri Piyush Goyal",
       position: "Minister of Commerce & Industry, India",
 
