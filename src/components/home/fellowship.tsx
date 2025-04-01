@@ -68,23 +68,23 @@ export default function LearningModules() {
               "After completing their training, Fellows are placed in the offices of leading public figures, gaining hands-on exposure to:",
             topics: [
               {
-                text: "drafting inputs on bills, parliamentary questions, and policy discussions",
+                text: "Drafting inputs on bills, parliamentary questions, and policy discussions",
                 emoji: "📝",
               },
               {
-                text: "managing social media and political communications",
+                text: "Managing social media and political communications",
                 emoji: "📢",
               },
               {
-                text: "assisting in election campaigns and constituency strategy",
+                text: "Assisting in election campaigns and constituency strategy",
                 emoji: "📊",
               },
               {
-                text: "conducting in-depth policy research and legislative analysis",
+                text: "Conducting in-depth policy research and legislative analysis",
                 emoji: "🔎",
               },
               {
-                text: "collaborating with consultants on political outreach, governance, and policy formulation",
+                text: "Collaborating with consultants on political outreach, governance, and policy formulation",
                 emoji: "🤝",
               },
             ],
