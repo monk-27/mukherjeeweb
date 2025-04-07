@@ -439,7 +439,7 @@ export default function MeetOurFellows() {
           },
         }}
       >
-        {sortedFellows_new.map((fellow: any, index: any) => (
+        {sortedFellows_new.map((fellow, index) => (
           <motion.div
             key={index}
             onClick={() => openNewModal(index)}
@@ -473,7 +473,7 @@ export default function MeetOurFellows() {
           },
         }}
       >
-        {sortedFellows_old.map((fellow: any, index: any) => (
+        {sortedFellows_old.map((fellow, index) => (
           <motion.div
             key={index}
             onClick={() => openOldModal(index)}
