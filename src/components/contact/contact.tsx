@@ -278,9 +278,7 @@ export default function RegistrationForm() {
   const [message, setMessage] = useState("");
 
   // Handle form field change
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
-  ) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
@@ -326,12 +324,7 @@ export default function RegistrationForm() {
   };
 
   return (
-    <motion.section
-      className="py-16 px-4 xl:px-0 max-w-7xl mx-auto"
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
-    >
+    <motion.section className="py-16 px-4 xl:px-0 max-w-7xl mx-auto" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
       {/* Title with Animation */}
       <motion.h2
         className="text-5xl font-bold text-gray-900 abril-fatface-regular mt-8"
@@ -340,17 +333,10 @@ export default function RegistrationForm() {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        Please fill in your information
+        fill in your information
       </motion.h2>
-      <motion.p
-        className="text-gray-600 mt-2 helvetica-neue-light"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.6, delay: 0.2 }}
-        viewport={{ once: true }}
-      >
-        Applications for our Fellowship open in the months of May-June. Connect
-        with us on our blogs and social media handles.
+      <motion.p className="text-gray-600 mt-2 helvetica-neue-light" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.6, delay: 0.2 }} viewport={{ once: true }}>
+        Applications for our Fellowship open in the months of May-June. Connect with us on our blogs and social media handles.
       </motion.p>
 
       {/* Form */}
@@ -368,10 +354,7 @@ export default function RegistrationForm() {
         }}
       >
         {/* Personal Information */}
-        <motion.div
-          className="bg-[#F7F7F7] sm:p-16 p-10 rounded-lg shadow-md space-y-6" 
-          variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
-        >
+        <motion.div className="bg-[#F7F7F7] sm:p-16 p-10 rounded-lg shadow-md space-y-6" variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}>
           <motion.div
             variants={{
               hidden: { y: 20, opacity: 0 },
@@ -462,10 +445,7 @@ export default function RegistrationForm() {
         </motion.div>
 
         {/* Address Information */}
-        <motion.div
-          className="bg-[#F7F7F7] sm:p-16 p-10 rounded-lg shadow-md space-y-6 mt-5 " 
-          variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
-        >
+        <motion.div className="bg-[#F7F7F7] sm:p-16 p-10 rounded-lg shadow-md space-y-6 mt-5 " variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}>
           <motion.div
             variants={{
               hidden: { y: 20, opacity: 0 },
