@@ -50,7 +50,7 @@ export default function Footer() {
           {["PPGF", "ICPC Internship", "Contact Us"].map((link, index) => (
             <motion.a
               key={index}
-              href="#"
+              href="/"
               className="text-[#1E1E1E] hover:text-gray-900"
               variants={{
                 hidden: { opacity: 0, y: 10 },
