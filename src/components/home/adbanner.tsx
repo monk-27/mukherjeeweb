@@ -6,28 +6,14 @@ export default function FellowshipStatus() {
   return (
     <section className="relative w-full h-auto py-24 px-4 md:px-12">
       {/* Background Image with Overlay */}
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('/fellowback.png')" }}
-      >
+      <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/fellowback.png')" }}>
         <div className="absolute inset-0 bg-gradient-to-r from-[#f77768] via-[#f5775b5c] to-[#f3f4f633] "></div>
       </div>
 
       {/* Content Wrapper */}
-      <motion.div
-        className="relative max-w-7xl mx-auto text-white text-center md:text-left"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-      >
+      <motion.div className="relative max-w-7xl mx-auto text-white text-center md:text-left" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
         {/* Heading with Animation */}
-        <motion.h2
-          className="text-3xl md:text-5xl abril-fatface-regular"
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          viewport={{ once: true }}
-        >
+        <motion.h2 className="text-3xl md:text-5xl abril-fatface-regular" initial={{ opacity: 0, y: -20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} viewport={{ once: true }}>
           What is the status of the Fellowship?
         </motion.h2>
 
@@ -51,8 +37,8 @@ export default function FellowshipStatus() {
               visible: { opacity: 1, x: 0 },
             }}
           >
-            <span className="helvetica-neue-bold">Fellowship 2025-26: </span>
-            <span className="helvetica-neue-regular">Important Dates</span>
+            <span className="helvetica-neue-bold">Applications for the 2024-25 cohort are now closed. </span>
+            {/* <span className="helvetica-neue-regular">Important Dates</span> */}
           </motion.p>
           <motion.p
             className="mb-2"
@@ -61,8 +47,8 @@ export default function FellowshipStatus() {
               visible: { opacity: 1, x: 0 },
             }}
           >
-            <span className="helvetica-neue-bold">Start Date: </span>
-            <span className="helvetica-neue-regular">July 14, 2025</span>
+            <span className="helvetica-neue-bold">Applications for the 2025-26 cohort will open in June 2025.</span>
+            {/* <span className="helvetica-neue-regular">July 14, 2025</span> */}
           </motion.p>
           <motion.p
             variants={{
@@ -70,8 +56,7 @@ export default function FellowshipStatus() {
               visible: { opacity: 1, x: 0 },
             }}
           >
-            <span className="helvetica-neue-bold"> Application Deadline: </span>{" "}
-            <span className="helvetica-neue-regular">June 30, 2025</span>
+            {/* <span className="helvetica-neue-bold"> Application Deadline: </span> <span className="helvetica-neue-regular">June 30, 2025</span> */}
           </motion.p>
         </motion.div>
 
@@ -83,22 +68,11 @@ export default function FellowshipStatus() {
           transition={{ duration: 0.7, delay: 0.3 }}
           viewport={{ once: true }}
         >
-          <motion.div
-            whileHover={{ scale: 1.1 }}
-            transition={{ duration: 0.3 }}
-          >
+          <motion.div whileHover={{ scale: 1.1 }} transition={{ duration: 0.3 }}>
             <Image src="/brand1.png" alt="PPGF Logo" width={144} height={72} />
           </motion.div>
-          <motion.div
-            whileHover={{ scale: 1.1 }}
-            transition={{ duration: 0.3 }}
-          >
-            <Image
-              src="/brand2.png"
-              alt="Nation First Logo"
-              width={144}
-              height={72}
-            />
+          <motion.div whileHover={{ scale: 1.1 }} transition={{ duration: 0.3 }}>
+            <Image src="/brand2.png" alt="Nation First Logo" width={144} height={72} />
           </motion.div>
         </motion.div>
       </motion.div>
