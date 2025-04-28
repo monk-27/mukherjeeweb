@@ -56,13 +56,13 @@ export default function MeetOurFellows() {
       description:
         "I'm Yadukrishna from Kerala, and I've always been passionate about politics and policy. Choosing the Mukherjee Fellowship has been a source of immense pride for me. This unique opportunity in India allows me to engage directly with the system, becoming an integral part of it, and driving meaningful change for myself and those around me.",
     },
-    {
-      name: "ARUNDAS A",
-      image: "/arun.jpg",
-      alt: "ARUNDAS A",
-      description:
-        "My name is Arundas A. After completing my post-graduation, I joined the Mukherjee Fellowship. It was a life-changing decision, one of the best I've made in recent years. Spending a year with the team as a fellow was truly inspirational and greatly boosted my confidence. It also opened my eyes to new horizons.",
-    },
+    // {
+    //   name: "ARUNDAS A",
+    //   image: "/arun.jpg",
+    //   alt: "ARUNDAS A",
+    //   description:
+    //     "My name is Arundas A. After completing my post-graduation, I joined the Mukherjee Fellowship. It was a life-changing decision, one of the best I've made in recent years. Spending a year with the team as a fellow was truly inspirational and greatly boosted my confidence. It also opened my eyes to new horizons.",
+    // },
     {
       name: "Ananya Vinod",
       image: "/ananya.png",

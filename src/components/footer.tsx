@@ -4,6 +4,13 @@ import { FaInstagram, FaLinkedin, FaXTwitter, FaMeta } from "react-icons/fa6";
 import Image from "next/image";
 
 export default function Footer() {
+  const socialLinks = [
+    { icon: FaXTwitter, url: "https://x.com/PPGF_Mukherjee" },
+    { icon: FaInstagram, url: "https://www.instagram.com/mukherjee_fellowship/" },
+    { icon: FaLinkedin, url: "https://www.linkedin.com/showcase/mukherjee-fellowship/posts/?feedView=all" },
+    { icon: FaMeta, url: "https://facebook.com/yourprofile" },
+  ];
+
   return (
     <motion.footer className="bg-gray-100 pt-12" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
       <div className="max-w-7xl mx-auto px-4 md:px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center md:text-left">
@@ -23,7 +30,8 @@ export default function Footer() {
             visible: { opacity: 1, transition: { staggerChildren: 0.2 } },
           }}
         >
-          {["Home", "SPEAR", "Accelerating India"].map((link, index) => (
+          {/* "SPEAR", */}
+          {["Home", "Accelerating India"].map((link, index) => (
             <motion.a
               key={index}
               href={link === "Home" ? "/" : "/"}
@@ -74,10 +82,12 @@ export default function Footer() {
               visible: { opacity: 1, transition: { staggerChildren: 0.2 } },
             }}
           >
-            {[FaXTwitter, FaInstagram, FaLinkedin, FaMeta].map((Icon, index) => (
+            {socialLinks.map(({ icon: Icon, url }, index) => (
               <motion.a
                 key={index}
-                href="#"
+                href={url}
+                target="_blank" // Opens link in a new tab
+                rel="noopener noreferrer" // Security best practice
                 className="text-white hover:text-gray-200 text-2xl rounded-full bg-black p-3"
                 variants={{
                   hidden: { opacity: 0, y: 10 },
