@@ -37,7 +37,7 @@ export default function Header() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
     >
-      <div className="max-w-7xl mx-auto flex items-center justify-between p-3 md:px-4 xl:px-0">
+      <div className="max-w-full mx-auto flex items-center justify-between p-3 md:px-6 xl:px-20 w-full">
         {/* Logo */}
         <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
           <Link href="/">
@@ -62,7 +62,7 @@ export default function Header() {
             <motion.a
               key={link.path}
               href={link.path}
-              className={`text-xl ${pathname === link.path ? "helvetica-neue-bold text-[#FF8609]" : "helvetica-neue-regular text-[#FF8609]"}  transition-all`}
+              className={`text-xl ${pathname === link.path ? "helvetica-neue-bold text-[#FF8609]" : "helvetica-neue-regular text-[#FF8609]"} transition-all`}
               variants={{
                 hidden: { opacity: 0, y: 10 },
                 visible: { opacity: 1, y: 0 },
@@ -96,9 +96,6 @@ export default function Header() {
                   key={link.path}
                   href={link.path}
                   className={` ${pathname === link.path ? "helvetica-neue-bold text-[#FF8609]" : "helvetica-neue-regular text-[#FF8609]"} hover:text-orange-600 transition-all`}
-                  // className={`font-semibold ${
-                  //   pathname === link.path ? "border-b-2 border-orange-500" : ""
-                  // } hover:text-orange-600 transition-all`}
                   onClick={() => setIsOpen(false)}
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
