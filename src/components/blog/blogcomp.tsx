@@ -78,7 +78,7 @@ export default function BlogSection() {
     <section className="py-16 px-4 xl:px-0 max-w-7xl mx-auto">
       {/* Heading with Animation */}
       <motion.h2
-        className="text-5xl font-bold text-center text-gray-900 abril-fatface-regular mt-8"
+        className="text-5xl  text-center text-gray-900 font-playfair-regular mt-8"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
@@ -161,7 +161,7 @@ export default function BlogSection() {
                   <FaShareAlt className="text-gray-600 hover:text-gray-900 cursor-pointer" />
                 </div>
                 <motion.h3
-                  className="font-bold text-2xl mt-2 text-gray-800 abril-fatface-regular"
+                  className="font-bold text-2xl mt-2 text-gray-800 font-playfair-regular"
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   transition={{ duration: 0.5, delay: 0.2 }}

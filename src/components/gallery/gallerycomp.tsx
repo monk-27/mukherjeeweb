@@ -327,7 +327,7 @@ export default function ImageGallery() {
     <section className="max-w-7xl mx-auto py-10 px-4 xl:px-0 text-center">
       {/* Title with Fade-In Effect */}
       <motion.h2
-        className="text-5xl text-gray-900 abril-fatface-regular mt-8"
+        className="text-5xl text-gray-900 font-playfair-regular mt-8"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
@@ -373,7 +373,7 @@ export default function ImageGallery() {
 
             {/* Title Appearing from Bottom (Hover on Whole Image) */}
             <motion.div
-              className="absolute inset-0 flex items-end justify-center pb-4 mx-4 text-white text-center opacity-0 transition-opacity duration-300 abril-fatface-regular"
+              className="absolute inset-0 flex items-end justify-center pb-4 mx-4 text-white text-center opacity-0 transition-opacity duration-300 font-playfair-extrabold"
               initial={{ y: 20, opacity: 0 }}
               whileHover={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.3, ease: "easeOut" }}
@@ -423,7 +423,7 @@ export default function ImageGallery() {
             {/* Main Image Display */}
             <div className="flex flex-col">
               <motion.div
-                className="text-left text-gray-900 text-2xl Abril_font"
+                className="text-left text-gray-900 text-2xl font-playfair-regular"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, ease: "easeOut" }}

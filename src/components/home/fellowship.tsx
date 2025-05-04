@@ -7,8 +7,8 @@ export default function LearningModules() {
     <motion.section className="bg-gray-100 mt-16 py-20 px-4 md:px-12 text-center" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
       {/* Title Section */}
       <motion.div className="max-w-4xl mx-auto" initial={{ opacity: 0, y: -20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>
-        <h2 className="text-3xl md:text-5xl font-bold text-gray-900 abril-fatface-regular">Mukherjee Fellowship</h2>
-        <h3 className="text-xl md:text-3xl font-semibold text-gray-900 mt-2 abril-fatface-regular">Structure</h3>
+        <h2 className="text-3xl md:text-5xl font-bold text-gray-900 font-playfair-regular">Mukherjee Fellowship</h2>
+        <h3 className="text-xl md:text-3xl font-semibold text-gray-900 mt-2 font-playfair-regular">Structure</h3>
       </motion.div>
 
       {/* Learning Modules Container */}
@@ -168,7 +168,7 @@ export default function LearningModules() {
                 </div>
 
                 {/* Title */}
-                <h2 className="text-white Abril_font text-base sm:text-2xl font-bold">{module.title}</h2>
+                <h2 className="text-white font-playfair-regular text-base sm:text-2xl font-bold">{module.title}</h2>
 
                 {/* Description */}
                 <p className="text-white helvetica-neue-bold text-sm sm:text-lg mt-2 leading-relaxed">{module.description}</p>

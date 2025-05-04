@@ -265,7 +265,7 @@ export default function FAQSection() {
     <section className="py-16 px-4 xl:px-0 max-w-7xl mx-auto">
       {/* Heading with Animation */}
       <motion.h2
-        className="text-5xl font-bold text-black text-center Abril_font mt-8"
+        className="text-5xl font-bold text-black text-center font-playfair-regular mt-8"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, ease: "easeOut" }}

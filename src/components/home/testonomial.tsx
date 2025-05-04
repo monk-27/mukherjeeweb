@@ -71,7 +71,7 @@ export default function Testimonials() {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        <h2 className="text-5xl abril-fatface-bold text-gray-900 mb-20 lg:mb-16 text-center Abril_font">Testimonials</h2>
+        <h2 className="text-5xl font-playfair-bold text-gray-900 mb-20 lg:mb-16 text-center">Testimonials</h2>
       </motion.div>
 
       {/* Swiper Section with Animation */}

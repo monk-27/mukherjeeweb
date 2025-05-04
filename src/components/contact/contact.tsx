@@ -327,7 +327,7 @@ export default function RegistrationForm() {
     <motion.section className="py-16 px-4 xl:px-0 max-w-7xl mx-auto" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
       {/* Title with Animation */}
       <motion.h2
-        className="text-5xl font-bold text-gray-900 abril-fatface-regular mt-8"
+        className="text-5xl font-bold text-gray-900 font-playfair-regular mt-8"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}

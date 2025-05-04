@@ -13,7 +13,7 @@ export default function FellowshipStatus() {
       {/* Content Wrapper */}
       <motion.div className="relative max-w-7xl mx-auto text-white text-center md:text-left" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
         {/* Heading with Animation */}
-        <motion.h2 className="text-3xl md:text-5xl abril-fatface-regular" initial={{ opacity: 0, y: -20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} viewport={{ once: true }}>
+        <motion.h2 className="text-3xl md:text-5xl font-playfair-regular" initial={{ opacity: 0, y: -20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} viewport={{ once: true }}>
           What is the status of the Fellowship?
         </motion.h2>
 

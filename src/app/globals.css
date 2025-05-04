@@ -23,24 +23,44 @@
   font-style: normal;
 }
 
-@font-face {
+/* @font-face {
   font-family: "Helvetica Neue";
   src: url("/fonts/HelveticaNeueLight.otf") format("opentype");
-  font-weight: 300; /* Light */
+  font-weight: 300; 
   font-style: normal;
 }
 
 @font-face {
   font-family: "Helvetica Neue";
   src: url("/fonts/HelveticaNeueMedium.otf") format("opentype");
-  font-weight: 400; /* Medium (mapped as regular) */
+  font-weight: 400; 
   font-style: normal;
 }
 
 @font-face {
   font-family: "Helvetica Neue";
   src: url("/fonts/HelveticaNeueBold.otf") format("opentype");
-  font-weight: 700; /* Bold */
+  font-weight: 700; 
+  font-style: normal;
+} */
+
+
+@font-face {
+  font-family: 'Helvetica';
+  src: url('/fonts/helvetica-light-587ebe5a.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Helvetica';
+  src: url('/fonts/Helvetica.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Helvetica';
+  src: url('/fonts/Helvetica-Bold.ttf') format('truetype');
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -48,6 +68,36 @@
   font-family: "Orelega One";
   src: url("/fonts/OrelegaOne-Regular.ttf") format("truetype");
   font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Playfair';
+  src: url('/fonts/Playfair_9pt-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Playfair';
+  src: url('/fonts/Playfair_9pt-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Playfair';
+  src: url('/fonts/Playfair_9pt-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Playfair';
+  src: url('/fonts/Playfair_9pt-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Playfair';
+  src: url('/fonts/Playfair_9pt-ExtraBold.ttf') format('truetype');
+  font-weight: 900;
   font-style: normal;
 }
 
@@ -90,25 +140,52 @@ body {
 
 /* Helvetica Neue Classes */
 .helvetica-neue-regular {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family:  Helvetica, Arial, sans-serif;
   font-weight: 400; /* Medium */
 }
 
 .helvetica-neue-medium {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family:  Helvetica, Arial, sans-serif;
   font-weight: 500; /* Simulated medium (falls back to 400 if not distinct) */
 }
 
 .helvetica-neue-light {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family:  Helvetica, Arial, sans-serif;
   font-weight: 300; /* Light */
 }
 
 .helvetica-neue-bold {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family:  Helvetica, Arial, sans-serif;
   font-weight: 900; /* Bold */
 }
 
+.font-playfair {
+  font-family: "Playfair", serif;
+}
+
+.font-playfair-light {
+  font-family: "Playfair", serif;
+  font-weight: 300;
+}
+
+.font-playfair-regular {
+  font-family: "Playfair", serif;
+  font-weight: 400;
+}
+
+.font-playfair-medium {
+  font-family: "Playfair", serif;
+  font-weight: 500;
+}
+
+.font-playfair-bold {
+  font-family: "Playfair", serif;
+  font-weight: 700;
+}
+.font-playfair-extrabold {
+  font-family: "Playfair", serif;
+  font-weight: 900;
+}
 /* Orelega One Classes */
 .orelega-one-regular {
   font-family: "Orelega One", serif;
@@ -147,7 +224,7 @@ body {
 }
 
 .abril_regular {
-  font-family: "Abril Fatface", Georgia, serif;
+  font-family: "Playfair", Georgia, serif;
   font-weight: 400; /* Regular */
   letter-spacing: 0.03em;
 }
