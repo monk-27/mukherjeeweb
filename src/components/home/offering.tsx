@@ -59,7 +59,7 @@ export default function Offerings() {
         <div className="relative max-w-7xl mx-auto">
           {/* Title */}
           <motion.h3
-            className=" text-3xl sm:text-6xl text-gray-800 mb-12 sm:mt-12 font-playfair-regular"
+            className=" text-3xl sm:text-5xl text-gray-800 mb-12 sm:mt-12 font-playfair-black"
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}

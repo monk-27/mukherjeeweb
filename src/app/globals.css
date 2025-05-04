@@ -72,6 +72,12 @@
 }
 @font-face {
   font-family: 'Playfair';
+  src: url('/fonts/Playfair_9pt-Black.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Playfair';
   src: url('/fonts/Playfair_9pt-Light.ttf') format('truetype');
   font-weight: 300;
   font-style: normal;
@@ -179,6 +185,10 @@ body {
 }
 
 .font-playfair-bold {
+  font-family: "Playfair", serif;
+  font-weight: 700;
+}
+.font-playfair-black {
   font-family: "Playfair", serif;
   font-weight: 700;
 }

@@ -78,7 +78,7 @@ export default function BlogSection() {
     <section className="py-16 px-4 xl:px-0 max-w-7xl mx-auto">
       {/* Heading with Animation */}
       <motion.h2
-        className="text-5xl  text-center text-gray-900 font-playfair-regular mt-8"
+        className="text-5xl  text-center text-gray-900 font-playfair-black mt-8"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
@@ -87,7 +87,7 @@ export default function BlogSection() {
         Blogs
       </motion.h2>
       <motion.p
-        className="text-gray-700 text-center mt-4 helvetica-neue-light text-xl"
+        className="text-gray-700 text-center mt-4 font-helvetica-regular text-xl"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.7, delay: 0.2 }}
@@ -155,13 +155,13 @@ export default function BlogSection() {
               {/* Content with Motion Effect */}
               <div className="p-6 md:w-2/3 relative">
                 <div className="flex justify-between items-center">
-                  <p className="text-gray-700 text-sm helvetica-neue-light">
+                  <p className="text-gray-700 text-sm ont-helvetica-regular">
                     {blog.author} &nbsp; | &nbsp; {blog.date}
                   </p>
                   <FaShareAlt className="text-gray-600 hover:text-gray-900 cursor-pointer" />
                 </div>
                 <motion.h3
-                  className="font-bold text-2xl mt-2 text-gray-800 font-playfair-regular"
+                  className="font-bold text-2xl mt-2 text-gray-800 font-helvetica-regular"
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   transition={{ duration: 0.5, delay: 0.2 }}
@@ -170,7 +170,7 @@ export default function BlogSection() {
                   {blog.title}
                 </motion.h3>
                 <motion.p
-                  className="text-gray-700 mt-2  text-xl helvetica-neue-regular"
+                  className="text-gray-700 mt-2  text-xl ont-helvetica-regular"
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   transition={{ duration: 0.5, delay: 0.3 }}

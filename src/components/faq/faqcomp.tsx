@@ -265,7 +265,7 @@ export default function FAQSection() {
     <section className="py-16 px-4 xl:px-0 max-w-7xl mx-auto">
       {/* Heading with Animation */}
       <motion.h2
-        className="text-5xl font-bold text-black text-center font-playfair-regular mt-8"
+        className="text-5xl font-bold text-black text-center font-playfair-black mt-8"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, ease: "easeOut" }}
@@ -274,7 +274,7 @@ export default function FAQSection() {
         Frequently Asked Questions
       </motion.h2>
       <motion.p
-        className="text-gray-700 mt-4 text-center helvetica text-xl"
+        className="text-gray-700 mt-4 text-center font-helvetica-regular text-xl"
         initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
