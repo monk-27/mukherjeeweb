@@ -287,7 +287,7 @@ export default function ImageGallery() {
     },
     {
       main: {
-        src: "/images/gal4.jpg",
+        src: "/images/gal4.jpeg",
         alt: "Group of people",
         className: "col-span-2",
         title: "Chief Economic Advisor to the Government of India Dr V. Anantha Nageswaran addressing Mukherjee Fellows",
@@ -295,28 +295,28 @@ export default function ImageGallery() {
       },
       gallery: [
         {
-          src: "/images/gal4.jpg",
+          src: "/images/gal4.jpeg",
           alt: "Group of people",
           title: "",
           description: "Chief Economic Advisor to the Government of India Dr V. Anantha Nageswaran addressing Mukherjee Fellows",
 
         },
         {
-          src: "/images/gal5.jpg",
+          src: "/images/gal5.jpeg",
           alt: "Group Detail 1",
           title: "",
           description: "Chief Economic Advisor to the Government of India Dr V. Anantha Nageswaran addressing Mukherjee Fellows",
 
         },
         {
-          src: "/images/gal6.jpg",
+          src: "/images/gal6.jpeg",
           alt: "Group Detail 1",
           title: "",
           description: "Chief Economic Advisor to the Government of India Dr V. Anantha Nageswaran addressing Mukherjee Fellows",
 
         },
         {
-          src: "/images/gal7.jpg",
+          src: "/images/gal7.jpeg",
           alt: "Group Detail 1",
           title: "",
           description: "Chief Economic Advisor to the Government of India Dr V. Anantha Nageswaran addressing Mukherjee Fellows",
