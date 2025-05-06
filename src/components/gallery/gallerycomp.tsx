@@ -328,7 +328,7 @@ export default function ImageGallery() {
         src: "/images/gal9.jpeg",
         alt: "Government Building Wide",
         className: "col-span-2",
-        title: "",
+        title: "Mukherjee Fellows at a session organised and conducted by the RIS",
         description: "Mukherjee Fellows at a session organised and conducted by the RIS",
       },
       gallery: [
