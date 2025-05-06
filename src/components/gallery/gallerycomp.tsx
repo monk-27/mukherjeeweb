@@ -328,7 +328,7 @@ export default function ImageGallery() {
         src: "/images/gal9.jpeg",
         alt: "Government Building Wide",
         className: "col-span-2",
-        title: "Mukherjee Fellows at a session organised and conducted by the RIS",
+        title: "",
         description: "Mukherjee Fellows at a session organised and conducted by the RIS",
       },
       gallery: [
@@ -356,18 +356,7 @@ export default function ImageGallery() {
           title: "",
           description: "Mukherjee Fellows at a session organised and conducted by the RIS",
         },
-        // {
-        //   src: "/images/gal14.jpeg",
-        //   alt: "Building Detail 2",
-        //   title: "",
-        //   description: "Mukherjee Fellows at a session organised and conducted by the RIS",
-        // },
-        // {
-        //   src: "/images/gal15.jpeg",
-        //   alt: "Building Detail 2",
-        //   title: "",
-        //   description: "Mukherjee Fellows at a session organised and conducted by the RIS",
-        // },
+        
         
       ],
     },
