@@ -469,7 +469,7 @@ export default function ImageGallery() {
             style={{ transformOrigin: "left" }}
             transition={{ duration: 0.5, ease: "easeOut" }}
           >
-            <Image
+            <img
               src={image.main.src}
               alt={image.main.alt}
               width={500}
@@ -552,7 +552,7 @@ export default function ImageGallery() {
             <div className="flex flex-col gap-2 overflow-y-auto max-h-[90vh] p-2">
               {images[selectedMainImage].gallery.map((image, index) => (
                 <button key={index} onClick={() => setCurrentIndex(index)}>
-                  <Image
+                  <img
                     src={image.src}
                     alt={image.alt}
                     width={80}
