@@ -54,7 +54,7 @@ export default function Testimonials() {
       image: "/image 2.png",
     },
     {
-      text: "The Mukherjee Fellow has been sincere, proactive, and conducted herself professionally. She efficiently handled all legislative work for the office. I suggest that future Fellows be taught to develop outreach programs to enhance their contributions further.a",
+      text: "The Mukherjee Fellow has been sincere, proactive, and conducted herself professionally. She efficiently handled all legislative work for the office. I suggest that future Fellows be taught to develop outreach programs to enhance their contributions further.",
       name: "Smt Vanathi Srinivasan",
       position: "MLA, Tamil Nadu",
       image: "/image3.png",

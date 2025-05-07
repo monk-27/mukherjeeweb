@@ -1,14 +1,14 @@
 "use client";
 import { motion } from "framer-motion";
-import { FaInstagram, FaLinkedin, FaXTwitter, FaMeta } from "react-icons/fa6";
+import { FaInstagram, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 import Image from "next/image";
 
 export default function Footer() {
   const socialLinks = [
-    { icon: FaXTwitter, url: "https://x.com/PPGFIndia" },
-    { icon: FaInstagram, url: "https://www.instagram.com/ppgf_india/?hl=en" },
-    { icon: FaLinkedin, url: "https://www.linkedin.com/company/75441612" },
-    { icon: FaMeta, url: "https://www.facebook.com/PPGF.IN" },
+    { icon: FaXTwitter, url: "https://x.com/PPGF_Mukherjee" },
+    { icon: FaInstagram, url: "https://www.instagram.com/mukherjee_fellowship/" },
+    { icon: FaLinkedin, url: "https://www.linkedin.com/showcase/mukherjee-fellowship/posts/?feedView=all" },
+    // { icon: FaMeta, url: "https://www.facebook.com/PPGF.IN" },
   ];
 
   return (
