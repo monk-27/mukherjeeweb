@@ -8,7 +8,7 @@ export default function LearningModules() {
       {/* Title Section */}
       <motion.div className="max-w-4xl mx-auto" initial={{ opacity: 0, y: -20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>
         <h2 className="text-3xl md:text-6xl  text-gray-900 font-playfair-black">Mukherjee Fellowship</h2>
-        <h3 className="text-3xl md:text-6xl  text-gray-900 mt-2 font-helvetica-regular">Structure</h3>
+        <h3 className="text-3xl md:text-4xl  text-gray-900 mt-2 font-helvetica-regular">Structure</h3>
       </motion.div>
 
       {/* Learning Modules Container */}
