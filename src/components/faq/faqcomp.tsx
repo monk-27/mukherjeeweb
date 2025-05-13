@@ -274,7 +274,7 @@ export default function FAQSection() {
         Frequently Asked Questions
       </motion.h2>
       <motion.p
-        className="text-gray-700 mt-4 text-center font-helvetica-regular text-3xl"
+        className="text-gray-700 mt-4 text-center font-helvetica-regular text-2xl"
         initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}

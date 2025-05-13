@@ -416,13 +416,13 @@ export default function MeetOurFellows() {
         Meet Our Fellows
       </motion.h2>
       <motion.p
-        className="text-gray-700 mt-4 font-helvetica-regular text-3xl max-w-3xl mx-auto"
+        className="text-gray-700 mt-4 font-helvetica-regular text-2xl max-w-7xl mx-auto"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.7, delay: 0.2 }}
         viewport={{ once: true }}
       >
-        Hear from our past and present Fellows sharing their Mukherjee Fellowship experience in their own words.
+        Hear from our past and present Fellows sharing their Mukherjee Fellowship <br/>experience in their own words.
       </motion.p>
 
       {/* 2024-2025 Fellows */}
