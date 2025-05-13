@@ -12,7 +12,7 @@ export default function Footer() {
   ];
 
   return (
-    <motion.footer className="bg-gray-100 pt-12" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+    <motion.footer className="bg-gray-100 pt-4" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
       <div className="max-w-7xl mx-auto px-4 md:px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center md:text-left">
         {/* Left Section - Logo & About */}
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>

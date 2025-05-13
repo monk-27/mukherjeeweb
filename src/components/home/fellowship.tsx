@@ -7,8 +7,8 @@ export default function LearningModules() {
     <motion.section className="bg-gray-100 mt-16 py-20 px-4 md:px-12 text-center" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
       {/* Title Section */}
       <motion.div className="max-w-4xl mx-auto" initial={{ opacity: 0, y: -20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>
-        <h2 className="text-3xl md:text-6xl  text-gray-900 font-playfair-black">Mukherjee Fellowship</h2>
-        <h3 className="text-3xl md:text-4xl  text-gray-900 mt-2 font-helvetica-regular">Structure</h3>
+        <h2 className="text-3xl md:text-6xl  text-gray-900 font-EB-extrabold">Mukherjee Fellowship</h2>
+        <h3 className="text-2xl md:text-3xl  text-gray-900 mt-2 font-helvetica-regular">Structure</h3>
       </motion.div>
 
       {/* Learning Modules Container */}
@@ -28,17 +28,17 @@ export default function LearningModules() {
         {[
           {
             title: "Theoretical Learning Module",
-            emoji: "📌",
+            emoji: "•",
             image1: "/time.svg",
             duration: "3 Months",
             location: "In-person",
             image: "/fellow1.png",
             description: "Before deployment, Fellows undergo intensive classroom training led by subject matter experts, covering: ",
             topics: [
-              "Understanding Indian Society - Analyzing political, social, and cultural frameworks.  ",
-              "Political Campaigns & Communications 101 - Strategies for elections, media relations, and voter engagement  ",
-              "Understanding Parliamentary Procedures - Insights into legislative processes and policymaking.",
-              "Law and Economics in India - Decoding the intersection of governance, law, and fiscal policies",
+              " Understanding Indian Society - Analyzing political, social, and cultural frameworks.  ",
+              " Political Campaigns & Communications 101 - Strategies for elections, media relations, and voter engagement  ",
+              " Understanding Parliamentary Procedures - Insights into legislative processes and policymaking.",
+              " Law and Economics in India - Decoding the intersection of governance, law, and fiscal policies",
             ],
           },
           {
@@ -52,19 +52,19 @@ export default function LearningModules() {
             topics: [
               {
                 text: "Drafting inputs on bills, parliamentary questions, and policy discussions",
-                emoji: "📝",
+                emoji: "•",
               },
               {
                 text: "Managing social media and political communications",
-                emoji: "📢",
+                 emoji: "•",
               },
               {
                 text: "Assisting in election campaigns and constituency strategy",
-                emoji: "📊",
+                 emoji: "•",
               },
               {
                 text: "Conducting in-depth policy research and legislative analysis",
-                emoji: "🔎",
+                 emoji: "•",
               },
               // {
               //   text: "Collaborating with consultants on political outreach, governance, and policy formulation",
@@ -128,8 +128,11 @@ export default function LearningModules() {
                         // For Theoretical Learning Module: Split and bold the part before hyphen
                         module.title === "Theoretical Learning Module" ? (
                           <>
+                           <span className="text-xl">
+                                {module.emoji}
+                                </span>
                             <span className="helvetica-neue-bold">
-                              {module.emoji}
+                             
                               {topic.split(" - ")[0] || topic}
                             </span>
                             {" - "}
@@ -143,7 +146,7 @@ export default function LearningModules() {
                         // For Experiential Learning Module: Render as object with emoji and text
 
                         <>
-                          <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-white text-black mr-2">{topic.emoji}</span>
+                          <span className="inline-flex items-center justify-center text-xl mr-2">{topic.emoji}</span>
                           <span>{topic.text}</span>
                         </>
                       )}
@@ -182,7 +185,7 @@ export default function LearningModules() {
                           `${module.emoji} ${topic}` // For Theoretical Learning Module
                         ) : (
                           <>
-                            <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-white text-black mr-2">{topic.emoji}</span>
+                            <span className="inline-flex items-center justify-center mr-2">{topic.emoji}</span>
                             <span>{topic.text}</span>
                           </>
                         ) // For Experiential Learning Module

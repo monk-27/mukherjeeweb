@@ -59,7 +59,7 @@ export default function Offerings() {
         <div className="relative max-w-7xl mx-auto">
           {/* Title */}
           <motion.h3
-            className=" text-3xl sm:text-6xl text-gray-800 mb-12 sm:mt-12 font-playfair-black"
+            className=" text-3xl sm:text-6xl text-gray-800 mb-12 sm:mt-12 font-EB-extrabold"
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
@@ -69,7 +69,7 @@ export default function Offerings() {
 
           {/* Offerings Wrapper */}
           <motion.img
-            src="/offering.png"
+            src="/offer.png"
             alt="Offerings"
             className="mx-auto"
             initial={{ opacity: 0, scale: 0.9 }}

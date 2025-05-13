@@ -407,7 +407,7 @@ export default function MeetOurFellows() {
   return (
     <section className="max-w-7xl mx-auto py-16 px-4 xl:px-0 text-center">
       <motion.h2
-        className="text-6xl text-gray-900 font-playfair-black mt-8"
+        className="text-6xl text-gray-900 font-EB-extrabold mt-8"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
@@ -508,7 +508,7 @@ export default function MeetOurFellows() {
             <Image src={fellownew[newIndex].image} alt={fellownew[newIndex].alt} fill className="object-cover rounded-lg" />
           </div>
           <div className="flex-1">
-            <motion.div className="text-left text-gray-900 text-2xl font-playfair-black">{fellownew[newIndex].name}</motion.div>
+            <motion.div className="text-left text-gray-900 text-2xl font-EB-extrabold">{fellownew[newIndex].name}</motion.div>
             <motion.div className="text-left text-gray-900 text-lg font-helvetica-regular mt-4">{fellownew[newIndex].description}</motion.div>
           </div>
         </motion.div>
@@ -528,7 +528,7 @@ export default function MeetOurFellows() {
             <Image src={fellowsold[oldIndex].image} alt={fellowsold[oldIndex].alt} fill className="object-cover rounded-lg" />
           </div>
           <div className="flex-1">
-            <motion.div className="text-left text-gray-900 text-2xl font-playfair-black">{fellowsold[oldIndex].name}</motion.div>
+            <motion.div className="text-left text-gray-900 text-2xl font-EB-extrabold">{fellowsold[oldIndex].name}</motion.div>
             <motion.div className="text-left text-gray-900 text-lg font-helvetica-regular mt-4">{fellowsold[oldIndex].description}</motion.div>
           </div>
         </motion.div>

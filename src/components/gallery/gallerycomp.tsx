@@ -433,7 +433,7 @@ export default function ImageGallery() {
     <section className="max-w-7xl mx-auto py-10 px-4 xl:px-0 text-center">
       {/* Title with Fade-In Effect */}
       <motion.h2
-        className="text-6xl text-gray-900 font-playfair-black mt-8"
+        className="text-6xl text-gray-900 font-EB-extrabold mt-8"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}

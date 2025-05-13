@@ -64,6 +64,14 @@
   font-style: normal;
 }
 
+
+@font-face {
+  font-family: 'EBGaramond';
+  src: url('/fonts/EBGaramond-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
 @font-face {
   font-family: "Orelega One";
   src: url("/fonts/OrelegaOne-Regular.ttf") format("truetype");
@@ -195,6 +203,12 @@ body {
 .font-playfair-extrabold {
   font-family: "Playfair", serif;
   font-weight: 900;
+}
+
+
+.font-EB-extrabold {
+  font-family: "EBGaramond", serif;
+  font-weight: 800;
 }
 /* Orelega One Classes */
 .orelega-one-regular {
