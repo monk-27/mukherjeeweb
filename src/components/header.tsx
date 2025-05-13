@@ -75,7 +75,7 @@ export default function Header() {
 
         {/* Right Side: Apply Button */}
         <motion.div className="hidden lg:flex items-center space-x-4" initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
-          <Link href="#">
+          <Link href="https://forms.gle/YRCpcPHnvuMfA9DCA" target="_blank">
             <button className="grad1 text-white px-4 xl:px-8 py-2 rounded-xl text-base xl:text-xl helvetica-neue-bold">Apply now</button>
           </Link>
         </motion.div>
@@ -110,7 +110,7 @@ export default function Header() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: 0.2 }}
               >
-                <Link href="#">Apply now</Link>
+                <Link href="https://forms.gle/YRCpcPHnvuMfA9DCA" target="_blank">Apply now</Link>
               </motion.button>
             </div>
           </motion.nav>

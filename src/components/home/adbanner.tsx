@@ -14,7 +14,7 @@ export default function FellowshipStatus() {
       <motion.div className="relative max-w-7xl mx-auto text-white text-center md:text-left" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
         {/* Heading with Animation */}
         <motion.h2 className="text-3xl md:text-5xl font-EB-extrabold" initial={{ opacity: 0, y: -20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} viewport={{ once: true }}>
-          What is the status of the Fellowship?
+          Mark your calendars!<br/> Dates for the 2025-26 cohort are out now:
         </motion.h2>
 
         {/* Fellowship Details with Staggered Effect */}
@@ -37,7 +37,7 @@ export default function FellowshipStatus() {
               visible: { opacity: 1, x: 0 },
             }}
           >
-            <span className="helvetica-neue-bold">Applications for the 2024-25 cohort are now closed. </span>
+            <span className="helvetica-neue-bold">Applications open on 26th May 2025 </span>
             {/* <span className="helvetica-neue-regular">Important Dates</span> */}
           </motion.p>
           <motion.p
@@ -47,7 +47,7 @@ export default function FellowshipStatus() {
               visible: { opacity: 1, x: 0 },
             }}
           >
-            <span className="helvetica-neue-bold">Applications for the 2025-26 cohort will open in June 2025.</span>
+            <span className="helvetica-neue-bold">Apply on or before 22nd June 2025</span>
             {/* <span className="helvetica-neue-regular">July 14, 2025</span> */}
           </motion.p>
           <motion.p
@@ -56,6 +56,8 @@ export default function FellowshipStatus() {
               visible: { opacity: 1, x: 0 },
             }}
           >
+            <span className="helvetica-neue-bold">Cohort starts on 17th July 2025</span>
+
             {/* <span className="helvetica-neue-bold"> Application Deadline: </span> <span className="helvetica-neue-regular">June 30, 2025</span> */}
           </motion.p>
         </motion.div>
