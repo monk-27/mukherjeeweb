@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function ExperientialLearning() {
   return (
     <motion.section
-      className="py-20 px-4 md:px-12 text-center bg-white"
+      className="py-20 px-4 md:px-12 text-center bg-white "
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}

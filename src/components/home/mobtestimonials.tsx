@@ -7,7 +7,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Image from "next/image";
 
-export default function Testimonials() {
+export default function TestimonialsMob() {
   const testimonials = [
   
 
@@ -53,12 +53,12 @@ export default function Testimonials() {
 
       {/* Swiper Section with Animation */}
       <motion.div className="col-span-3 lg:col-span-2 relative" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} viewport={{ once: true }}>
-        <div
+        {/* <div
           className="absolute w-1/2 right-0 h-[70vh] md:h-[70vh] lg:h-[570px] top-52 lg:top-16"
           style={{
             background: "linear-gradient(to right, #FECAB8 0%, #FEA48F 29%, #FC7F6F 100%)",
           }}
-        ></div>
+        ></div> */}
 
         {/* Swiper Slider with Navigation */}
         <div className="relative flex items-center justify-center">

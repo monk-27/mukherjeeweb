@@ -13,10 +13,10 @@ export default function Footer() {
 
   return (
     <motion.footer className="bg-gray-100 pt-4" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-      <div className="max-w-7xl mx-auto px-4 md:px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center md:text-left">
+      <div className="max-w-7xl mx-auto px-4 md:px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-left">
         {/* Left Section - Logo & About */}
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>
-          <Image src="/footerlogo.png" alt="Mukherjee Fellowship" width={150} height={50} className="mx-auto md:mx-0" />
+        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-left">
+          <Image src="/footerlogo.png" alt="Mukherjee Fellowship" width={150} height={50} className="mx-0 " />
           <p className="text-[#1E1E1E] mt-4 text-base helvetica-neue-regular">Creating opportunities for students and young professionals in Policy, Politics & Governance.</p>
         </motion.div>
 

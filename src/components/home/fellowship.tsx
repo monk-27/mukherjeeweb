@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function LearningModules() {
   return (
-    <motion.section className="bg-gray-100 mt-16 py-20 px-4 md:px-12 text-center" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+    <motion.section className="bg-gray-100 mt-16 py-20 px-4 md:px-12 text-center " initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
       {/* Title Section */}
       <motion.div className="max-w-4xl mx-auto" initial={{ opacity: 0, y: -20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>
         <h2 className="text-3xl md:text-6xl  text-gray-900 font-EB-extrabold">Mukherjee Fellowship</h2>
@@ -97,9 +97,9 @@ export default function LearningModules() {
                 transition={{ duration: 0.3, ease: "easeOut" }}
               >
                 {/* Badges */}
-                <div className="flex space-x-3 mb-3">
-                  <span className="grad1 text-white px-3 py-1 text-sm helvetica-neue-bold rounded-md flex items-center">
-                    <Image src={module.image1} alt={`${module.title} badge`} width={20} height={20} className="mr-2" />
+                <div className="flex space-x-1 sm:space-x-3 mb-3">
+                  <span className="grad1 text-white px-1 sm:px-3 py-1 text-sm helvetica-neue-bold rounded-md flex items-center">
+                    <Image src={module.image1} alt={`${module.title} badge`} width={20} height={20} className="mr-0 sm:mr-2" />
                     {module.duration}
                   </span>
                   <span className="grad1 text-white px-3 py-1 text-sm helvetica-neue-bold rounded-md">{module.location}</span>
@@ -163,8 +163,8 @@ export default function LearningModules() {
               >
                 {/* Badges */}
                 <div className="flex space-x-3 mb-3">
-                  <span className="grad1 text-white px-3 py-1 text-sm helvetica-neue-bold rounded-md">
-                    <Image src={module.image1} alt={`${module.title} badge`} width={20} height={20} className="mr-2" />
+                  <span className="grad1 text-white px-4 sm:px-3 py-1 text-sm helvetica-neue-bold rounded-md flex">
+                    <Image src={module.image1} alt={`${module.title} badge`} width={20} height={20} className="" />
                     {module.duration}
                   </span>
                   <span className="grad1 text-white px-3 py-1 text-sm helvetica-neue-bold rounded-md">{module.location}</span>

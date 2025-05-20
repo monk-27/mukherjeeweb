@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function Offerings() {
   return (
-    <div className="py-2 bg-white mb-6">
+    <div className="py-2 bg-white mb-6  ">
       {/* Header Section */}
 
       <motion.p
@@ -27,11 +27,11 @@ export default function Offerings() {
             transition={{ duration: 0.7, delay: 0.4 }}
             className="text-xl md:text-4xl helvetica-neue-bold text-[#FB7165]"
           >
-            Presents young professionals with an immersive hands-on <br/> 
+            Presents young professionals with an immersive hands-on <br />
             <span className="text-[#FE8854]">
-            experience
-            in policymaking and political strategy consulting. </span>
-            
+              experience
+              in policymaking and political strategy consulting. </span>
+
           </motion.h2>
           <motion.p
             transition={{ duration: 0.7, delay: 0.6 }}
@@ -71,12 +71,41 @@ export default function Offerings() {
           <motion.img
             src="/offer.png"
             alt="Offerings"
-            className="mx-auto"
+            className="mx-auto hidden md:block"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.8 }}
             viewport={{ once: true }}
           />
+         <div className="block sm:hidden space-y-4">
+  <motion.img
+    src="/image01.png"
+    alt="Offerings"
+    className="mx-auto max-w-[50%]" // Reduced size to 50% of container width
+    initial={{ opacity: 0, scale: 0.9 }}
+    whileInView={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 0.8, delay: 0.8 }}
+    viewport={{ once: true }}
+  />
+  <motion.img
+    src="/image02.png"
+    alt="Offerings"
+    className="mx-auto max-w-[50%]" // Reduced size to 50% of container width
+    initial={{ opacity: 0, scale: 0.9 }}
+    whileInView={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 0.8, delay: 0.8 }}
+    viewport={{ once: true }}
+  />
+  <motion.img
+    src="/image03.png"
+    alt="Offerings"
+    className="mx-auto max-w-[50%]" // Reduced size to 50% of container width
+    initial={{ opacity: 0, scale: 0.9 }}
+    whileInView={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 0.8, delay: 0.8 }}
+    viewport={{ once: true }}
+  />
+</div>
         </div>
       </motion.section>
     </div>

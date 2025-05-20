@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function FellowshipStatus() {
   return (
-    <section className="relative w-full h-auto py-24 px-4 md:px-12">
+    <section className="relative w-full h-auto py-24 px-4 md:px-12 ">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/fellowback.png')" }}>
         <div className="absolute inset-0 bg-gradient-to-r from-[#f77768] via-[#f5775b5c] to-[#f3f4f633] "></div>

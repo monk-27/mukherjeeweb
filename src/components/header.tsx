@@ -37,7 +37,7 @@ export default function Header() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
     >
-      <div className="max-w-full mx-auto flex items-center justify-between p-3 md:px-6 xl:px-20 w-full">
+      <div className="  sm:max-w-full mx-auto flex items-center justify-between p-3 md:px-6 xl:px-20 w-full">
         {/* Logo */}
         <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
           <Link href="/">
