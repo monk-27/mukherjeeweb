@@ -106,38 +106,46 @@ export default function Header() {
       </div>
 
       {/* Mobile Navigation Menu with Slide-in Animation */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.nav 
-          variants={menuVariants}
-          className="lg:hidden bg-white border-t absolute w-full left-0" initial={{ y: "-100%" }} animate={{ y: 0 }} exit={{ y: "-100%" }} transition={{ duration: 0.5 }}>
-            <div className="flex flex-col space-y-4 p-4 ">
-              {navLinks.map((link) => (
-                <motion.a
-                  key={link.path}
-                  href={link.path}
-                  
-                  className={` ${pathname === link.path ? "helvetica-neue-bold text-[#FF8609] text-lg" : "helvetica-neue-regular text-[#FF8609] text-lg"} hover:text-orange-600 transition-all`}
-                  onClick={() => setIsOpen(false)}
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.3, delay: 0.1 }}
-                >
-                  {link.name}
-                </motion.a>
-              ))}
-              <motion.button
-                className="grad1 text-white px-4 py-2 rounded-xl helvetica-neue-bold w-1/2"
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, delay: 0.2 }}
-              >
-                <Link href="https://forms.gle/YRCpcPHnvuMfA9DCA" target="_blank">Apply now</Link>
-              </motion.button>
-            </div>
-          </motion.nav>
-        )}
-      </AnimatePresence>
+     <AnimatePresence>
+  {isOpen && (
+    <motion.nav
+      variants={menuVariants}
+      className="lg:hidden bg-white border-t absolute w-full left-0 text-center"
+      initial={{ y: "-100%" }}
+      animate={{ y: 0 }}
+      exit={{ y: "-100%" }}
+      transition={{ duration: 0.5 }}
+    >
+      <div className="flex flex-col text-center space-y-4 p-4">
+        {navLinks.map((link) => (
+          <motion.a
+            key={link.path}
+            href={link.path}
+            className={`${
+              pathname === link.path
+                ? "helvetica-neue-bold text-[#FF8609] text-lg"
+                : "helvetica-neue-regular text-[#FF8609] text-lg"
+            } hover:text-orange-600 transition-all`}
+            onClick={() => setIsOpen(false)}
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, delay: 0.1 }}
+          >
+            {link.name}
+          </motion.a>
+        ))}
+        <motion.button
+          className="grad1 text-white px-4 py-2 rounded-xl helvetica-neue-bold w-1/2 mx-auto" // Added mx-auto to center the button
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3, delay: 0.2 }}
+        >
+          <Link href="https://forms.gle/YRCpcPHnvuMfA9DCA" target="_blank">Apply now</Link>
+        </motion.button>
+      </div>
+    </motion.nav>
+  )}
+</AnimatePresence>
     </motion.header>
   );
 }
