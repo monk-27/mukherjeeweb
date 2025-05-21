@@ -78,7 +78,7 @@ export default function BlogSection() {
     <section className="py-16 px-4 xl:px-0 max-w-7xl mx-auto">
       {/* Heading with Animation */}
       <motion.h2
-        className="text-6xl  text-center text-gray-900 font-EB-extrabold mt-8"
+        className="text-3xl sm:text-6xl  text-center text-gray-900 font-EB-extrabold mt-8"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
@@ -87,13 +87,14 @@ export default function BlogSection() {
         Blogs
       </motion.h2>
       <motion.p
-        className="text-gray-700 text-center mt-4 font-helvetica-regular text-2xl"
+        className="text-gray-700 text-center mt-4 font-helvetica-regular text-lg sm:text-2xl"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.7, delay: 0.2 }}
         viewport={{ once: true }}
       >
-        Explore our blogs for new perspectives, insights, and stories.
+        Explore our blogs for new perspectives, 
+        insights, and stories.
       </motion.p>
 
       {/* Tabs with Animation */}

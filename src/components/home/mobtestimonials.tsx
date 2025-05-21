@@ -50,7 +50,7 @@ export default function TestimonialsMob() {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        <h2 className="text-3xl font-EB-extrabold text-grad mb-2 text-center">Testimonials</h2>
+        <h2 className="text-2xl font-EB-extrabold text-grad mb-2 text-center">Testimonials</h2>
       </motion.div>
 
       {/* Swiper Section with Animation */}
@@ -108,9 +108,9 @@ export default function TestimonialsMob() {
                       <Image
                         src={testimonial.image}
                         alt={testimonial.name}
-                        width={240}
-                        height={288}
-                        className="w-60 h-72 rounded-md object-cover"
+                        width={199}
+                        height={185}
+                        className="w-50 h-45 rounded-md object-cover"
                       />
                     </div>
                     {/* Testimonial Text */}

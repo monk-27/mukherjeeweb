@@ -7,8 +7,8 @@ export default function LearningModules() {
     <motion.section className="bg-gray-100 mt-16 py-20 px-4 md:px-12 text-center " initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
       {/* Title Section */}
       <motion.div className="max-w-4xl mx-auto" initial={{ opacity: 0, y: -20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>
-        <h2 className="text-3xl md:text-6xl  text-gray-900 font-EB-extrabold">Mukherjee Fellowship</h2>
-        <h3 className="text-2xl md:text-3xl  text-gray-900 mt-2 font-helvetica-regular">Structure</h3>
+        <h2 className="text-2xl md:text-6xl  text-gray-900 font-EB-extrabold">Mukherjee Fellowship</h2>
+        <h3 className="text-xl md:text-3xl  text-gray-900 mt-2 font-helvetica-regular">Structure</h3>
       </motion.div>
 
       {/* Learning Modules Container */}
@@ -82,7 +82,7 @@ export default function LearningModules() {
             }}
           >
             {/* Section Title */}
-            <h3 className="text-xl md:text-2xl  helvetica-neue-bold mb-4 text-black">
+            <h3 className="text-lg md:text-2xl  helvetica-neue-bold mb-4 text-black">
               {String.fromCharCode(65 + index)}. {module.title}
             </h3>
 

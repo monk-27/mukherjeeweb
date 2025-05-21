@@ -4,22 +4,23 @@ import Image from "next/image";
 
 export default function FellowshipStatus() {
   return (
-    <section className="relative w-full h-auto py-24 px-4 md:px-12 ">
+    <section className="relative w-full h-auto py-12 sm:py-24 px-4 md:px-12 ">
       {/* Background Image with Overlay */}
-      <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/fellowback.png')" }}>
+      {/* <div className="absolute inset-0 bg-contain sm:bg-cover bg-no-repeat bg-center" style={{ backgroundImage: "url('/fellowback.png')" }}> */}
+      <div className="absolute  inset-0 bg-mobimg min-h-fit">
         <div className="absolute inset-0 bg-gradient-to-r from-[#f77768] via-[#f5775b5c] to-[#f3f4f633] "></div>
       </div>
 
       {/* Content Wrapper */}
       <motion.div className="relative max-w-7xl mx-auto text-white text-center md:text-left" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
         {/* Heading with Animation */}
-        <motion.h2 className="text-3xl md:text-5xl font-EB-extrabold" initial={{ opacity: 0, y: -20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} viewport={{ once: true }}>
+        <motion.h2 className="text-2xl md:text-5xl font-EB-extrabold" initial={{ opacity: 0, y: -20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} viewport={{ once: true }}>
           Mark your calendars!<br/> Dates for the 2025-26 cohort are out now:
         </motion.h2>
 
         {/* Fellowship Details with Staggered Effect */}
         <motion.div
-          className="my-12 text-xl"
+          className="my-12 text-sm sm:text-xl"
           initial="hidden"
           animate="visible"
           variants={{

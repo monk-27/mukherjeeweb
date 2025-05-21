@@ -30,14 +30,13 @@ export default function ExperientialLearning() {
 
       {/* Caption with Staggered Effect */}
       <motion.p
-        className="text-[#1E1E1E] mt-4 text-base md:text-lg helvetica-neue-regular"
+        className="text-[#1E1E1E] mt-4 text-xs md:text-lg helvetica-neue-regular"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}
         viewport={{ once: true }}
       >
-        Our Fellows during the experiential learning module at New Parliament
-        Building (2023)
+        Our Fellows during the experiential learning module at New Parliament Building (2023)
       </motion.p>
     </motion.section>
   );
