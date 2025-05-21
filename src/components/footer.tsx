@@ -13,7 +13,7 @@ export default function Footer() {
 
   return (
     <motion.footer className="bg-gray-100 pt-4" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-      <div className="max-w-7xl mx-auto px-4 md:px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-left">
+      <div className="max-w-7xl mx-auto px-4 md:px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-8 text-left">
         {/* Left Section - Logo & About */}
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-left">
           <Image src="/footerlogo.png" alt="Mukherjee Fellowship" width={150} height={50} className="mx-0 " />
@@ -72,9 +72,9 @@ export default function Footer() {
 
         {/* Right Section - Social Media */}
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.3 }} viewport={{ once: true }} className="mt-0 md:mt-24">
-          <h3 className="helvetica-neue-bold text-xl text-gray-900">Follow Us On</h3>
+          <h3 className="font-EB-extrabold text-xl text-gray-900">Follow Us On</h3>
           <motion.div
-            className="flex justify-center md:justify-start space-x-4 mt-4"
+            className="flex justify-start space-x-4 mt-4"
             initial="hidden"
             animate="visible"
             variants={{

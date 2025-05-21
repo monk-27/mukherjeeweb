@@ -81,7 +81,7 @@ export default function Header() {
         </motion.div>
 
         {/* Mobile Menu Button */}
-        <button onClick={() => setIsOpen(!isOpen)} className="lg:hidden">
+        <button onClick={() => setIsOpen(!isOpen)} className="lg:hidden text-black">
           {isOpen ? <X size={28} /> : <Menu color="#000" size={28} />}
         </button>
       </div>
@@ -105,7 +105,7 @@ export default function Header() {
                 </motion.a>
               ))}
               <motion.button
-                className="grad1 text-white px-4 py-2 rounded-xl helvetica-neue-bold"
+                className="grad1 text-white px-4 py-2 rounded-xl helvetica-neue-bold w-1/2"
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: 0.2 }}

@@ -9,37 +9,39 @@ import Image from "next/image";
 
 export default function TestimonialsMob() {
   const testimonials = [
-  
-
     {
       text: "The Mukherjee Fellows in our office displayed remarkable professionalism, work ethic and political attitude. They embraced the work promptly and established a close connection with on ground volunteers. Their knowledge of the Marathi electorate was invaluable to our team, greatly contributing to the election campaign!",
       name: "Shri Piyush Goyal",
       position: "Minister of Commerce & Industry, India",
-
-      image: "/piyushgoyal.png",
+      image: "/test/1.png",
     },
     {
       text: "The Mukherjee Fellow in our office made invaluable contributions across various domains displaying exceptional professionalism and dedication. His political work was outstanding including work on issue briefs and talking pointers. His policy work was exceptional too with his contribution to the CM Dashboard Project invaluable.",
       name: "Dr Pramod Sawant ",
       position: "Chief Minister, Goa",
-      image: "/image12.png",
+      image: "/test/2.png",
     },
     {
       text: "The Mukherjee Fellow has shown exceptional reliability and zeal throughout her fellowship. During the General Elections of 2024, she skillfully managed the entire Assembly Constituency of Mahanga, demonstrating her capability and dedication. The Fellow’s overall performance has been commendable.",
       name: "Shri Baijayant ‘Jay’ Panda",
       position: "Member of Parliament, Kendrapara",
-      image: "/image 2.png",
+      image: "/test/3.png",
     },
     {
       text: "The Mukherjee Fellow has been sincere, proactive, and conducted herself professionally. She efficiently handled all legislative work for the office. I suggest that future Fellows be taught to develop outreach programs to enhance their contributions further.",
       name: "Smt Vanathi Srinivasan",
       position: "MLA, Tamil Nadu",
-      image: "/image3.png",
+      image: "/test/4.png",
     },
   ];
 
   return (
-    <motion.section className=" py-28 px-4 grid grid-cols-3 md:px-12 bg-white relative" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+    <motion.section
+      className="py-28 px-4 grid grid-cols-3 md:px-12 bg-white relative"
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+    >
       {/* Title Section with Animation */}
       <motion.div
         className="col-span-3 lg:col-span-1 place-content-center"
@@ -48,18 +50,19 @@ export default function TestimonialsMob() {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        <h2 className="text-6xl font-EB-extrabold text-gray-900 mb-20 lg:mb-16 text-center">Testimonials</h2>
+        <h2 className="text-3xl font-EB-extrabold text-grad mb-2 text-center">Testimonials</h2>
       </motion.div>
 
       {/* Swiper Section with Animation */}
-      <motion.div className="col-span-3 lg:col-span-2 relative" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} viewport={{ once: true }}>
-        {/* <div
-          className="absolute w-1/2 right-0 h-[70vh] md:h-[70vh] lg:h-[570px] top-52 lg:top-16"
-          style={{
-            background: "linear-gradient(to right, #FECAB8 0%, #FEA48F 29%, #FC7F6F 100%)",
-          }}
-        ></div> */}
+      <motion.div
+        className="col-span-3 lg:col-span-2 relative shadow-md"
+                  // style={{ boxShadow: "rgb(131 131 131) 0px 0px 7px" }}
 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
+        viewport={{ once: true }}
+      >
         {/* Swiper Slider with Navigation */}
         <div className="relative flex items-center justify-center">
           <Swiper
@@ -88,8 +91,8 @@ export default function TestimonialsMob() {
             {testimonials.map((testimonial, index) => (
               <SwiperSlide key={index}>
                 <motion.div
-                  className="bg-white shadow-lg p-6 relative m-3 mb-8"
-                  style={{ boxShadow: "rgb(131 131 131) 0px 0px 7px" }}
+                  className="bg-white p-6 relative m-3 mb-8"
+                  // style={{ boxShadow: "rgb(131 131 131) 0px 0px 7px" }}
                   initial={{ opacity: 0, x: 50 }}
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -50 }}
@@ -100,22 +103,29 @@ export default function TestimonialsMob() {
                   }}
                 >
                   {/* Image & Testimonial Content */}
-                  <div className="grid grid-cols-3 items-center justify-center place-content-center min-h-[400px] gap-6">
+                  <div className="grid grid-cols-3 items-center justify-center place-content-center min-h-[400px] gap-1">
                     <div className="place-content-center flex items-center justify-center col-span-3 lg:col-span-1">
-                      <Image src={testimonial.image} alt={testimonial.name} width={240} height={288} className="w-60 h-72 rounded-md object-cover" />
+                      <Image
+                        src={testimonial.image}
+                        alt={testimonial.name}
+                        width={240}
+                        height={288}
+                        className="w-60 h-72 rounded-md object-cover"
+                      />
                     </div>
                     {/* Testimonial Text */}
                     <div className="place-content-center col-span-3 lg:col-span-2 flex flex-col justify-between h-full mt-8 lg:mt-0">
                       <p className="text-gray-600 text-xl italic helvetica-neue-medium text-center">
-                        <img src="/testo1.png" className="h-12 top-12 absolute" />
+                        <img src="/test/q0.png" className="h-5 inline-block mr-1" alt="quote start" />
                         {testimonial.text}
                         <div className="flex justify-end">
-                          <img src="/testo2.png" className="h-12" />
+                          <img src="/test/q1.png" className="h-5" alt="quote end" />
                         </div>
                       </p>
-                      <div>
-                        <h4 className="helvetica-neue-bold mt-4 text-right text-black">{testimonial.name}</h4>
-                        <p className="text-sm text-gray-500 text-right helvetica-neue-regular">{testimonial.position}</p>
+                      {/* Name and Position Centered */}
+                      <div className=" text-center">
+                        <h4 className="helvetica-neue-bold text-grad">{testimonial.name}</h4>
+                        <p className="text-sm text-gray-500 helvetica-neue-regular">{testimonial.position}</p>
                       </div>
                     </div>
                   </div>

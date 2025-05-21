@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function VideoBanner() {
   return (
-    <div className="relative px-4 xl:px-0 x-auto w-full h-[60vh]  sm:h-screen overflow-hidden bg-white">
+    <div className="relative px-4 xl:px-0 mx-auto w-full h-[60vh] sm:h-screen overflow-hidden bg-white">
       {/* Background Video */}
       <motion.video
         className="absolute top-0 left-0 w-full h-full object-cover bg-white"
@@ -29,7 +29,7 @@ export default function VideoBanner() {
 
       {/* Text Content with Staggered Animation */}
       <motion.div
-        className="absolute inset-0 flex flex-col justify-end bottom-32 text-left text-white px-4 sm:px-20 md:px-20"
+        className="absolute inset-0 flex flex-col justify-end bottom-8 sm:bottom-32 text-left text-white px-4 sm:px-20 md:px-20"
         initial="hidden"
         animate="visible"
         variants={{
@@ -58,7 +58,7 @@ export default function VideoBanner() {
 
         {/* Main Heading */}
         <motion.h1
-          className="text-2xl sm:text-5xl md:text-8xl mt-2 abrildisplay whitespace-nowrap"
+          className="text-3xl sm:text-5xl md:text-8xl mt-2 abrildisplay whitespace-nowrap"
           variants={{
             hidden: { opacity: 0, y: 20 },
             visible: { opacity: 1, y: 0 },
