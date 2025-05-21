@@ -121,7 +121,7 @@ export default function FAQSection() {
                     onClick={() => toggleFAQ(index)}
                   >
                     <span
-                      className={`text-xl sm:text-2xl helvetica-neue-bold ${
+                      className={`text-xs sm:text-2xl helvetica-neue-bold ${
                         openIndex === index ? "text-[#FB7165]" : "text-[#FB7165]"
                       }`}
                     >
@@ -147,7 +147,7 @@ export default function FAQSection() {
                     className="overflow-hidden"
                   >
                     <motion.p
-                      className="text-lg leading-7 rounded-b-2xl px-4 py-3 helvetica-neue-regular grad1 text-white"
+                      className="text-xs sm:text-lg leading-7 rounded-b-2xl px-4 py-3 helvetica-neue-regular grad1 text-white"
                       animate={{ opacity: openIndex === index ? 1 : 0 }}
                       transition={{ duration: 0.3, ease: "easeOut" }}
                     >
