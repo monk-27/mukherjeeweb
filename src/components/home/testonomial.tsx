@@ -9,32 +9,29 @@ import Image from "next/image";
 
 export default function Testimonials() {
   const testimonials = [
-  
-
     {
       text: "The Mukherjee Fellows in our office displayed remarkable professionalism, work ethic and political attitude. They embraced the work promptly and established a close connection with on ground volunteers. Their knowledge of the Marathi electorate was invaluable to our team, greatly contributing to the election campaign!",
       name: "Shri Piyush Goyal",
       position: "Minister of Commerce & Industry, India",
-
-      image: "/piyushgoyal.png",
+      image: "/test/1.png",
     },
     {
       text: "The Mukherjee Fellow in our office made invaluable contributions across various domains displaying exceptional professionalism and dedication. His political work was outstanding including work on issue briefs and talking pointers. His policy work was exceptional too with his contribution to the CM Dashboard Project invaluable.",
       name: "Dr Pramod Sawant ",
       position: "Chief Minister, Goa",
-      image: "/image12.png",
+      image: "/test/2.png",
     },
     {
       text: "The Mukherjee Fellow has shown exceptional reliability and zeal throughout her fellowship. During the General Elections of 2024, she skillfully managed the entire Assembly Constituency of Mahanga, demonstrating her capability and dedication. The Fellow’s overall performance has been commendable.",
       name: "Shri Baijayant ‘Jay’ Panda",
       position: "Member of Parliament, Kendrapara",
-      image: "/image 2.png",
+      image: "/test/3.png",
     },
     {
       text: "The Mukherjee Fellow has been sincere, proactive, and conducted herself professionally. She efficiently handled all legislative work for the office. I suggest that future Fellows be taught to develop outreach programs to enhance their contributions further.",
       name: "Smt Vanathi Srinivasan",
       position: "MLA, Tamil Nadu",
-      image: "/image3.png",
+      image: "/test/4.png",
     },
   ];
 

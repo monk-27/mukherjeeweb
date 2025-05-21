@@ -42,7 +42,7 @@ export default function LearningModules() {
             ],
           },
           {
-            title: "Experiential Learning Module:",
+            title: "Experiential Learning Module",
             image1: "/time.svg",
 
             duration: "9 Months",
