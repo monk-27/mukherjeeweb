@@ -9,7 +9,7 @@ export default function Offerings() {
         transition={{ duration: 0.7, delay: 0.2 }}
         className="text-center mt-10"
       >
-        <div className="text-gray-600 sm:text-xl text-sm helvetica-neue-light px-2 mx-auto">
+        <div className="text-gray-600 sm:text-xl text-sm helvetica-neue-regular px-2 mx-auto">
           The Policy, Politics and Governance Foundation (PPGF), in
           collaboration with the Nation First Policy Research Centre (NFPRC)
         </div>
@@ -33,7 +33,7 @@ export default function Offerings() {
           </motion.h2>
           <motion.p
             transition={{ duration: 0.7, delay: 0.6 }}
-            className="text-gray-700 mt-8 text-sm md:text-xl helvetica-neue-light px-6 sm:px-10"
+            className="text-gray-700 mt-8 text-sm md:text-xl helvetica-neue-regular px-6 sm:px-10"
           >
             The Fellowship intends to empower passionate students and
             exceptional professionals with the necessary skill set to succeed in
@@ -79,7 +79,7 @@ export default function Offerings() {
             <motion.img
               src="/image01.png"
               alt="Offerings"
-              className="mx-auto max-w-[50%]"
+              className="mx-auto max-w-[75%]"
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.8 }}
@@ -88,7 +88,7 @@ export default function Offerings() {
             <motion.img
               src="/image02.png"
               alt="Offerings"
-              className="mx-auto max-w-[50%]"
+              className="mx-auto max-w-[75%]"
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.8 }}
@@ -97,7 +97,7 @@ export default function Offerings() {
             <motion.img
               src="/image03.png"
               alt="Offerings"
-              className="mx-auto max-w-[50%]"
+              className="mx-auto max-w-[75%]"
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.8 }}

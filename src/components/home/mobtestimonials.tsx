@@ -115,7 +115,7 @@ export default function TestimonialsMob() {
                     </div>
                     {/* Testimonial Text */}
                     <div className="place-content-center col-span-3 lg:col-span-2 flex flex-col justify-between h-full mt-8 lg:mt-0">
-                      <p className="text-gray-600 text-xl italic helvetica-neue-medium text-center">
+                      <p className="text-gray-600 text-xs italic helvetica-neue-regular text-center">
                         <img src="/test/q0.png" className="h-5 inline-block mr-1" alt="quote start" />
                         {testimonial.text}
                         <div className="flex justify-end">
@@ -124,8 +124,8 @@ export default function TestimonialsMob() {
                       </p>
                       {/* Name and Position Centered */}
                       <div className=" text-center">
-                        <h4 className="helvetica-neue-bold text-grad">{testimonial.name}</h4>
-                        <p className="text-sm text-gray-500 helvetica-neue-regular">{testimonial.position}</p>
+                        <h4 className="helvetica-neue-bold text-sm text-grad">{testimonial.name}</h4>
+                        <p className="text-base text-gray-500 helvetica-neue-regular">{testimonial.position}</p>
                       </div>
                     </div>
                   </div>
