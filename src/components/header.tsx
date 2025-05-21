@@ -30,6 +30,25 @@ export default function Header() {
     { name: "Meet Our Fellows", path: "/fellowmate" },
   ];
 
+  const menuVariants = {
+    hidden: { y: "-100%", opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.4,
+        ease: [0.4, 0, 0.2, 1], // Custom cubic-bezier for smooth slide-in
+      },
+    },
+    exit: {
+      y: "-100%",
+      opacity: 0,
+      transition: {
+        duration: 0.3,
+        ease: [0.4, 0, 0.2, 1], // Smooth slide-out
+      },
+    },
+  };
   return (
     <motion.header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? "bg-white shadow-md" : "bg-white shadow-sm"}`}
@@ -89,13 +108,16 @@ export default function Header() {
       {/* Mobile Navigation Menu with Slide-in Animation */}
       <AnimatePresence>
         {isOpen && (
-          <motion.nav className="lg:hidden bg-white border-t absolute w-full left-0" initial={{ y: "-100%" }} animate={{ y: 0 }} exit={{ y: "-100%" }} transition={{ duration: 0.5 }}>
-            <div className="flex flex-col space-y-4 p-4">
+          <motion.nav 
+          variants={menuVariants}
+          className="lg:hidden bg-white border-t absolute w-full left-0" initial={{ y: "-100%" }} animate={{ y: 0 }} exit={{ y: "-100%" }} transition={{ duration: 0.5 }}>
+            <div className="flex flex-col space-y-4 p-4 ">
               {navLinks.map((link) => (
                 <motion.a
                   key={link.path}
                   href={link.path}
-                  className={` ${pathname === link.path ? "helvetica-neue-bold text-[#FF8609]" : "helvetica-neue-regular text-[#FF8609]"} hover:text-orange-600 transition-all`}
+                  
+                  className={` ${pathname === link.path ? "helvetica-neue-bold text-[#FF8609] text-lg" : "helvetica-neue-regular text-[#FF8609] text-lg"} hover:text-orange-600 transition-all`}
                   onClick={() => setIsOpen(false)}
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}

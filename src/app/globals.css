@@ -285,12 +285,6 @@ body {
     /* Secondary shadow for depth */ -2px -2px 4px rgba(0, 0, 0, 0.3); /* Slight opposite shadow for wrap effect */
 }
 
-.bg-img {
-  background-image: url(/parlya.png);
-  height: 500px;
-  background-position: center top;
-  background-size: cover;
-}
 
 .grad1 {
   background: linear-gradient(100.31deg, #fb7165 -0.01%, #fe8854 89.82%);
@@ -373,11 +367,20 @@ SELECT {
     margin-left: 0;
   }
 }
+.bg-img {
+  background-image: url(/parlya.png);
+  height: 500px;
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat; /* Prevent tiling */
+}
+
 @media screen and (max-width: 992px) {
   .bg-img {
-    height: 100px !important;
-    background-position: center top;
-    background-size: cover;
+    height: 75px !important; /* Adjusted height for tablets */
+    background-position: center center; /* Center the image for better focus */
+    background-size: contain; /* Use contain to avoid stretching */
+    background-repeat: no-repeat; /* Prevent tiling */
   }
   .swiper-wrapper {
     padding-bottom: 0px;
@@ -386,8 +389,9 @@ SELECT {
 
 @media screen and (max-width: 600px) {
   .bg-img {
-    height: 100px !important;
-    background-position: center top;
-    background-size: cover;
+    height: 200px !important; /* Reduced height for mobile */
+    background-position: center top; /* Center the image */
+    background-size: contain; /* Use contain to avoid stretching */
+    background-repeat: no-repeat; /* Prevent tiling */
   }
 }

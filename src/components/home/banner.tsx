@@ -11,6 +11,7 @@ export default function VideoBanner() {
         loop
         muted
         playsInline
+        controls={false}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.2 }}
@@ -43,7 +44,7 @@ export default function VideoBanner() {
       >
         {/* Subheading */}
         <motion.h3
-          className="text-base sm:text-xl md:text-4xl helvetica-neue"
+          className="text-sm sm:text-xl md:text-4xl helvetica-neue"
           variants={{
             hidden: { opacity: 0, y: 20 },
             visible: { opacity: 1, y: 0 },

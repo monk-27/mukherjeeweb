@@ -3,14 +3,13 @@ import { motion } from "framer-motion";
 
 export default function Offerings() {
   return (
-    <div className="py-2 bg-white mb-6  ">
+    <div className="py-2 bg-white mb-6">
       {/* Header Section */}
-
       <motion.p
         transition={{ duration: 0.7, delay: 0.2 }}
         className="text-center mt-10"
       >
-        <div className="text-gray-600 sm:text-xl text-sm helvetica-neue-light px-2 mx-auto ">
+        <div className="text-gray-600 sm:text-xl text-sm helvetica-neue-light px-2 mx-auto">
           The Policy, Politics and Governance Foundation (PPGF), in
           collaboration with the Nation First Policy Research Centre (NFPRC)
         </div>
@@ -29,9 +28,8 @@ export default function Offerings() {
           >
             Presents young professionals with an immersive hands-on <br />
             <span className="text-[#FE8854]">
-              experience
-              in policymaking and political strategy consulting. </span>
-
+              experience in policymaking and political strategy consulting.
+            </span>
           </motion.h2>
           <motion.p
             transition={{ duration: 0.7, delay: 0.6 }}
@@ -50,7 +48,7 @@ export default function Offerings() {
 
       {/* Offerings Section */}
       <motion.section
-        className="relative py-20 px-4 md:px-12 text-center bg-white bg-img min-h-fit"
+        className="relative py-0 sm:py-20 px-4 md:px-12 text-center bg-white bg-img min-h-fit"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1 }}
@@ -59,7 +57,7 @@ export default function Offerings() {
         <div className="relative max-w-7xl mx-auto">
           {/* Title */}
           <motion.h3
-            className=" text-3xl sm:text-6xl text-gray-800 mb-12 sm:mt-12 font-EB-extrabold"
+            className="text-3xl sm:text-6xl text-gray-800 mb-12 sm:mt-12 font-EB-extrabold"
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
@@ -77,35 +75,35 @@ export default function Offerings() {
             transition={{ duration: 0.8, delay: 0.8 }}
             viewport={{ once: true }}
           />
-         <div className="block sm:hidden space-y-4">
-  <motion.img
-    src="/image01.png"
-    alt="Offerings"
-    className="mx-auto max-w-[50%]" // Reduced size to 50% of container width
-    initial={{ opacity: 0, scale: 0.9 }}
-    whileInView={{ opacity: 1, scale: 1 }}
-    transition={{ duration: 0.8, delay: 0.8 }}
-    viewport={{ once: true }}
-  />
-  <motion.img
-    src="/image02.png"
-    alt="Offerings"
-    className="mx-auto max-w-[50%]" // Reduced size to 50% of container width
-    initial={{ opacity: 0, scale: 0.9 }}
-    whileInView={{ opacity: 1, scale: 1 }}
-    transition={{ duration: 0.8, delay: 0.8 }}
-    viewport={{ once: true }}
-  />
-  <motion.img
-    src="/image03.png"
-    alt="Offerings"
-    className="mx-auto max-w-[50%]" // Reduced size to 50% of container width
-    initial={{ opacity: 0, scale: 0.9 }}
-    whileInView={{ opacity: 1, scale: 1 }}
-    transition={{ duration: 0.8, delay: 0.8 }}
-    viewport={{ once: true }}
-  />
-</div>
+          <div className="block sm:hidden space-y-4">
+            <motion.img
+              src="/image01.png"
+              alt="Offerings"
+              className="mx-auto max-w-[50%]"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+              viewport={{ once: true }}
+            />
+            <motion.img
+              src="/image02.png"
+              alt="Offerings"
+              className="mx-auto max-w-[50%]"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+              viewport={{ once: true }}
+            />
+            <motion.img
+              src="/image03.png"
+              alt="Offerings"
+              className="mx-auto max-w-[50%]"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+              viewport={{ once: true }}
+            />
+          </div>
         </div>
       </motion.section>
     </div>
