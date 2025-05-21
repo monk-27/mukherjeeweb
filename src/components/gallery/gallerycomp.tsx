@@ -442,7 +442,7 @@ export default function ImageGallery() {
         Image Gallery
       </motion.h2>
       <motion.p
-        className="text-gray-700 mt-4 font-helvetica-regular text-lg sm:text-2xl"
+        className="text-gray-700 mt-4 font-helvetica-regular text-xs sm:text-2xl"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.7, delay: 0.2 }}

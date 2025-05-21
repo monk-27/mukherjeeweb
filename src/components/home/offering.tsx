@@ -24,7 +24,7 @@ export default function Offerings() {
         <div className="max-w-6xl mx-auto px-4">
           <motion.h2
             transition={{ duration: 0.7, delay: 0.4 }}
-            className="text-xl md:text-4xl helvetica-neue-bold text-[#FB7165]"
+            className="text-lg md:text-4xl helvetica-neue-bold text-[#FB7165]"
           >
             Presents young professionals with an immersive hands-on <br />
             <span className="text-[#FE8854]">
