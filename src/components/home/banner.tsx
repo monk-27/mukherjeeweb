@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 
 export default function VideoBanner() {
+
   return (
     <div className="relative px-4 xl:px-0 mx-auto w-full h-[60vh] sm:h-screen overflow-hidden bg-white">
       {/* Background Video */}
@@ -11,7 +12,7 @@ export default function VideoBanner() {
         loop
         muted
         playsInline
-        controls={false}
+        webkit-playsinline="true"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.2 }}
