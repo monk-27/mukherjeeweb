@@ -407,7 +407,7 @@ export default function MeetOurFellows() {
   return (
     <section className="max-w-7xl mx-auto py-16 px-4 xl:px-0 text-center">
       <motion.h2
-        className="text-2xl sm:text-6xl text-gray-900 font-EB-extrabold mt-8"
+        className="text-2xl sm:text-6xl text-gray-900 font-EB-extrabold mt-6 sm:mt-8"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
@@ -435,7 +435,7 @@ export default function MeetOurFellows() {
       </motion.p>
 
       {/* 2024-2025 Fellows */}
-      <span className="block text-gray-700 text-xl sm:text-4xl mt-12 mb-6 font-helvetica-regular">2024 - 2025</span>
+      <span className="block text-gray-700 text-xl sm:text-4xl mt-12 sm:mt-14 mb-6 font-helvetica-regular">2024 - 2025</span>
       <motion.div
         className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6 mt-8"
         initial="hidden"

@@ -433,7 +433,7 @@ export default function ImageGallery() {
     <section className="max-w-7xl mx-auto py-10 px-4 xl:px-0 text-center">
       {/* Title with Fade-In Effect */}
       <motion.h2
-        className="text-2xl sm:text-6xl text-gray-900 font-EB-extrabold mt-8"
+        className="text-2xl sm:text-6xl text-gray-900 font-EB-extrabold mt-6 sm:mt-8"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
@@ -442,7 +442,7 @@ export default function ImageGallery() {
         Image Gallery
       </motion.h2>
       <motion.p
-        className="text-gray-700 mt-4 font-helvetica-regular text-xs sm:text-2xl"
+        className="text-gray-700 mt-4 sm:mt-6 font-helvetica-regular text-xs sm:text-2xl"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.7, delay: 0.2 }}
@@ -451,7 +451,7 @@ export default function ImageGallery() {
         See our Fellows in action!
       </motion.p>
       <motion.div
-        className="grid grid-cols-3 gap-4 mt-12"
+        className="grid grid-cols-3 gap-4 mt-6 sm:mt-8"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         whileInView={{ opacity: 1 }}
