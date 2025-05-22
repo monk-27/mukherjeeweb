@@ -5,7 +5,7 @@ export default function Offerings() {
   return (
     <div className="mb-6 bg-white py-2">
       {/* Header Section */}
-      <motion.p
+      <motion.div
         transition={{ duration: 0.7, delay: 0.2 }}
         className="mt-8 px-6 text-center sm:px-0"
       >
@@ -13,7 +13,7 @@ export default function Offerings() {
           The Policy, Politics and Governance Foundation (PPGF), in
           collaboration with the Nation First Policy Research Centre (NFPRC)
         </div>
-      </motion.p>
+      </motion.div>
 
       <motion.section
         className="mx-auto max-w-6xl px-6 text-center sm:px-0"

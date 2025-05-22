@@ -36,24 +36,38 @@ export default function Testimonials() {
   ];
 
   return (
-    <motion.section className=" py-36 px-4 grid grid-cols-3 md:px-12 bg-white relative" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+    <motion.section
+      className="relative grid grid-cols-3 bg-white px-4 py-36 md:px-12"
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+    >
       {/* Title Section with Animation */}
       <motion.div
-        className="col-span-3 lg:col-span-1 place-content-center"
+        className="col-span-3 place-content-center lg:col-span-1"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        <h2 className="text-6xl font-EB-extrabold text-gray-900 mb-20 lg:mb-16 text-center">Testimonials</h2>
+        <h2 className="font-EB-extrabold mb-20 text-center text-6xl text-gray-900 lg:mb-16">
+          Testimonials
+        </h2>
       </motion.div>
 
       {/* Swiper Section with Animation */}
-      <motion.div className="col-span-3 lg:col-span-2 relative" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} viewport={{ once: true }}>
+      <motion.div
+        className="relative col-span-3 lg:col-span-2"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
+        viewport={{ once: true }}
+      >
         <div
-          className="absolute w-2/3 right-0 h-[70vh] md:h-[70vh] lg:h-[520px] top-52 lg:top-[-20]"
+          className="absolute right-0 top-52 h-[70vh] w-2/3 md:h-[70vh] lg:top-[-20] lg:h-[520px]"
           style={{
-            background: "linear-gradient(to right, #FECAB8 0%, #FEA48F 29%, #FC7F6F 100%)",
+            background:
+              "linear-gradient(to right, #FECAB8 0%, #FEA48F 29%, #FC7F6F 100%)",
           }}
         ></div>
 
@@ -85,7 +99,7 @@ export default function Testimonials() {
             {testimonials.map((testimonial, index) => (
               <SwiperSlide key={index}>
                 <motion.div
-                  className="bg-white shadow-lg p-6 relative m-3 mb-8"
+                  className="relative m-3 mb-8 bg-white p-6 shadow-lg"
                   style={{ boxShadow: "rgb(131 131 131) 0px 0px 7px" }}
                   initial={{ opacity: 0, x: 50 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -97,22 +111,35 @@ export default function Testimonials() {
                   }}
                 >
                   {/* Image & Testimonial Content */}
-                  <div className="grid grid-cols-3 items-center justify-center place-content-center min-h-[400px] gap-6">
-                    <div className="place-content-center flex items-center justify-center col-span-3 lg:col-span-1">
-                      <Image src={testimonial.image} alt={testimonial.name} width={240} height={288} className="w-60 h-72 rounded-md object-cover" />
+                  <div className="grid min-h-[400px] grid-cols-3 place-content-center items-center justify-center gap-6">
+                    <div className="col-span-3 flex place-content-center items-center justify-center lg:col-span-1">
+                      <Image
+                        src={testimonial.image}
+                        alt={testimonial.name}
+                        width={240}
+                        height={288}
+                        className="h-72 w-60 rounded-md object-cover"
+                      />
                     </div>
                     {/* Testimonial Text */}
-                    <div className="place-content-center col-span-3 lg:col-span-2 flex flex-col justify-between h-full mt-8 lg:mt-0">
-                      <p className="text-gray-600 text-xl italic helvetica-neue-medium text-center">
-                        <img src="/testo1.png" className="h-12 top-12 absolute" />
+                    <div className="col-span-3 mt-8 flex h-full flex-col place-content-center justify-between lg:col-span-2 lg:mt-0">
+                      <div className="helvetica-neue-medium text-center text-xl italic text-gray-600">
+                        <img
+                          src="/testo1.png"
+                          className="absolute top-12 h-12"
+                        />
                         {testimonial.text}
                         <div className="flex justify-end">
                           <img src="/testo2.png" className="h-12" />
                         </div>
-                      </p>
+                      </div>
                       <div>
-                        <h4 className="helvetica-neue-bold mt-4 text-right text-black">{testimonial.name}</h4>
-                        <p className="text-sm text-gray-500 text-right helvetica-neue-regular">{testimonial.position}</p>
+                        <h4 className="helvetica-neue-bold mt-4 text-right text-black">
+                          {testimonial.name}
+                        </h4>
+                        <p className="helvetica-neue-regular text-right text-sm text-gray-500">
+                          {testimonial.position}
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -121,10 +148,10 @@ export default function Testimonials() {
             ))}
           </Swiper>
           {/* Navigation Arrows Positioned Outside */}
-          <div className="absolute top-1/2 transform -translate-y-1/2 left-0 z-10">
+          <div className="absolute left-0 top-1/2 z-10 -translate-y-1/2 transform">
             <div className="swiper-button-prev"></div>
           </div>
-          <div className="absolute top-1/2 transform -translate-y-1/2 right-0 z-10">
+          <div className="absolute right-0 top-1/2 z-10 -translate-y-1/2 transform">
             <div className="swiper-button-next"></div>
           </div>
         </div>
