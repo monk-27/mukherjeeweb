@@ -121,7 +121,7 @@ export default function LearningModules() {
                 alt={module.title}
                 width={1000}
                 height={600}
-                className="min-h-[400px] w-full rounded-lg object-cover shadow-lg"
+                className="min-h-[400px] w-full rounded-lg object-cover shadow-lg lg:h-[529px]"
               />
               <motion.div
                 className="absolute inset-0 hidden flex-col justify-end rounded-lg bg-black bg-opacity-60 p-6 opacity-0 transition-opacity duration-500 group-hover:opacity-100 lg:flex"

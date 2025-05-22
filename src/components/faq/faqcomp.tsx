@@ -75,7 +75,7 @@ export default function FAQSection() {
         Frequently Asked Questions
       </motion.h2>
       <motion.p
-        className="font-helvetica-regular mt-4 text-center text-xs text-gray-700 sm:text-2xl"
+        className="font-helvetica-regular mt-[7px] text-center text-xs leading-3 text-[#1E1E1E] sm:text-2xl"
         initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}

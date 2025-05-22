@@ -420,7 +420,7 @@ export default function MeetOurFellows() {
         Meet Our Fellows
       </motion.h2>
       <motion.p
-        className="font-helvetica-regular mt-4 block text-xs text-gray-700 sm:hidden"
+        className="font-helvetica-regular mt-[7px] block text-xs leading-3 text-[#1E1E1E] sm:hidden"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.7, delay: 0.2 }}

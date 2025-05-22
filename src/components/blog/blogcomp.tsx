@@ -93,7 +93,7 @@
 //         transition={{ duration: 0.7, delay: 0.2 }}
 //         viewport={{ once: true }}
 //       >
-//         Explore our blogs for new perspectives, 
+//         Explore our blogs for new perspectives,
 //         insights, and stories.
 //       </motion.p>
 
@@ -259,10 +259,10 @@ export default function BlogSection() {
   const filteredBlogs = blogs.filter((blog) => blog.category === activeTab);
 
   return (
-    <section className="py-16 px-4 xl:px-0 max-w-7xl mx-auto">
+    <section className="mx-auto max-w-7xl px-4 py-16 xl:px-0">
       {/* Heading with Animation */}
       <motion.h2
-        className="text-2xl sm:text-6xl text-center text-gray-900 font-EB-extrabold mt-6 sm:mt-8"
+        className="font-EB-extrabold mt-6 text-center text-2xl text-gray-900 sm:mt-8 sm:text-6xl"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
@@ -271,19 +271,18 @@ export default function BlogSection() {
         Blogs
       </motion.h2>
       <motion.p
-        className="text-gray-700 text-center mt-4 font-helvetica-regular text-xs sm:text-2xl"
+        className="font-helvetica-regular mt-[7px] text-center text-xs leading-3 text-[#1E1E1E] sm:text-2xl"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.7, delay: 0.2 }}
         viewport={{ once: true }}
       >
-        Explore our blogs for new perspectives,
-        insights, and stories.
+        Explore our blogs for new perspectives, insights, and stories.
       </motion.p>
 
       {/* Tabs with Animation */}
       <motion.div
-        className="flex justify-center space-x-6 mt-12 pb-4"
+        className="mt-12 flex justify-center space-x-6 pb-4"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.3 }}
@@ -292,10 +291,11 @@ export default function BlogSection() {
         {tabs.map((tab) => (
           <button
             key={tab}
-            className={`text-sm sm:text-lg font-semibold ${activeTab === tab
-                ? "text-gray-900 border-b-2 border-red-500 helvetica-neue-bold"
-                : "text-gray-800 helvetica-neue-regular"
-              }`}
+            className={`text-sm font-semibold sm:text-lg ${
+              activeTab === tab
+                ? "helvetica-neue-bold border-b-2 border-red-500 text-gray-900"
+                : "helvetica-neue-regular text-gray-800"
+            }`}
             onClick={() => setActiveTab(tab)}
           >
             {tab}
@@ -316,14 +316,14 @@ export default function BlogSection() {
           {filteredBlogs.map((blog) => (
             <motion.div
               key={blog.id}
-              className="flex flex-col md:flex-row bg-white  overflow-hidden shadowMy group"
+              className="shadowMy group flex flex-col overflow-hidden bg-white md:flex-row"
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
             >
               {/* Image with Hover Animation */}
-              <div className="md:w-1/3 relative cursor-pointer overflow-hidden group h-64 m-4">
+              <div className="group relative m-4 h-64 cursor-pointer overflow-hidden md:w-1/3">
                 <motion.div
-                  className="absolute inset-0 bg-black opacity-60 group-hover:opacity-0 transition-opacity duration-500"
+                  className="absolute inset-0 bg-black opacity-60 transition-opacity duration-500 group-hover:opacity-0"
                   initial={{ opacity: 0.6 }}
                   whileHover={{ opacity: 0 }}
                 ></motion.div>
@@ -332,20 +332,20 @@ export default function BlogSection() {
                   alt={blog.title}
                   width={400}
                   height={250}
-                  className="w-full h-full object-cover filter grayscale transition duration-300 group-hover:grayscale-0"
+                  className="h-full w-full object-cover grayscale filter transition duration-300 group-hover:grayscale-0"
                 />
               </div>
 
               {/* Content with Motion Effect */}
-              <div className="p-6 md:w-2/3 relative">
-                <div className="flex justify-between items-center">
-                  <p className="text-gray-700 text-sm font-helvetica-regular">
-                    {blog.author}      {blog.date}
+              <div className="relative p-6 md:w-2/3">
+                <div className="flex items-center justify-between">
+                  <p className="font-helvetica-regular text-sm text-gray-700">
+                    {blog.author}     {blog.date}
                   </p>
                   {/* <FaShareAlt className="text-gray-600 hover:text-gray-900 cursor-pointer" /> */}
                 </div>
                 <motion.h3
-                  className="font-EB-extrabold text-2xl mt-2 text-gray-800 font-helvetica-regular"
+                  className="font-EB-extrabold font-helvetica-regular mt-2 text-2xl text-gray-800"
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   transition={{ duration: 0.5, delay: 0.2 }}
@@ -354,7 +354,7 @@ export default function BlogSection() {
                   {blog.title}
                 </motion.h3>
                 <motion.p
-                  className="text-gray-700 mt-2 text-lg font-helvetica-regular"
+                  className="font-helvetica-regular mt-2 text-lg text-gray-700"
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   transition={{ duration: 0.5, delay: 0.3 }}
@@ -364,19 +364,17 @@ export default function BlogSection() {
                 </motion.p>
 
                 {/* Read More & Share */}
-                <div className="flex justify-between items-center mt-4 ">
-                 <a
-  href={blog.link}
-  target="_blank"
-  rel="noopener noreferrer"
-  className="font-semibold helvetica-neue-bold bg-gradient-to-r from-[#fb7165] to-[#fe8854] bg-clip-text text-transparent relative inline-block"
->
-  <span className="after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[2px] after:bg-gradient-to-r after:from-[#fb7165] after:to-[#fe8854]">
-    Continue reading
-  </span>
-</a>
-
-
+                <div className="mt-4 flex items-center justify-between">
+                  <a
+                    href={blog.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="helvetica-neue-bold relative inline-block bg-gradient-to-r from-[#fb7165] to-[#fe8854] bg-clip-text font-semibold text-transparent"
+                  >
+                    <span className="after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:bg-gradient-to-r after:from-[#fb7165] after:to-[#fe8854] after:content-['']">
+                      Continue reading
+                    </span>
+                  </a>
                 </div>
               </div>
             </motion.div>
