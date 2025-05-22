@@ -37,9 +37,10 @@ export default function Footer() {
             src="/footerlogo.png"
             alt="Mukherjee Fellowship"
             width={150}
-            height={50}
-            className="sm:h-30 mx-0 h-[109.598px] w-[126px] sm:w-40"
+            height={300}
+            className="sm:h-30 mx-0 h-[109.598px] w-[126px] sm:w-40 md:h-[147px] md:w-[169px]"
           />
+
           <p className="helvetica-neue-regular mt-4 text-base text-[#1E1E1E]">
             Creating opportunities for students and young professionals in
             Policy, Politics & Governance.

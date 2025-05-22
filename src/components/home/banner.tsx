@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 
 export default function VideoBanner() {
   return (
-    <div className="relative px-4 xl:px-0 mx-auto w-full h-[60vh] sm:h-screen overflow-hidden bg-white">
+    <div className="relative mx-auto h-[60vh] w-full overflow-hidden bg-white px-4 sm:h-screen xl:px-0">
       {/* Background Video */}
       <motion.video
-        className="absolute top-0 left-0 w-full h-full object-cover bg-white"
+        className="absolute left-0 top-0 h-full w-full bg-white object-cover"
         autoPlay
         loop
         muted
@@ -30,7 +30,7 @@ export default function VideoBanner() {
 
       {/* Text Content with Staggered Animation */}
       <motion.div
-        className="absolute inset-0 flex flex-col justify-end bottom-8 sm:bottom-28 text-left text-white px-4 sm:px-20 md:px-20"
+        className="absolute inset-0 bottom-8 flex flex-col justify-end px-4 text-left text-white sm:bottom-28 sm:px-20 md:px-20"
         initial="hidden"
         animate="visible"
         variants={{
@@ -44,7 +44,7 @@ export default function VideoBanner() {
       >
         {/* Subheading */}
         <motion.h3
-          className="text-sm sm:text-xl md:text-4xl helvetica-neue"
+          className="helvetica-neue text-sm sm:text-xl md:text-4xl"
           variants={{
             hidden: { opacity: 0, y: 20 },
             visible: { opacity: 1, y: 0 },
@@ -59,7 +59,7 @@ export default function VideoBanner() {
 
         {/* Main Heading */}
         <motion.h1
-          className="text-3xl sm:text-5xl md:text-8xl mt-2 font-EB-extrabold whitespace-nowrap"
+          className="font-EB-extrabold whitespace-nowrap text-3xl sm:text-5xl md:text-8xl"
           variants={{
             hidden: { opacity: 0, y: 20 },
             visible: { opacity: 1, y: 0 },

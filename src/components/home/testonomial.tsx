@@ -100,7 +100,9 @@ export default function Testimonials() {
               <SwiperSlide key={index}>
                 <motion.div
                   className="relative m-3 mb-8 bg-white p-6 shadow-lg"
-                  style={{ boxShadow: "rgb(131 131 131) 0px 0px 7px" }}
+                  style={{
+                    boxShadow: "0px 4px 13.9px 0px rgba(59, 59, 59, 0.25)",
+                  }}
                   initial={{ opacity: 0, x: 50 }}
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -50 }}

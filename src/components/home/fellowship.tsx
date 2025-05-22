@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function LearningModules() {
   return (
     <motion.section
-      className="mt-4 px-4 py-0 text-center sm:mt-16 sm:bg-gray-100 sm:py-20 md:px-12"
+      className="mt-[60px] px-4 py-0 text-center sm:mt-16 sm:bg-gray-100 sm:py-20 md:px-12"
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}

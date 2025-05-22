@@ -182,7 +182,7 @@ export default function FAQSection() {
       >
         <input
           type="text"
-          placeholder="Search for a question..."
+          placeholder="Ask a question"
           className="w-full rounded-lg border p-3 text-gray-700 shadow-md transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-orange-500"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}

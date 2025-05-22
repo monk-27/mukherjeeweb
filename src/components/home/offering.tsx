@@ -26,7 +26,7 @@ export default function Offerings() {
         {/* <div className=""> */}
         <motion.h2
           transition={{ duration: 0.7, delay: 0.4 }}
-          className="helvetica-neue-bold py-[24px] text-[18px] text-[#FB7165] md:text-4xl"
+          className="helvetica-bold py-[10px] text-[18px] leading-tight text-[#FB7165] md:text-[30px]"
         >
           Presents young professionals with an immersive{" "}
           <span className="text-[#FE8854]">
@@ -62,7 +62,7 @@ export default function Offerings() {
         <div className="relative mx-auto max-w-7xl">
           {/* Title */}
           <motion.h3
-            className="font-EB-extrabold mb-12 mt-0 text-3xl text-gray-800 sm:mt-12 sm:text-6xl"
+            className="font-EB-extrabold mb-6 mt-0 text-3xl text-gray-800 sm:mt-12 sm:text-6xl md:mb-12"
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
@@ -82,7 +82,7 @@ export default function Offerings() {
           />
           <div className="block space-y-4 sm:hidden">
             <motion.img
-              src="/image01.png"
+              src="/offer_mobile.png"
               alt="Offerings"
               className="mx-auto max-w-[75%]"
               initial={{ opacity: 0, scale: 0.9 }}
@@ -90,7 +90,7 @@ export default function Offerings() {
               transition={{ duration: 0.8, delay: 0.8 }}
               viewport={{ once: true }}
             />
-            <motion.img
+            {/* <motion.img
               src="/image02.png"
               alt="Offerings"
               className="mx-auto max-w-[75%]"
@@ -107,7 +107,7 @@ export default function Offerings() {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.8 }}
               viewport={{ once: true }}
-            />
+            /> */}
           </div>
         </div>
       </motion.section>

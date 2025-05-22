@@ -50,7 +50,7 @@ export default function TestimonialsMob() {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        <h2 className="font-EB-extrabold text-grad mb-2 text-center text-2xl">
+        <h2 className="font-EB-extrabold mb-2 text-center text-[30px] text-[#181818]">
           Testimonials
         </h2>
       </motion.div>
@@ -93,8 +93,8 @@ export default function TestimonialsMob() {
             {testimonials.map((testimonial, index) => (
               <SwiperSlide key={index}>
                 <motion.div
-                  className="relative m-3 mb-8 bg-white p-6"
-                  // style={{ boxShadow: "rgb(131 131 131) 0px 0px 7px" }}
+                  // className="relative m-3 mb-8 bg-white p-6"
+                  className="relative mb-8 bg-white p-6"
                   initial={{ opacity: 0, x: 50 }}
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -50 }}
@@ -141,10 +141,17 @@ export default function TestimonialsMob() {
 
                       {/* Name and Position Centered */}
                       <div className="text-center">
-                        <h4 className="font-EB-extrabold text-grad text-[13.25px]">
+                        {/* <h4 className="font-EB-extrabold text-[13.25px] text-[#181818]">
                           {testimonial.name}
                         </h4>
                         <p className="helvetica-neue-regular text-[9.275px] text-base text-[#555]">
+                          {testimonial.position}
+                        </p> */}
+
+                        <h4 className="helvetica-neue-bold mt-4 text-black">
+                          {testimonial.name}
+                        </h4>
+                        <p className="helvetica-neue-regular text-sm text-gray-500">
                           {testimonial.position}
                         </p>
                       </div>

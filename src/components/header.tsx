@@ -51,7 +51,7 @@ export default function Header() {
   };
   return (
     <motion.header
-      className={`fixed top-0 z-50 w-full transition-all duration-300 ${
+      className={`fixed top-0 z-50 w-full transition-all duration-300 md:py-2 ${
         isScrolled ? "bg-white shadow-md" : "bg-white shadow-sm"
       }`}
       initial={{ opacity: 0, y: -30 }}
@@ -68,11 +68,19 @@ export default function Header() {
         >
           <Link href="/">
             <Image
+              src="/mobile_logo.png"
+              alt="Mukherjee Fellowship"
+              width={100}
+              height={100}
+              className="h-[22px] sm:h-[51px] sm:w-[262px] md:hidden"
+            />
+
+            <Image
               src="/logo.png"
               alt="Mukherjee Fellowship"
               width={100}
               height={100}
-              className="h-[20px] w-[102px] sm:h-[51px] sm:w-[262px]"
+              className="hidden h-[22px] sm:h-[51px] sm:w-[262px] md:block"
             />
           </Link>
         </motion.div>

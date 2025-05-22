@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function ExperientialLearning() {
   return (
     <motion.section
-      className="bg-white px-6 py-12 text-center sm:mb-12 md:px-12"
+      className="mt-[60px] bg-white px-6 py-12 text-center sm:mb-12 md:px-12"
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
@@ -23,8 +23,8 @@ export default function ExperientialLearning() {
           src="/imglearn.png"
           alt="Fellows at New Parliament Building"
           width={1000}
-          height={600}
-          className="h-[165px] w-full rounded-lg object-contain md:h-auto"
+          height={400}
+          className="w-full rounded-[4px]"
         />
       </motion.div>
 
