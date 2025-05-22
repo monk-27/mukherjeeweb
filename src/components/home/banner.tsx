@@ -31,7 +31,7 @@ export default function VideoBanner() {
 
       {/* Text Content with Staggered Animation */}
       <motion.div
-        className="absolute inset-0 flex flex-col justify-end bottom-8 sm:bottom-32 text-left text-white px-4 sm:px-20 md:px-20"
+        className="absolute inset-0 flex flex-col justify-end bottom-8 sm:bottom-28 text-left text-white px-4 sm:px-20 md:px-20"
         initial="hidden"
         animate="visible"
         variants={{

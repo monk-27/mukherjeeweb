@@ -36,7 +36,7 @@ export default function Testimonials() {
   ];
 
   return (
-    <motion.section className=" py-28 px-4 grid grid-cols-3 md:px-12 bg-white relative" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+    <motion.section className=" py-36 px-4 grid grid-cols-3 md:px-12 bg-white relative" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
       {/* Title Section with Animation */}
       <motion.div
         className="col-span-3 lg:col-span-1 place-content-center"
@@ -51,7 +51,7 @@ export default function Testimonials() {
       {/* Swiper Section with Animation */}
       <motion.div className="col-span-3 lg:col-span-2 relative" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} viewport={{ once: true }}>
         <div
-          className="absolute w-1/2 right-0 h-[70vh] md:h-[70vh] lg:h-[570px] top-52 lg:top-16"
+          className="absolute w-2/3 right-0 h-[70vh] md:h-[70vh] lg:h-[520px] top-52 lg:top-[-20]"
           style={{
             background: "linear-gradient(to right, #FECAB8 0%, #FEA48F 29%, #FC7F6F 100%)",
           }}

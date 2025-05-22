@@ -13,7 +13,7 @@ export default function LearningModules() {
 
       {/* Learning Modules Container */}
       <motion.div
-        className="max-w-5xl mx-auto mt-10 space-y-12 text-left"
+        className="max-w-5xl mx-auto mt-8 sm:pt-12 space-y-12 text-left"
         initial="hidden"
         animate="visible"
         variants={{
@@ -75,14 +75,14 @@ export default function LearningModules() {
         ].map((module, index) => (
           <motion.div
             key={index}
-            className="w-full max-w-5xl mx-auto overflow-hidden rounded-lg group"
+            className="w-full max-w-5xl mx-auto overflow-hidden rounded-lg group "
             variants={{
               hidden: { opacity: 0, y: 20 },
               visible: { opacity: 1, y: 0 },
             }}
           >
             {/* Section Title */}
-            <h3 className="text-lg md:text-2xl  helvetica-neue-bold mb-4 text-black">
+            <h3 className="text-lg md:text-2xl  helvetica-neue-bold mb-4 text-black ">
               {String.fromCharCode(65 + index)}. {module.title}
             </h3>
 
