@@ -4,14 +4,14 @@
 
 /* Define CSS variables for light and dark themes */
 :root {
-  --background: #ffffff;
+  --background: #fbfaf8;
   --foreground: #171717;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
-    --foreground: #ededed;
+    --foreground: #fbfaf8;
   }
 }
 
@@ -44,30 +44,35 @@
   font-style: normal;
 } */
 
-
 @font-face {
-  font-family: 'Helvetica';
-  src: url('/fonts/helvetica-light-587ebe5a.ttf') format('truetype');
+  font-family: "Helvetica";
+  src: url("/fonts/helvetica-light-587ebe5a.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Helvetica';
-  src: url('/fonts/Helvetica.ttf') format('truetype');
+  font-family: "Helvetica";
+  src: url("/fonts/Helvetica.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Helvetica';
-  src: url('/fonts/Helvetica-Bold.ttf') format('truetype');
+  font-family: "Helvetica";
+  src: url("/fonts/Helvetica-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
 
+@font-face {
+  font-family: "EBGaramond";
+  src: url("/fonts/EBGaramond-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
 
 @font-face {
-  font-family: 'EBGaramond';
-  src: url('/fonts/EBGaramond-ExtraBold.ttf') format('truetype');
+  font-family: "EBGaramond";
+  src: url("/fonts/EBGaramond-ExtraBold.ttf") format("truetype");
   font-weight: 800;
   font-style: normal;
 }
@@ -79,38 +84,38 @@
   font-style: normal;
 }
 @font-face {
-  font-family: 'Playfair';
-  src: url('/fonts/Playfair_144pt-Black.ttf') format('truetype');
+  font-family: "Playfair";
+  src: url("/fonts/Playfair_144pt-Black.ttf") format("truetype");
   font-weight: 900;
   /* font-style: black; */
 }
 @font-face {
-  font-family: 'Playfair';
-  src: url('/fonts/Playfair_9pt-Light.ttf') format('truetype');
+  font-family: "Playfair";
+  src: url("/fonts/Playfair_9pt-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Playfair';
-  src: url('/fonts/Playfair_9pt-Regular.ttf') format('truetype');
+  font-family: "Playfair";
+  src: url("/fonts/Playfair_9pt-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Playfair';
-  src: url('/fonts/Playfair_9pt-Medium.ttf') format('truetype');
+  font-family: "Playfair";
+  src: url("/fonts/Playfair_9pt-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Playfair';
-  src: url('/fonts/Playfair_9pt-Bold.ttf') format('truetype');
+  font-family: "Playfair";
+  src: url("/fonts/Playfair_9pt-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Playfair';
-  src: url('/fonts/Playfair_9pt-ExtraBold.ttf') format('truetype');
+  font-family: "Playfair";
+  src: url("/fonts/Playfair_9pt-ExtraBold.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
 }
@@ -154,22 +159,22 @@ body {
 
 /* Helvetica Neue Classes */
 .helvetica-neue-regular {
-  font-family:  Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   font-weight: 400; /* Medium */
 }
 
 .helvetica-neue-medium {
-  font-family:  Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   font-weight: 500; /* Simulated medium (falls back to 400 if not distinct) */
 }
 
 .helvetica-neue-light {
-  font-family:  Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   font-weight: 300; /* Light */
 }
 
 .helvetica-neue-bold {
-  font-family:  Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   font-weight: 900; /* Bold */
 }
 
@@ -205,11 +210,16 @@ body {
   font-weight: 900;
 }
 
-
 .font-EB-extrabold {
   font-family: "EBGaramond", serif;
   font-weight: 800;
 }
+
+.font-EB {
+  font-family: "EBGaramond", serif;
+  font-weight: 400;
+}
+
 /* Orelega One Classes */
 .orelega-one-regular {
   font-family: "Orelega One", serif;
@@ -242,7 +252,8 @@ body {
   font-weight: 400; /* Regular */
   /* font-size: 5.5rem; */
   color: #ffffff;
-  text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.7),
+  text-shadow:
+    4px 4px 6px rgba(0, 0, 0, 0.7),
     /* Main shadow */ 6px 6px 10px rgba(0, 0, 0, 0.5),
     /* Secondary shadow for depth */ -2px -2px 4px rgba(0, 0, 0, 0.3); /* Slight opposite shadow for wrap effect */
 }
@@ -280,11 +291,11 @@ body {
   font-weight: 900;
   /* font-size: 5.5rem; */
   color: #ffffff;
-  text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.7),
+  text-shadow:
+    4px 4px 6px rgba(0, 0, 0, 0.7),
     /* Main shadow */ 6px 6px 10px rgba(0, 0, 0, 0.5),
     /* Secondary shadow for depth */ -2px -2px 4px rgba(0, 0, 0, 0.3); /* Slight opposite shadow for wrap effect */
 }
-
 
 .grad1 {
   background: linear-gradient(100.31deg, #fb7165 -0.01%, #fe8854 89.82%);
@@ -297,7 +308,6 @@ body {
   background-position: 0 100%;
   /* text-decoration: none; Remove default underline */
 }
-
 
 .swiper-pagination-fraction {
   bottom: -20px !important;
@@ -320,12 +330,12 @@ body {
   background: -webkit-linear-gradient(#fb7165, #fe8854);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}/* Customize Swiper navigation arrows */
+} /* Customize Swiper navigation arrows */
 .swiper-button-next,
 .swiper-button-prev {
-  color: #FC7F6F  !important; /* Match your gradient color */
-  width: 40px !important;;
-  height: 40px !important;;
+  color: #fc7f6f !important; /* Match your gradient color */
+  width: 40px !important;
+  height: 40px !important;
   background: rgba(255, 255, 255, 0.8); /* Optional: Add a background */
   border-radius: 50%;
   transition: all 0.3s ease;
@@ -334,7 +344,7 @@ body {
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
   background: rgba(255, 255, 255, 1);
-  color: #FEA48F;
+  color: #fea48f;
 }
 
 .swiper-button-next:after,
@@ -345,11 +355,11 @@ body {
 
 /* Positioning adjustments if needed */
 .swiper-button-prev {
-  left: -30px !important;;
+  left: -30px !important;
 }
 
 .swiper-button-next {
-  right: -40px !important;;
+  right: -40px !important;
 }
 @media (max-width: 768px) {
   .swiper-button-prev {
@@ -408,7 +418,7 @@ SELECT {
 .bg-mobimg {
   background-image: url(/fellowback.png);
   height: 500px;
-  background-position: center ;
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat; /* Prevent tiling */
 }
@@ -428,7 +438,7 @@ SELECT {
 @media screen and (max-width: 600px) {
   .bg-mobimg {
     height: 550px !important; /* Reduced height for mobile */
-    background-position: center ; /* Center the image */
+    background-position: center; /* Center the image */
     background-size: cover; /* Use contain to avoid stretching */
     background-repeat: no-repeat; /* Prevent tiling */
   }

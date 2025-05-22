@@ -8,15 +8,14 @@ import Testimonials from "@/components/home/testonomial";
 
 export default function Home() {
   return (
-    <div className="bg-white ">
+    <div className="bg-white">
       <VideoBanner />
       <Offerings />
       <LearningModules />
       <div className="hidden md:block">
-
         <Testimonials />
       </div>
-      <div className="block sm:hidden space-y-4">
+      <div className="block space-y-4 sm:hidden">
         <TestimonialsMob />
       </div>
       <FellowshipStatus />

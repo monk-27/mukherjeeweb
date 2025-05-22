@@ -1,5 +1,3 @@
-
-
 "use client";
 import { useState } from "react";
 import { motion } from "framer-motion";
@@ -19,7 +17,8 @@ export default function FAQSection() {
     },
     {
       question: "Will Fellows receive a stipend?",
-      answer: "Yes. For the period of the Fellowship including the training module, Fellows will receive a stipend of ₹ 50,000 per month.",
+      answer:
+        "Yes. For the period of the Fellowship including the training module, Fellows will receive a stipend of ₹ 50,000 per month.",
     },
     {
       question:
@@ -30,12 +29,13 @@ export default function FAQSection() {
     {
       question:
         "Can professionals pursue both the ICPC Internship and the Mukherjee Fellowship?",
-      answer: "No. The ICPC Internship is for penultimate-year students, while the Mukherjee Fellowship is designed for graduates and professionals.",
+      answer:
+        "No. The ICPC Internship is for penultimate-year students, while the Mukherjee Fellowship is designed for graduates and professionals.",
     },
     {
       question: "Will those who complete the Fellowship receive a Certificate?",
-      answer: "Yes. Upon successful completion, Fellows will receive a course completion certificate from the Nation First Policy Research Centre, along with recommendation letters from their assigned offices.",
-
+      answer:
+        "Yes. Upon successful completion, Fellows will receive a course completion certificate from the Nation First Policy Research Centre, along with recommendation letters from their assigned offices.",
     },
     // {
     //   question:
@@ -59,14 +59,14 @@ export default function FAQSection() {
 
   // Filter FAQs based on search input
   const filteredFAQs = faqs.filter((faq) =>
-    faq.question.toLowerCase().includes(searchQuery.toLowerCase())
+    faq.question.toLowerCase().includes(searchQuery.toLowerCase()),
   );
 
   return (
-    <section className="py-16 px-4 xl:px-0 max-w-7xl mx-auto">
+    <section className="mx-auto max-w-7xl px-4 py-16 xl:px-0">
       {/* Heading with Animation */}
       <motion.h2
-        className="text-2xl sm:text-6xl  text-black text-center font-EB-extrabold mt-6 sm:mt-8"
+        className="font-EB-extrabold mt-6 text-center text-2xl text-black sm:mt-8 sm:text-6xl"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, ease: "easeOut" }}
@@ -75,7 +75,7 @@ export default function FAQSection() {
         Frequently Asked Questions
       </motion.h2>
       <motion.p
-        className="text-gray-700 mt-4 text-center font-helvetica-regular text-xs sm:text-2xl"
+        className="font-helvetica-regular mt-4 text-center text-xs text-gray-700 sm:text-2xl"
         initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
@@ -99,12 +99,12 @@ export default function FAQSection() {
         }}
       >
         <div>
-          <dl className="mt-8 space-y-4 divide-y divide-gray-900/10 z-50">
+          <dl className="z-50 mt-8 space-y-4 divide-y divide-gray-900/10">
             {filteredFAQs.length > 0 ? (
               filteredFAQs.map((faq, index) => (
                 <motion.div
                   key={index}
-                  className="border rounded-2xl shadow-xl overflow-hidden hover:bg-gray-50"
+                  className="overflow-hidden rounded-2xl border shadow-xl hover:bg-gray-50"
                   variants={{
                     hidden: { opacity: 0, y: 20 },
                     visible: {
@@ -117,12 +117,14 @@ export default function FAQSection() {
                 >
                   {/* Question with Fixed Increased Height */}
                   <div
-                    className="flex justify-between items-center p-4 sm:p-10 cursor-pointer" // Increased padding to p-6 for more height
+                    className="flex cursor-pointer items-center justify-between p-4 sm:p-10" // Increased padding to p-6 for more height
                     onClick={() => toggleFAQ(index)}
                   >
                     <span
-                      className={`text-xs sm:text-2xl helvetica-neue-bold ${
-                        openIndex === index ? "text-[#FB7165]" : "text-[#FB7165]"
+                      className={`helvetica-neue-bold text-xs sm:text-2xl ${
+                        openIndex === index
+                          ? "text-[#FB7165]"
+                          : "text-[#FB7165]"
                       }`}
                     >
                       {faq.question}
@@ -132,9 +134,9 @@ export default function FAQSection() {
                       transition={{ duration: 0.3, ease: "easeInOut" }}
                     >
                       {openIndex === index ? (
-                        <FaMinus className="text-[#FB7165] w-5 h-5" />
+                        <FaMinus className="h-5 w-5 text-[#FB7165]" />
                       ) : (
-                        <FaPlus className="text-gray-600 w-5 h-5" />
+                        <FaPlus className="h-5 w-5 text-gray-600" />
                       )}
                     </motion.div>
                   </div>
@@ -147,7 +149,7 @@ export default function FAQSection() {
                     className="overflow-hidden"
                   >
                     <motion.p
-                      className="text-xs sm:text-lg leading-7 rounded-b-2xl px-4 py-3 helvetica-neue-regular grad1 text-white"
+                      className="helvetica-neue-regular grad1 rounded-b-2xl px-4 py-3 text-xs leading-7 text-white sm:text-lg"
                       animate={{ opacity: openIndex === index ? 1 : 0 }}
                       transition={{ duration: 0.3, ease: "easeOut" }}
                     >
@@ -158,7 +160,7 @@ export default function FAQSection() {
               ))
             ) : (
               <motion.p
-                className="text-gray-500 mt-4 helvetica text-center"
+                className="helvetica mt-4 text-center text-gray-500"
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, ease: "easeOut" }}
@@ -180,8 +182,8 @@ export default function FAQSection() {
       >
         <input
           type="text"
-          placeholder="Ask a question"
-          className="w-full p-3 border rounded-lg shadow-md focus:outline-none text-gray-700 transition-all duration-300 focus:ring-2 focus:ring-orange-500"
+          placeholder="Search for a question..."
+          className="w-full rounded-lg border p-3 text-gray-700 shadow-md transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-orange-500"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
         />

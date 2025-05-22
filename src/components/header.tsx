@@ -51,22 +51,35 @@ export default function Header() {
   };
   return (
     <motion.header
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? "bg-white shadow-md" : "bg-white shadow-sm"}`}
+      className={`fixed top-0 z-50 w-full transition-all duration-300 ${
+        isScrolled ? "bg-white shadow-md" : "bg-white shadow-sm"
+      }`}
       initial={{ opacity: 0, y: -30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
     >
-      <div className="  sm:max-w-full mx-auto flex items-center justify-between p-4 sm:py-1 px-8 xl:px-20 w-full">
+      <div className="mx-auto flex w-full items-center justify-between p-4 px-8 sm:max-w-full sm:py-1 xl:px-20">
         {/* Logo */}
-        <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+        <motion.div
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+        >
           <Link href="/">
-            <Image src="/logo.png" alt="Mukherjee Fellowship" width={100} height={100} className="w-[102px] h-[19.85px] sm:w-[262px] sm:h-[51px]" />
+            <Image
+              src="/logo.png"
+              alt="Mukherjee Fellowship"
+              width={100}
+              height={100}
+              className="h-[20px] w-[102px] sm:h-[51px] sm:w-[262px]"
+            />
           </Link>
         </motion.div>
 
         {/* Desktop Navigation */}
         <motion.nav
-          className="hidden lg:flex space-x-12"
+          className="hidden space-x-12 lg:flex"
           initial="hidden"
           animate="visible"
           variants={{
@@ -81,7 +94,11 @@ export default function Header() {
             <motion.a
               key={link.path}
               href={link.path}
-              className={`text-xl ${pathname === link.path ? "helvetica-neue-bold text-[#FF8609]" : "helvetica-neue-regular text-[#FF8609]"} transition-all`}
+              className={`text-xl ${
+                pathname === link.path
+                  ? "helvetica-neue-bold text-[#FF8609]"
+                  : "helvetica-neue-regular text-[#FF8609]"
+              } transition-all`}
               variants={{
                 hidden: { opacity: 0, y: 10 },
                 visible: { opacity: 1, y: 0 },
@@ -93,59 +110,79 @@ export default function Header() {
         </motion.nav>
 
         {/* Right Side: Apply Button */}
-        <motion.div className="hidden lg:flex items-center space-x-4" initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+        <motion.div
+          className="hidden items-center space-x-4 lg:flex"
+          initial={{ opacity: 0, x: 20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+        >
           <Link href="https://forms.gle/YRCpcPHnvuMfA9DCA" target="_blank">
-            <button className="grad1 text-white px-4 xl:px-8 py-2 rounded-xl text-base xl:text-xl helvetica-neue-bold">Apply now</button>
+            <button className="grad1 helvetica-neue-bold rounded-[2px] px-4 py-2 text-base text-white md:rounded-[8px] xl:px-8 xl:text-xl">
+              Apply now
+            </button>
           </Link>
         </motion.div>
 
         {/* Mobile Menu Button */}
-        <button onClick={() => setIsOpen(!isOpen)} className="lg:hidden text-black">
-          {isOpen ? <X size={28} /> : <Menu color="#000" size={24} className="w-[24px] h-[24px]" />}
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="text-black lg:hidden"
+        >
+          {isOpen ? (
+            <X size={28} />
+          ) : (
+            <Menu color="#000" size={24} className="h-[24px] w-[24px]" />
+          )}
         </button>
       </div>
 
       {/* Mobile Navigation Menu with Slide-in Animation */}
-     <AnimatePresence>
-  {isOpen && (
-    <motion.nav
-      variants={menuVariants}
-      className="lg:hidden bg-white border-t absolute w-full left-0 text-center"
-      initial={{ y: "-100%" }}
-      animate={{ y: 0 }}
-      exit={{ y: "-100%" }}
-      transition={{ duration: 0.5 }}
-    >
-      <div className="flex flex-col text-center space-y-4 p-4">
-        {navLinks.map((link) => (
-          <motion.a
-            key={link.path}
-            href={link.path}
-            className={`${
-              pathname === link.path
-                ? "helvetica-neue-bold text-[#FF8609] text-lg"
-                : "helvetica-neue-regular text-[#FF8609] text-lg"
-            } hover:text-orange-600 transition-all`}
-            onClick={() => setIsOpen(false)}
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, delay: 0.1 }}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.nav
+            variants={menuVariants}
+            className="absolute left-0 w-full border-t bg-white text-center lg:hidden"
+            initial={{ y: "-100%" }}
+            animate={{ y: 0 }}
+            exit={{ y: "-100%" }}
+            transition={{ duration: 0.5 }}
           >
-            {link.name}
-          </motion.a>
-        ))}
-        <motion.button
-          className="grad1 text-white px-4 py-2 rounded-xl helvetica-neue-bold w-1/2 mx-auto" // Added mx-auto to center the button
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3, delay: 0.2 }}
-        >
-          <Link href="https://forms.gle/YRCpcPHnvuMfA9DCA" target="_blank">Apply now</Link>
-        </motion.button>
-      </div>
-    </motion.nav>
-  )}
-</AnimatePresence>
+            <div className="flex flex-col space-y-4 p-4 text-center">
+              {navLinks.map((link) => (
+                <motion.a
+                  key={link.path}
+                  href={link.path}
+                  className={`${
+                    pathname === link.path
+                      ? "helvetica-neue-bold text-lg text-[#FF8609]"
+                      : "helvetica-neue-regular text-lg text-[#FF8609]"
+                  } transition-all hover:text-orange-600`}
+                  onClick={() => setIsOpen(false)}
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3, delay: 0.1 }}
+                >
+                  {link.name}
+                </motion.a>
+              ))}
+              <motion.button
+                className="grad1 helvetica-neue-bold mx-auto w-1/2 rounded-[2px] px-4 py-2 text-white md:rounded-[8px]" // Added mx-auto to center the button
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3, delay: 0.2 }}
+              >
+                <Link
+                  href="https://forms.gle/YRCpcPHnvuMfA9DCA"
+                  target="_blank"
+                >
+                  Apply now
+                </Link>
+              </motion.button>
+            </div>
+          </motion.nav>
+        )}
+      </AnimatePresence>
     </motion.header>
   );
 }

@@ -402,12 +402,16 @@ export default function MeetOurFellows() {
     setIsOldOpen(true);
   };
 
-  const sortedFellows_old = fellowsold.sort((a, b) => a.name.trim().localeCompare(b.name.trim()));
-  const sortedFellows_new = fellownew.sort((a, b) => a.name.trim().localeCompare(b.name.trim()));
+  const sortedFellows_old = fellowsold.sort((a, b) =>
+    a.name.trim().localeCompare(b.name.trim()),
+  );
+  const sortedFellows_new = fellownew.sort((a, b) =>
+    a.name.trim().localeCompare(b.name.trim()),
+  );
   return (
-    <section className="max-w-7xl mx-auto py-16 px-4 xl:px-0 text-center">
+    <section className="mx-auto max-w-7xl px-4 py-16 text-center xl:px-0">
       <motion.h2
-        className="text-2xl sm:text-6xl text-gray-900 font-EB-extrabold mt-6 sm:mt-8"
+        className="font-EB-extrabold mt-6 text-2xl text-gray-900 sm:mt-8 sm:text-6xl"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
@@ -416,28 +420,34 @@ export default function MeetOurFellows() {
         Meet Our Fellows
       </motion.h2>
       <motion.p
-        className="text-gray-700 mt-4 font-helvetica-regular block sm:hidden text-xs "
+        className="font-helvetica-regular mt-4 block text-xs text-gray-700 sm:hidden"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.7, delay: 0.2 }}
         viewport={{ once: true }}
       >
-        Hear from our past and present Fellows sharing their Mukherjee Fellowship experience in their own words.
+        Hear from our past and present Fellows sharing their Mukherjee
+        Fellowship experience in their own words.
       </motion.p>
       <motion.p
-        className="text-gray-700 mt-4 font-helvetica-regular hidden sm:block text-2xl max-w-7xl mx-auto"
+        className="font-helvetica-regular mx-auto mt-4 hidden max-w-7xl text-2xl text-gray-700 sm:block"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.7, delay: 0.2 }}
         viewport={{ once: true }}
       >
-        Hear from our past and present Fellows sharing their Mukherjee Fellowship <br/>experience in their own words.
+        Hear from our past and present Fellows sharing their Mukherjee
+        Fellowship <br />
+        experience in their own words.
       </motion.p>
 
       {/* 2024-2025 Fellows */}
-      <span className="block text-gray-700 text-xl sm:text-4xl mt-12 sm:mt-14 mb-6 font-helvetica-regular">2024 - 2025</span>
+      <span className="font-EB mb-6 mt-12 block text-xl text-gray-700 sm:mt-14 sm:text-4xl">
+        2024 - 2025
+      </span>
+
       <motion.div
-        className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6 mt-8"
+        className="mt-8 grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6"
         initial="hidden"
         animate="visible"
         variants={{
@@ -452,7 +462,7 @@ export default function MeetOurFellows() {
           <motion.div
             key={index}
             onClick={() => openNewModal(index)}
-            className="flex flex-col items-center cursor-pointer "
+            className="flex cursor-pointer flex-col items-center"
             variants={{
               hidden: { opacity: 0, y: 20 },
               visible: { opacity: 1, y: 0 },
@@ -460,18 +470,27 @@ export default function MeetOurFellows() {
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}
           >
-            <div className="w-40 h-40 sm:w-48 sm:h-48 relative ">
-              <Image src={fellow.image} alt={fellow.name} fill className="object-cover rounded-lg shadow-md" />
+            <div className="relative h-40 w-40 sm:h-48 sm:w-48">
+              <Image
+                src={fellow.image}
+                alt={fellow.name}
+                fill
+                className="rounded-lg object-cover shadow-md"
+              />
             </div>
-            <p className="font-semibold mt-3 text-gray-800 text-sm sm:text-base max-w-[14rem] truncate text-center">{fellow.name}</p>
+            <p className="mt-3 max-w-[14rem] truncate text-center text-sm font-semibold text-gray-800 sm:text-base">
+              {fellow.name}
+            </p>
           </motion.div>
         ))}
       </motion.div>
 
       {/* 2023-2024 Fellows */}
-      <span className="block text-gray-700 text-xl sm:text-4xl mt-16 mb-6 font-helvetica-regular">2023 - 2024</span>
+      <span className="font-EB-extrabold mb-6 mt-16 block text-xl text-gray-700 sm:text-4xl">
+        2023 - 2024
+      </span>
       <motion.div
-        className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6 mt-8"
+        className="mt-8 grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6"
         initial="hidden"
         animate="visible"
         variants={{
@@ -486,7 +505,7 @@ export default function MeetOurFellows() {
           <motion.div
             key={index}
             onClick={() => openOldModal(index)}
-            className="flex flex-col items-center cursor-pointer"
+            className="flex cursor-pointer flex-col items-center"
             variants={{
               hidden: { opacity: 0, y: 20 },
               visible: { opacity: 1, y: 0 },
@@ -494,51 +513,90 @@ export default function MeetOurFellows() {
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}
           >
-            <div className="w-40 h-40 sm:w-48 sm:h-48 relative">
-              <Image src={fellow.image} alt={fellow.name} fill className="object-cover rounded-lg shadow-md" />
+            <div className="relative h-40 w-40 sm:h-48 sm:w-48">
+              <Image
+                src={fellow.image}
+                alt={fellow.name}
+                fill
+                className="rounded-lg object-cover shadow-md"
+              />
             </div>
-            <p className="font-semibold mt-3 text-gray-800 text-sm sm:text-base max-w-[13rem] truncate text-center">{fellow.name}</p>
+            <p className="mt-3 max-w-[13rem] truncate text-center text-sm font-semibold text-gray-800 sm:text-base">
+              {fellow.name}
+            </p>
           </motion.div>
         ))}
       </motion.div>
 
       {/* Dialogs remain largely the same, with minor adjustments */}
-      <Dialog open={isNewOpen} onClose={() => setIsNewOpen(false)} className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75 px-4">
+      <Dialog
+        open={isNewOpen}
+        onClose={() => setIsNewOpen(false)}
+        className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75 px-4"
+      >
         <motion.div
-          className="relative mx-auto max-w-5xl max-h-[90vh] flex flex-col md:flex-row items-center gap-6 bg-white p-8 rounded-lg overflow-y-auto"
+          className="relative mx-auto flex max-h-[90vh] max-w-5xl flex-col items-center gap-6 overflow-y-auto rounded-lg bg-white p-8 md:flex-row"
           initial={{ x: "-30%", opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
         >
-          <button className="absolute top-2 right-2 bg-white p-2 rounded-full" onClick={() => setIsNewOpen(false)}>
-            <XMarkIcon className="w-5 h-5 text-black" />
+          <button
+            className="absolute right-2 top-2 rounded-full bg-white p-2"
+            onClick={() => setIsNewOpen(false)}
+          >
+            <XMarkIcon className="h-5 w-5 text-black" />
           </button>
-          <div className="w-64 h-64 relative flex-shrink-0">
-            <Image src={fellownew[newIndex].image} alt={fellownew[newIndex].alt} fill className="object-cover rounded-lg" />
+          <div className="relative h-64 w-64 flex-shrink-0">
+            <Image
+              src={fellownew[newIndex].image}
+              alt={fellownew[newIndex].alt}
+              fill
+              className="rounded-lg object-cover"
+            />
           </div>
           <div className="flex-1">
-            <motion.div className="text-left text-gray-900 text-2xl font-EB-extrabold">{fellownew[newIndex].name}</motion.div>
-            <motion.div className="text-left text-gray-900 text-lg font-helvetica-regular mt-4">{fellownew[newIndex].description}</motion.div>
+            <motion.div className="font-EB-extrabold text-left text-2xl text-gray-900">
+              {fellownew[newIndex].name}
+            </motion.div>
+            <motion.div className="font-helvetica-regular mt-4 text-left text-lg text-gray-900">
+              {fellownew[newIndex].description}
+            </motion.div>
           </div>
         </motion.div>
       </Dialog>
 
-      <Dialog open={isOldOpen} onClose={() => setIsOldOpen(false)} className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75 px-4">
+      <Dialog
+        open={isOldOpen}
+        onClose={() => setIsOldOpen(false)}
+        className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75 px-4"
+      >
         <motion.div
-          className="relative mx-auto max-w-5xl max-h-[90vh] flex flex-col md:flex-row items-center gap-6 bg-white p-8 rounded-lg overflow-y-auto"
+          className="relative mx-auto flex max-h-[90vh] max-w-5xl flex-col items-center gap-6 overflow-y-auto rounded-lg bg-white p-8 md:flex-row"
           initial={{ x: "-30%", opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
         >
-          <button className="absolute top-2 right-2 bg-white p-2 rounded-full" onClick={() => setIsOldOpen(false)}>
-            <XMarkIcon className="w-5 h-5 text-black" />
+          <button
+            className="absolute right-2 top-2 rounded-full bg-white p-2"
+            onClick={() => setIsOldOpen(false)}
+          >
+            <XMarkIcon className="h-5 w-5 text-black" />
           </button>
-          <div className="w-64 h-64 relative flex-shrink-0">
-            <Image src={fellowsold[oldIndex].image} alt={fellowsold[oldIndex].alt} fill className="object-cover rounded-lg" />
+          <div className="relative h-64 w-64 flex-shrink-0">
+            <Image
+              src={fellowsold[oldIndex].image}
+              alt={fellowsold[oldIndex].alt}
+              fill
+              className="rounded-lg object-cover"
+            />
           </div>
           <div className="flex-1">
-            <motion.div className="text-left text-gray-900 text-2xl font-EB-extrabold">{fellowsold[oldIndex].name}</motion.div>
-            <motion.div className="text-left text-gray-900 text-lg font-helvetica-regular mt-4">{fellowsold[oldIndex].description}</motion.div>
+            <motion.div className="font-EB-extrabold text-left text-2xl text-gray-900">
+              {fellowsold[oldIndex].name}
+            </motion.div>
+            <motion.div className="font-helvetica-regular mt-4 text-left text-lg text-gray-900">
+              {fellowsold[oldIndex].description}
+            </motion.div>
           </div>
         </motion.div>
       </Dialog>

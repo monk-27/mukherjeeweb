@@ -37,26 +37,28 @@ export default function TestimonialsMob() {
 
   return (
     <motion.section
-      className="py-12 sm:py-28 px-4 grid grid-cols-3 md:px-12 bg-white relative"
+      className="relative grid grid-cols-3 bg-white px-4 py-12 sm:py-28 md:px-12"
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
     >
       {/* Title Section with Animation */}
       <motion.div
-        className="col-span-3 lg:col-span-1 place-content-center"
+        className="col-span-3 place-content-center lg:col-span-1"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        <h2 className="text-2xl font-EB-extrabold text-grad mb-2 text-center">Testimonials</h2>
+        <h2 className="font-EB-extrabold text-grad mb-2 text-center text-2xl">
+          Testimonials
+        </h2>
       </motion.div>
 
       {/* Swiper Section with Animation */}
       <motion.div
-        className="col-span-3 lg:col-span-2 relative shadow-md"
-                  // style={{ boxShadow: "rgb(131 131 131) 0px 0px 7px" }}
+        className="relative col-span-3 shadow-md lg:col-span-2"
+        // style={{ boxShadow: "rgb(131 131 131) 0px 0px 7px" }}
 
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -91,7 +93,7 @@ export default function TestimonialsMob() {
             {testimonials.map((testimonial, index) => (
               <SwiperSlide key={index}>
                 <motion.div
-                  className="bg-white p-6 relative m-3 mb-8"
+                  className="relative m-3 mb-8 bg-white p-6"
                   // style={{ boxShadow: "rgb(131 131 131) 0px 0px 7px" }}
                   initial={{ opacity: 0, x: 50 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -103,8 +105,8 @@ export default function TestimonialsMob() {
                   }}
                 >
                   {/* Image & Testimonial Content */}
-                  <div className="grid grid-cols-3 items-center justify-center place-content-center min-h-[400px] gap-1">
-                    <div className="place-content-center flex items-center justify-center col-span-3 lg:col-span-1">
+                  <div className="grid min-h-[400px] grid-cols-3 place-content-center items-center justify-center gap-1">
+                    <div className="col-span-3 flex place-content-center items-center justify-center lg:col-span-1">
                       <Image
                         src={testimonial.image}
                         alt={testimonial.name}
@@ -114,18 +116,37 @@ export default function TestimonialsMob() {
                       />
                     </div>
                     {/* Testimonial Text */}
-                    <div className="place-content-center col-span-3 lg:col-span-2 flex flex-col justify-between h-full mt-8 lg:mt-0">
-                      <p className="text-gray-600 text-xs italic helvetica-neue-regular text-center">
-                        <img src="/test/q0.png" className="h-5 inline-block mr-1" alt="quote start" />
-                        {testimonial.text}
-                        <div className="flex justify-end">
-                          <img src="/test/q1.png" className="h-5" alt="quote end" />
+                    <div className="col-span-3 mt-8 flex h-full flex-col place-content-center justify-between lg:col-span-2 lg:mt-0">
+                      <div className="helvetica-neue-regular text-center text-xs italic text-gray-600">
+                        <div className="flex justify-start">
+                          <img
+                            src="/testo1.png"
+                            className="h-[11.196px]"
+                            alt="quote start"
+                          />
                         </div>
-                      </p>
+
+                        <p className="text-[11.926px] text-[#4F4F4F]">
+                          {testimonial.text}
+                        </p>
+
+                        <div className="flex justify-end">
+                          <img
+                            src="/testo2.png"
+                            className="h-[11.196px]"
+                            alt="quote end"
+                          />
+                        </div>
+                      </div>
+
                       {/* Name and Position Centered */}
-                      <div className=" text-center">
-                        <h4 className="helvetica-neue-bold text-sm text-grad">{testimonial.name}</h4>
-                        <p className="text-base text-gray-500 helvetica-neue-regular">{testimonial.position}</p>
+                      <div className="text-center">
+                        <h4 className="font-EB-extrabold text-grad text-[13.25px]">
+                          {testimonial.name}
+                        </h4>
+                        <p className="helvetica-neue-regular text-[9.275px] text-base text-[#555]">
+                          {testimonial.position}
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -134,10 +155,10 @@ export default function TestimonialsMob() {
             ))}
           </Swiper>
           {/* Navigation Arrows Positioned Outside */}
-          <div className="absolute top-1/2 transform -translate-y-1/2 left-0 z-10">
+          <div className="absolute left-0 top-1/2 z-10 -translate-y-1/2 transform">
             <div className="swiper-button-prev"></div>
           </div>
-          <div className="absolute top-1/2 transform -translate-y-1/2 right-0 z-10">
+          <div className="absolute right-0 top-1/2 z-10 -translate-y-1/2 transform">
             <div className="swiper-button-next"></div>
           </div>
         </div>

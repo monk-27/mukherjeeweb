@@ -3,61 +3,66 @@ import { motion } from "framer-motion";
 
 export default function Offerings() {
   return (
-    <div className="py-2 bg-white mb-6">
+    <div className="mb-6 bg-white py-2">
       {/* Header Section */}
       <motion.p
         transition={{ duration: 0.7, delay: 0.2 }}
-        className="text-center mt-10"
+        className="mt-8 px-6 text-center sm:px-0"
       >
-        <div className="text-gray-600 sm:text-xl text-[14px] helvetica-neue-regular px-2 mx-auto">
+        <div className="helvetica-neue-regular mx-auto px-2 text-[14px] text-[#1E1E1E] sm:text-xl">
           The Policy, Politics and Governance Foundation (PPGF), in
           collaboration with the Nation First Policy Research Centre (NFPRC)
         </div>
       </motion.p>
+
       <motion.section
-        className="py-8 text-center"
+        className="mx-auto max-w-6xl px-6 text-center sm:px-0"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1 }}
         viewport={{ once: true }}
       >
-        <div className="max-w-6xl mx-auto px-4">
-          <motion.h2
-            transition={{ duration: 0.7, delay: 0.4 }}
-            className="text-[18px] md:text-4xl helvetica-neue-bold text-[#FB7165]"
-          >
-            Presents young professionals with an immersive hands-on <br />
-            <span className="text-[#FE8854]">
-              experience in policymaking and political strategy consulting.
-            </span>
-          </motion.h2>
-          <motion.p
-            transition={{ duration: 0.7, delay: 0.6 }}
-            className="text-gray-700 mt-8 text-[14px] md:text-xl helvetica-neue-regular px-6 sm:px-10"
-          >
-            The Fellowship intends to empower passionate students and
-            exceptional professionals with the necessary skill set to succeed in
-            policy making and political strategy consulting. After completing a
-            customized training program, Fellows will be assigned to work at the
-            offices of leading policymakers, public leaders, and administrators,
-            providing them with valuable insights into policymaking and
-            politics.
-          </motion.p>
-        </div>
+        {/* <div className="max-w-6xl mx-auto"> */}
+        {/* <div className=""> */}
+        <motion.h2
+          transition={{ duration: 0.7, delay: 0.4 }}
+          className="helvetica-neue-bold py-[24px] text-[18px] text-[#FB7165] md:text-4xl"
+        >
+          Presents young professionals with an immersive{" "}
+          <span className="text-[#FE8854]">
+            hands-on experience in policymaking and political strategy
+            consulting.
+          </span>
+        </motion.h2>
+
+        <motion.p
+          transition={{ duration: 0.7, delay: 0.6 }}
+          className="helvetica-neue-regular text-[14px] text-[#1E1E1E] sm:px-10 md:text-xl"
+        >
+          The Fellowship intends to empower passionate students and exceptional
+          professionals with the necessary skill set to succeed in policy making
+          and political strategy consulting. After completing a customized
+          training program, Fellows will be assigned to work at the offices of
+          leading policymakers, public leaders, and administrators, providing
+          them with valuable insights into policymaking and politics.
+        </motion.p>
+        {/* </div> */}
       </motion.section>
+
+      <div className="h-[60px]"></div>
 
       {/* Offerings Section */}
       <motion.section
-        className="relative py-0 sm:py-20 px-4 md:px-12 text-center bg-white bg-img min-h-fit"
+        className="bg-img relative min-h-fit bg-white px-4 py-0 text-center sm:py-20 md:px-12"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1 }}
         viewport={{ once: true }}
       >
-        <div className="relative max-w-7xl mx-auto">
+        <div className="relative mx-auto max-w-7xl">
           {/* Title */}
           <motion.h3
-            className="text-3xl sm:text-6xl text-gray-800 mb-12 mt-0 sm:mt-12 font-EB-extrabold"
+            className="font-EB-extrabold mb-12 mt-0 text-3xl text-gray-800 sm:mt-12 sm:text-6xl"
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
@@ -75,7 +80,7 @@ export default function Offerings() {
             transition={{ duration: 0.8, delay: 0.8 }}
             viewport={{ once: true }}
           />
-          <div className="block sm:hidden space-y-4">
+          <div className="block space-y-4 sm:hidden">
             <motion.img
               src="/image01.png"
               alt="Offerings"

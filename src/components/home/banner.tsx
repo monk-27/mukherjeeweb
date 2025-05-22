@@ -2,7 +2,6 @@
 import { motion } from "framer-motion";
 
 export default function VideoBanner() {
-
   return (
     <div className="relative px-4 xl:px-0 mx-auto w-full h-[60vh] sm:h-screen overflow-hidden bg-white">
       {/* Background Video */}
@@ -60,7 +59,7 @@ export default function VideoBanner() {
 
         {/* Main Heading */}
         <motion.h1
-          className="text-3xl sm:text-5xl md:text-8xl mt-2 abrildisplay whitespace-nowrap"
+          className="text-3xl sm:text-5xl md:text-8xl mt-2 font-EB-extrabold whitespace-nowrap"
           variants={{
             hidden: { opacity: 0, y: 20 },
             visible: { opacity: 1, y: 0 },
