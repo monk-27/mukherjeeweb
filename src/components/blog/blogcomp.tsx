@@ -212,7 +212,7 @@ export default function BlogSection() {
     {
       id: 1,
       category: "Featured",
-      image: "/blog1.png",
+      image: "/images/blog1.png",
       author: "Mukherjee Fellowship",
       date: "February 5, 2025",
       title:
@@ -224,7 +224,7 @@ export default function BlogSection() {
     {
       id: 2,
       category: "Featured",
-      image: "/image 9.png",
+      image: "/images/blog2.png",
       author: "Mukherjee Fellowship",
       date: "February 4, 2025",
       title: "Rising East: BJP's Northeast Success Story",
@@ -235,7 +235,7 @@ export default function BlogSection() {
     {
       id: 3,
       category: "Featured",
-      image: "/imagemeet.png",
+      image: "/images/blog3.png",
       author: "Mukherjee Fellowship",
       date: "January 31, 2025",
       title: "India Hosting the Olympics",
@@ -246,7 +246,7 @@ export default function BlogSection() {
     {
       id: 4,
       category: "Featured",
-      image: "/imagemeet.png",
+      image: "/images/blog4.png",
       author: "Mukherjee Fellowship",
       date: "January 28, 2025",
       title: "Cleared for Takeoff: Bharat’s Journey to Aviation Supremacy",
