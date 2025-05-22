@@ -37,7 +37,7 @@ export default function TestimonialsMob() {
 
   return (
     <motion.section
-      className="py-28 px-4 grid grid-cols-3 md:px-12 bg-white relative"
+      className="py-12 sm:py-28 px-4 grid grid-cols-3 md:px-12 bg-white relative"
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}

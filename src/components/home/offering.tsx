@@ -9,7 +9,7 @@ export default function Offerings() {
         transition={{ duration: 0.7, delay: 0.2 }}
         className="text-center mt-10"
       >
-        <div className="text-gray-600 sm:text-xl text-sm helvetica-neue-regular px-2 mx-auto">
+        <div className="text-gray-600 sm:text-xl text-[14px] helvetica-neue-regular px-2 mx-auto">
           The Policy, Politics and Governance Foundation (PPGF), in
           collaboration with the Nation First Policy Research Centre (NFPRC)
         </div>
@@ -24,7 +24,7 @@ export default function Offerings() {
         <div className="max-w-6xl mx-auto px-4">
           <motion.h2
             transition={{ duration: 0.7, delay: 0.4 }}
-            className="text-lg md:text-4xl helvetica-neue-bold text-[#FB7165]"
+            className="text-[18px] md:text-4xl helvetica-neue-bold text-[#FB7165]"
           >
             Presents young professionals with an immersive hands-on <br />
             <span className="text-[#FE8854]">
@@ -33,7 +33,7 @@ export default function Offerings() {
           </motion.h2>
           <motion.p
             transition={{ duration: 0.7, delay: 0.6 }}
-            className="text-gray-700 mt-8 text-sm md:text-xl helvetica-neue-regular px-6 sm:px-10"
+            className="text-gray-700 mt-8 text-[14px] md:text-xl helvetica-neue-regular px-6 sm:px-10"
           >
             The Fellowship intends to empower passionate students and
             exceptional professionals with the necessary skill set to succeed in
@@ -57,7 +57,7 @@ export default function Offerings() {
         <div className="relative max-w-7xl mx-auto">
           {/* Title */}
           <motion.h3
-            className="text-3xl sm:text-6xl text-gray-800 mb-12 sm:mt-12 font-EB-extrabold"
+            className="text-3xl sm:text-6xl text-gray-800 mb-12 mt-0 sm:mt-12 font-EB-extrabold"
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}

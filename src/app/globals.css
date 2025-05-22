@@ -398,7 +398,8 @@ SELECT {
 
 @media screen and (max-width: 600px) {
   .bg-img {
-    height: 200px !important; /* Reduced height for mobile */
+    height: 220px !important; /* Reduced height for mobile */
+    margin-top: 2px;
     background-position: center top; /* Center the image */
     background-size: contain; /* Use contain to avoid stretching */
     background-repeat: no-repeat; /* Prevent tiling */

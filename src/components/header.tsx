@@ -56,11 +56,11 @@ export default function Header() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
     >
-      <div className="  sm:max-w-full mx-auto flex items-center justify-between p-1 sm:py-1 md:px-6 xl:px-20 w-full">
+      <div className="  sm:max-w-full mx-auto flex items-center justify-between p-4 sm:py-1 px-8 xl:px-20 w-full">
         {/* Logo */}
         <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
           <Link href="/">
-            <Image src="/logo.png" alt="Mukherjee Fellowship" width={250} height={100} />
+            <Image src="/logo.png" alt="Mukherjee Fellowship" width={100} height={100} className="w-[102px] h-[19.85px] sm:w-[262px] sm:h-[51px]" />
           </Link>
         </motion.div>
 
@@ -101,7 +101,7 @@ export default function Header() {
 
         {/* Mobile Menu Button */}
         <button onClick={() => setIsOpen(!isOpen)} className="lg:hidden text-black">
-          {isOpen ? <X size={28} /> : <Menu color="#000" size={28} />}
+          {isOpen ? <X size={28} /> : <Menu color="#000" size={24} className="w-[24px] h-[24px]" />}
         </button>
       </div>
 
