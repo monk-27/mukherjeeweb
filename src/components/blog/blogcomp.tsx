@@ -316,7 +316,7 @@ export default function BlogSection() {
           {filteredBlogs.map((blog) => (
             <motion.div
               key={blog.id}
-              className="flex flex-col md:flex-row bg-white rounded-lg overflow-hidden shadowMy group"
+              className="flex flex-col md:flex-row bg-white  overflow-hidden shadowMy group"
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
             >
