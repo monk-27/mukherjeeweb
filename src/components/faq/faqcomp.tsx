@@ -75,7 +75,7 @@ export default function FAQSection() {
         Frequently Asked Questions
       </motion.h2>
       <motion.p
-        className="font-helvetica-regular mt-[7px] text-center text-xs leading-3 text-[#1E1E1E] sm:text-2xl"
+        className="font-helvetica-regular mt-[7px] leading-4 sm:leading-tight  text-center text-xs  text-[#1E1E1E] sm:text-2xl"
         initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
@@ -149,7 +149,7 @@ export default function FAQSection() {
                     className="overflow-hidden"
                   >
                     <motion.p
-                      className="helvetica-neue-regular grad1 rounded-b-2xl px-4 py-3 text-xs leading-7 text-white sm:text-lg"
+                      className="helvetica-neue-regular leading-tight grad1 rounded-b-2xl px-4 py-3 text-xs  text-white sm:text-lg"
                       animate={{ opacity: openIndex === index ? 1 : 0 }}
                       transition={{ duration: 0.3, ease: "easeOut" }}
                     >

@@ -207,7 +207,7 @@ export default function MeetOurFellows() {
         "I am immensely grateful for the opportunity provided by the Mukherjee Fellowship, which served as a gateway for me to delve into the intricacies of the political sphere firsthand. The in-office training equipped me with invaluable theoretical knowledge, proving instrumental when I was assigned to Dr. Sambit Patra's office. Working alongside him as a member of his research and communication team during the 2024 election campaign was a privilege that significantly enriched my understanding and skills.Under Dr. Patra's mentorship, each day brought new challenges and opportunities for growth, particularly through extensive fieldwork conducted during the Lok Sabha elections. I am certain that the lessons and expertise gained through the Mukherjee Fellowship will serve as a solid foundation for my future endeavours.",
     },
     {
-      name: "Mukesh Ghanshyam Bisane",
+      name: "Mukesh  Bisane",
       image: "/images/images2024/Mukesh Bisane.png",
       alt: "Mukesh Ghanshyam Bisane",
 
@@ -215,7 +215,7 @@ export default function MeetOurFellows() {
         "With my R&D background and experience in the development sector, I have always been passionate about politics and policy. As a Mukherjee fellow, I had the opportunity to closely observe, learn, and execute various election strategies in the complex state of Bihar. This provided me with valuable insights into the real-world impact of government policies. During this time, I deepened my understanding of social engineering processes, the role of data in elections, and effective mass communication strategies. The fellowship has helped me grow and evolve as a person on multiple fronts.",
     },
     {
-      name: "Mrunmayee Mandar Paralikar",
+      name: "Mrunmayee  Paralikar",
       image: "/images/images2024/Mrunmayee Mandar Paralikar.png",
       alt: "Mrunmayee Mandar Paralikar",
 
@@ -442,7 +442,7 @@ export default function MeetOurFellows() {
       </motion.p>
 
       {/* 2024-2025 Fellows */}
-      <span className="font-EB mb-6 mt-12 block text-xl text-gray-700 sm:mt-14 sm:text-4xl">
+      <span className="font-EB-extrabold mb-6 mt-12 block text-xl text-gray-700 sm:mt-14 sm:text-4xl">
         2024 - 2025
       </span>
 
